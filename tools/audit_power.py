@@ -48,7 +48,24 @@ def dmax_pp(tau_a: float, tau_b: float) -> float:
     return round(100.0 * (tau_a + tau_b), 2)
 
 
+def check(tau_a: float, tau_b: float, gap_pp: float) -> int:
+    """一行决策：给定两臂税与观测分差，判"能否当作能力证据"。"""
+    bound = dmax_pp(tau_a, tau_b)
+    licensed = abs(gap_pp) > bound
+    print(f"τ_A={tau_a}  τ_B={tau_b}  |Δ|={abs(gap_pp)}pp  界 Δ_max={bound}pp")
+    print(("✅ 许可：分差超出界 ⇒ 不能由未执行样本解释" if licensed else
+           "⛔ 不许可：分差落在界内 ⇒ 可以被未执行样本完全解释，先报可达性"))
+    return 0 if licensed else 3
+
+
 def main() -> int:
+    import argparse as _ap
+    import sys as _sys
+    _p = _ap.ArgumentParser(add_help=False)
+    _p.add_argument("--check", nargs=3, type=float, metavar=("TAU_A", "TAU_B", "GAP_PP"))
+    _a, _ = _p.parse_known_args()
+    if _a.check:
+        return check(*_a.check)
     # 1) 边界表
     taus = [0.0, 0.02, 0.05, 0.10, 0.20, 0.50, 0.875]
     table = [{"tau_a": a, "tau_b": 0.0, "dmax_pp": dmax_pp(a, 0.0)} for a in taus]
