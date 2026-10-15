@@ -1,0 +1,787 @@
+{
+ "arms": {
+  "E4": {
+   "model": "Qwen3-4B",
+   "path": "results/ts/ts_expand_v1/E4/agent_gorilla-llm/gorilla-openfunctions-v2_user_gpt-3.5-turbo-0125_10_15_2026_14_47_50/result_summary.json",
+   "n_scenarios": 37,
+   "n_exception": 13,
+   "exception_rate": 0.3514,
+   "exception_rate_ci95_wilson": [
+    0.2183,
+    0.5124
+   ],
+   "exception_types": [
+    "BadRequestError",
+    "KeyError",
+    "RetryError"
+   ],
+   "normalized_similarity": 0.203,
+   "agg_keys": [
+    "similarity",
+    "turn_count"
+   ],
+   "agg_ALL_CATEGORIES": {
+    "similarity": 0.2029833322649212,
+    "turn_count": 25.72972972972973
+   },
+   "rows": [
+    {
+     "name": "find_current_city_low_battery_mode_insufficient_information",
+     "similarity": 1,
+     "turn_count": 22,
+     "exception_type": null,
+     "has_traceback": false
+    },
+    {
+     "name": "turn_on_wifi_low_battery_mode_implicit",
+     "similarity": 0.20190227752807036,
+     "turn_count": 30,
+     "exception_type": null,
+     "has_traceback": false
+    },
+    {
+     "name": "search_message_with_recency_latest",
+     "similarity": 0,
+     "turn_count": 30,
+     "exception_type": "RetryError",
+     "has_traceback": true
+    },
+    {
+     "name": "turn_on_cellular_low_battery_mode",
+     "similarity": 0,
+     "turn_count": 30,
+     "exception_type": "KeyError",
+     "has_traceback": true
+    },
+    {
+     "name": "wifi_off_3_distraction_tools_arg_description_scrambled",
+     "similarity": 0,
+     "turn_count": 30,
+     "exception_type": "KeyError",
+     "has_traceback": true
+    },
+    {
+     "name": "find_phone_number_with_location_name",
+     "similarity": 0,
+     "turn_count": 30,
+     "exception_type": "KeyError",
+     "has_traceback": true
+    },
+    {
+     "name": "cellular_off_3_distraction_tools",
+     "similarity": 0.28325816166946055,
+     "turn_count": 28,
+     "exception_type": null,
+     "has_traceback": false
+    },
+    {
+     "name": "search_message_with_recency_oldest",
+     "similarity": 0.0,
+     "turn_count": 22,
+     "exception_type": null,
+     "has_traceback": false
+    },
+    {
+     "name": "wifi_off_all_tools",
+     "similarity": 0.3466806211074355,
+     "turn_count": 28,
+     "exception_type": null,
+     "has_traceback": false
+    },
+    {
+     "name": "wifi_off",
+     "similarity": 0.1237243776152284,
+     "turn_count": 15,
+     "exception_type": null,
+     "has_traceback": false
+    },
+    {
+     "name": "cellular_off_3_distraction_tools_tool_name_scrambled",
+     "similarity": 0,
+     "turn_count": 30,
+     "exception_type": "KeyError",
+     "has_traceback": true
+    },
+    {
+     "name": "cellular_off_3_distraction_tools_tool_description_scrambled",
+     "similarity": 0.24499863440346956,
+     "turn_count": 28,
+     "exception_type": null,
+     "has_traceback": false
+    },
+    {
+     "name": "find_current_location_insufficient_information",
+     "similarity": 1,
+     "turn_count": 19,
+     "exception_type": null,
+     "has_traceback": false
+    },
+    {
+     "name": "search_message_with_recency_latest_multiple_user_turn",
+     "similarity": 0,
+     "turn_count": 30,
+     "exception_type": "KeyError",
+     "has_traceback": true
+    },
+    {
+     "name": "search_message_with_recency_latest_multiple_user_turn_alt",
+     "similarity": 0,
+     "turn_count": 30,
+     "exception_type": "KeyError",
+     "has_traceback": true
+    },
+    {
+     "name": "wifi_off_3_distraction_tools_tool_name_scrambled",
+     "similarity": 0.42171633121188085,
+     "turn_count": 26,
+     "exception_type": null,
+     "has_traceback": false
+    },
+    {
+     "name": "cellular_off_3_distraction_tools_arg_type_scrambled",
+     "similarity": 0,
+     "turn_count": 30,
+     "exception_type": "KeyError",
+     "has_traceback": true
+    },
+    {
+     "name": "convert_currency",
+     "similarity": 0.0,
+     "turn_count": 15,
+     "exception_type": null,
+     "has_traceback": false
+    },
+    {
+     "name": "get_cellular_10_distraction_tools",
+     "similarity": 0.3404885635597742,
+     "turn_count": 24,
+     "exception_type": null,
+     "has_traceback": false
+    },
+    {
+     "name": "get_cellular_3_distraction_tools_arg_type_scrambled",
+     "similarity": 0,
+     "turn_count": 30,
+     "exception_type": "KeyError",
+     "has_traceback": true
+    },
+    {
+     "name": "get_cellular_all_tools",
+     "similarity": 0,
+     "turn_count": 30,
+     "exception_type": "KeyError",
+     "has_traceback": true
+    },
+    {
+     "name": "search_message_with_recency_latest_alt",
+     "similarity": 0.0,
+     "turn_count": 20,
+     "exception_type": null,
+     "has_traceback": false
+    },
+    {
+     "name": "get_cellular_3_distraction_tools_tool_name_scrambled",
+     "similarity": 0.10763210208111998,
+     "turn_count": 28,
+     "exception_type": null,
+     "has_traceback": false
+    },
+    {
+     "name": "cellular_off_10_distraction_tools",
+     "similarity": 0.3293168709328808,
+     "turn_count": 15,
+     "exception_type": null,
+     "has_traceback": false
+    },
+    {
+     "name": "get_cellular_3_distraction_tools_tool_description_scrambled",
+     "similarity": 0,
+     "turn_count": 30,
+     "exception_type": "KeyError",
+     "has_traceback": true
+    },
+    {
+     "name": "cellular_off",
+     "similarity": 0.12865418255167857,
+     "turn_count": 16,
+     "exception_type": null,
+     "has_traceback": false
+    },
+    {
+     "name": "cellular_off_all_tools",
+     "similarity": 0,
+     "turn_count": 30,
+     "exception_type": "BadRequestError",
+     "has_traceback": true
+    },
+    {
+     "name": "find_current_city_insufficient_information",
+     "similarity": 1,
+     "turn_count": 28,
+     "exception_type": null,
+     "has_traceback": false
+    },
+    {
+     "name": "wifi_off_10_distraction_tools",
+     "similarity": 0.36840314640520855,
+     "turn_count": 30,
+     "exception_type": null,
+     "has_traceback": false
+    },
+    {
+     "name": "cellular_off_3_distraction_tools_arg_description_scrambled",
+     "similarity": 0.3086789491422043,
+     "turn_count": 15,
+     "exception_type": null,
+     "has_traceback": false
+    },
+    {
+     "name": "get_cellular",
+     "similarity": 0.15491110457296492,
+     "turn_count": 26,
+     "exception_type": null,
+     "has_traceback": false
+    },
+    {
+     "name": "find_temperature",
+     "similarity": 0.0,
+     "turn_count": 17,
+     "exception_type": null,
+     "has_traceback": false
+    },
+    {
+     "name": "search_message_with_recency_oldest_multiple_user_turn",
+     "similarity": 0,
+     "turn_count": 30,
+     "exception_type": "KeyError",
+     "has_traceback": true
+    },
+    {
+     "name": "turn_on_wifi_low_battery_mode",
+     "similarity": 0.2766088441872384,
+     "turn_count": 30,
+     "exception_type": null,
+     "has_traceback": false
+    },
+    {
+     "name": "wifi_off_3_distraction_tools_arg_type_scrambled",
+     "similarity": 0.28325816166946055,
+     "turn_count": 26,
+     "exception_type": null,
+     "has_traceback": false
+    },
+    {
+     "name": "get_cellular_3_distraction_tools_arg_description_scrambled",
+     "similarity": 0.46415888390911664,
+     "turn_count": 26,
+     "exception_type": null,
+     "has_traceback": false
+    },
+    {
+     "name": "wifi_off_3_distraction_tools_tool_description_scrambled",
+     "similarity": 0.12599208125489306,
+     "turn_count": 28,
+     "exception_type": null,
+     "has_traceback": false
+    }
+   ]
+  },
+  "EL": {
+   "model": "Llama-3.1-8B-Instruct",
+   "path": "results/ts/ts_expand_v1/EL/agent_gorilla-llm/gorilla-openfunctions-v2_user_gpt-3.5-turbo-0125_10_15_2026_14_47_52/result_summary.json",
+   "n_scenarios": 37,
+   "n_exception": 36,
+   "exception_rate": 0.973,
+   "exception_rate_ci95_wilson": [
+    0.8618,
+    0.9952
+   ],
+   "exception_types": [
+    "RetryError"
+   ],
+   "normalized_similarity": 0.0135,
+   "agg_keys": [
+    "similarity",
+    "turn_count"
+   ],
+   "agg_ALL_CATEGORIES": {
+    "similarity": 0.013513513513513514,
+    "turn_count": 30.0
+   },
+   "rows": [
+    {
+     "name": "find_current_city_low_battery_mode_insufficient_information",
+     "similarity": 0,
+     "turn_count": 30,
+     "exception_type": "RetryError",
+     "has_traceback": true
+    },
+    {
+     "name": "turn_on_wifi_low_battery_mode_implicit",
+     "similarity": 0,
+     "turn_count": 30,
+     "exception_type": "RetryError",
+     "has_traceback": true
+    },
+    {
+     "name": "search_message_with_recency_latest",
+     "similarity": 0,
+     "turn_count": 30,
+     "exception_type": "RetryError",
+     "has_traceback": true
+    },
+    {
+     "name": "turn_on_cellular_low_battery_mode",
+     "similarity": 0,
+     "turn_count": 30,
+     "exception_type": "RetryError",
+     "has_traceback": true
+    },
+    {
+     "name": "wifi_off_3_distraction_tools_arg_description_scrambled",
+     "similarity": 0,
+     "turn_count": 30,
+     "exception_type": "RetryError",
+     "has_traceback": true
+    },
+    {
+     "name": "find_phone_number_with_location_name",
+     "similarity": 0,
+     "turn_count": 30,
+     "exception_type": "RetryError",
+     "has_traceback": true
+    },
+    {
+     "name": "cellular_off_3_distraction_tools",
+     "similarity": 0,
+     "turn_count": 30,
+     "exception_type": "RetryError",
+     "has_traceback": true
+    },
+    {
+     "name": "search_message_with_recency_oldest",
+     "similarity": 0,
+     "turn_count": 30,
+     "exception_type": "RetryError",
+     "has_traceback": true
+    },
+    {
+     "name": "wifi_off_all_tools",
+     "similarity": 0,
+     "turn_count": 30,
+     "exception_type": "RetryError",
+     "has_traceback": true
+    },
+    {
+     "name": "wifi_off",
+     "similarity": 0.5,
+     "turn_count": 30,
+     "exception_type": null,
+     "has_traceback": false
+    },
+    {
+     "name": "cellular_off_3_distraction_tools_tool_name_scrambled",
+     "similarity": 0,
+     "turn_count": 30,
+     "exception_type": "RetryError",
+     "has_traceback": true
+    },
+    {
+     "name": "cellular_off_3_distraction_tools_tool_description_scrambled",
+     "similarity": 0,
+     "turn_count": 30,
+     "exception_type": "RetryError",
+     "has_traceback": true
+    },
+    {
+     "name": "find_current_location_insufficient_information",
+     "similarity": 0,
+     "turn_count": 30,
+     "exception_type": "RetryError",
+     "has_traceback": true
+    },
+    {
+     "name": "search_message_with_recency_latest_multiple_user_turn",
+     "similarity": 0,
+     "turn_count": 30,
+     "exception_type": "RetryError",
+     "has_traceback": true
+    },
+    {
+     "name": "search_message_with_recency_latest_multiple_user_turn_alt",
+     "similarity": 0,
+     "turn_count": 30,
+     "exception_type": "RetryError",
+     "has_traceback": true
+    },
+    {
+     "name": "wifi_off_3_distraction_tools_tool_name_scrambled",
+     "similarity": 0,
+     "turn_count": 30,
+     "exception_type": "RetryError",
+     "has_traceback": true
+    },
+    {
+     "name": "cellular_off_3_distraction_tools_arg_type_scrambled",
+     "similarity": 0,
+     "turn_count": 30,
+     "exception_type": "RetryError",
+     "has_traceback": true
+    },
+    {
+     "name": "convert_currency",
+     "similarity": 0,
+     "turn_count": 30,
+     "exception_type": "RetryError",
+     "has_traceback": true
+    },
+    {
+     "name": "get_cellular_10_distraction_tools",
+     "similarity": 0,
+     "turn_count": 30,
+     "exception_type": "RetryError",
+     "has_traceback": true
+    },
+    {
+     "name": "get_cellular_3_distraction_tools_arg_type_scrambled",
+     "similarity": 0,
+     "turn_count": 30,
+     "exception_type": "RetryError",
+     "has_traceback": true
+    },
+    {
+     "name": "get_cellular_all_tools",
+     "similarity": 0,
+     "turn_count": 30,
+     "exception_type": "RetryError",
+     "has_traceback": true
+    },
+    {
+     "name": "search_message_with_recency_latest_alt",
+     "similarity": 0,
+     "turn_count": 30,
+     "exception_type": "RetryError",
+     "has_traceback": true
+    },
+    {
+     "name": "get_cellular_3_distraction_tools_tool_name_scrambled",
+     "similarity": 0,
+     "turn_count": 30,
+     "exception_type": "RetryError",
+     "has_traceback": true
+    },
+    {
+     "name": "cellular_off_10_distraction_tools",
+     "similarity": 0,
+     "turn_count": 30,
+     "exception_type": "RetryError",
+     "has_traceback": true
+    },
+    {
+     "name": "get_cellular_3_distraction_tools_tool_description_scrambled",
+     "similarity": 0,
+     "turn_count": 30,
+     "exception_type": "RetryError",
+     "has_traceback": true
+    },
+    {
+     "name": "cellular_off",
+     "similarity": 0,
+     "turn_count": 30,
+     "exception_type": "RetryError",
+     "has_traceback": true
+    },
+    {
+     "name": "cellular_off_all_tools",
+     "similarity": 0,
+     "turn_count": 30,
+     "exception_type": "RetryError",
+     "has_traceback": true
+    },
+    {
+     "name": "find_current_city_insufficient_information",
+     "similarity": 0,
+     "turn_count": 30,
+     "exception_type": "RetryError",
+     "has_traceback": true
+    },
+    {
+     "name": "wifi_off_10_distraction_tools",
+     "similarity": 0,
+     "turn_count": 30,
+     "exception_type": "RetryError",
+     "has_traceback": true
+    },
+    {
+     "name": "cellular_off_3_distraction_tools_arg_description_scrambled",
+     "similarity": 0,
+     "turn_count": 30,
+     "exception_type": "RetryError",
+     "has_traceback": true
+    },
+    {
+     "name": "get_cellular",
+     "similarity": 0,
+     "turn_count": 30,
+     "exception_type": "RetryError",
+     "has_traceback": true
+    },
+    {
+     "name": "find_temperature",
+     "similarity": 0,
+     "turn_count": 30,
+     "exception_type": "RetryError",
+     "has_traceback": true
+    },
+    {
+     "name": "search_message_with_recency_oldest_multiple_user_turn",
+     "similarity": 0,
+     "turn_count": 30,
+     "exception_type": "RetryError",
+     "has_traceback": true
+    },
+    {
+     "name": "turn_on_wifi_low_battery_mode",
+     "similarity": 0,
+     "turn_count": 30,
+     "exception_type": "RetryError",
+     "has_traceback": true
+    },
+    {
+     "name": "wifi_off_3_distraction_tools_arg_type_scrambled",
+     "similarity": 0,
+     "turn_count": 30,
+     "exception_type": "RetryError",
+     "has_traceback": true
+    },
+    {
+     "name": "get_cellular_3_distraction_tools_arg_description_scrambled",
+     "similarity": 0,
+     "turn_count": 30,
+     "exception_type": "RetryError",
+     "has_traceback": true
+    },
+    {
+     "name": "wifi_off_3_distraction_tools_tool_description_scrambled",
+     "similarity": 0,
+     "turn_count": 30,
+     "exception_type": "RetryError",
+     "has_traceback": true
+    }
+   ]
+  }
+ },
+ "missing": [],
+ "descriptive": {
+  "E4": {
+   "requests_log": "results/ts/ts_expand_v1/E4_requests.jsonl",
+   "n_requests": 380,
+   "n_error": 3,
+   "max_tokens_seen": [
+    null
+   ],
+   "signature_examples": [
+    {
+     "max_tokens": null,
+     "pairs_sum_8193": [],
+     "error": "Error code: 400 - {'error': {'message': \"This model's maximum context length is 8192 tokens. However, you requested 0 output tokens and your prompt contains at least 8193 input tokens, for a total of "
+    },
+    {
+     "max_tokens": null,
+     "pairs_sum_8193": [],
+     "error": "Error code: 400 - {'error': {'message': \"This model's maximum context length is 8192 tokens. However, you requested 0 output tokens and your prompt contains at least 8193 input tokens, for a total of "
+    },
+    {
+     "max_tokens": null,
+     "pairs_sum_8193": [],
+     "error": "Error code: 400 - {'error': {'message': \"This model's maximum context length is 8192 tokens. However, you requested 0 output tokens and your prompt contains at least 8193 input tokens, for a total of "
+    }
+   ]
+  },
+  "EL": {
+   "requests_log": "results/ts/ts_expand_v1/EL_requests.jsonl",
+   "n_requests": 345,
+   "n_error": 108,
+   "max_tokens_seen": [
+    null
+   ],
+   "signature_examples": [
+    {
+     "max_tokens": null,
+     "pairs_sum_8193": [],
+     "error": "Error code: 400 - {'error': {'message': \"This model's maximum context length is 8192 tokens. However, you requested 0 output tokens and your prompt contains at least 8193 input tokens, for a total of "
+    },
+    {
+     "max_tokens": null,
+     "pairs_sum_8193": [],
+     "error": "Error code: 400 - {'error': {'message': \"This model's maximum context length is 8192 tokens. However, you requested 0 output tokens and your prompt contains at least 8193 input tokens, for a total of "
+    },
+    {
+     "max_tokens": null,
+     "pairs_sum_8193": [],
+     "error": "Error code: 400 - {'error': {'message': \"This model's maximum context length is 8192 tokens. However, you requested 0 output tokens and your prompt contains at least 8193 input tokens, for a total of "
+    },
+    {
+     "max_tokens": null,
+     "pairs_sum_8193": [],
+     "error": "Error code: 400 - {'error': {'message': \"This model's maximum context length is 8192 tokens. However, you requested 0 output tokens and your prompt contains at least 8193 input tokens, for a total of "
+    },
+    {
+     "max_tokens": null,
+     "pairs_sum_8193": [],
+     "error": "Error code: 400 - {'error': {'message': \"This model's maximum context length is 8192 tokens. However, you requested 0 output tokens and your prompt contains at least 8193 input tokens, for a total of "
+    }
+   ]
+  }
+ },
+ "verdict": {
+  "missing": [],
+  "E-1": {
+   "pred": "≥5/37 场景以 harness 内部异常结束",
+   "got": {
+    "E4": 13,
+    "EL": 36
+   },
+   "pass": true
+  },
+  "E-2": {
+   "pred": "≥1 条 similarity<0.2 且 exception 非空",
+   "got": [
+    "search_message_with_recency_latest",
+    "turn_on_cellular_low_battery_mode",
+    "wifi_off_3_distraction_tools_arg_description_scrambled",
+    "find_phone_number_with_location_name",
+    "cellular_off_3_distraction_tools_tool_name_scrambled",
+    "search_message_with_recency_latest_multiple_user_turn",
+    "search_message_with_recency_latest_multiple_user_turn_alt",
+    "cellular_off_3_distraction_tools_arg_type_scrambled",
+    "get_cellular_3_distraction_tools_arg_type_scrambled",
+    "get_cellular_all_tools",
+    "get_cellular_3_distraction_tools_tool_description_scrambled",
+    "cellular_off_all_tools",
+    "search_message_with_recency_oldest_multiple_user_turn",
+    "find_current_city_low_battery_mode_insufficient_information",
+    "turn_on_wifi_low_battery_mode_implicit",
+    "search_message_with_recency_latest",
+    "turn_on_cellular_low_battery_mode",
+    "wifi_off_3_distraction_tools_arg_description_scrambled",
+    "find_phone_number_with_location_name",
+    "cellular_off_3_distraction_tools",
+    "search_message_with_recency_oldest",
+    "wifi_off_all_tools",
+    "cellular_off_3_distraction_tools_tool_name_scrambled",
+    "cellular_off_3_distraction_tools_tool_description_scrambled",
+    "find_current_location_insufficient_information",
+    "search_message_with_recency_latest_multiple_user_turn",
+    "search_message_with_recency_latest_multiple_user_turn_alt",
+    "wifi_off_3_distraction_tools_tool_name_scrambled",
+    "cellular_off_3_distraction_tools_arg_type_scrambled",
+    "convert_currency",
+    "get_cellular_10_distraction_tools",
+    "get_cellular_3_distraction_tools_arg_type_scrambled",
+    "get_cellular_all_tools",
+    "search_message_with_recency_latest_alt",
+    "get_cellular_3_distraction_tools_tool_name_scrambled",
+    "cellular_off_10_distraction_tools",
+    "get_cellular_3_distraction_tools_tool_description_scrambled",
+    "cellular_off",
+    "cellular_off_all_tools",
+    "find_current_city_insufficient_information",
+    "wifi_off_10_distraction_tools",
+    "cellular_off_3_distraction_tools_arg_description_scrambled",
+    "get_cellular",
+    "find_temperature",
+    "search_message_with_recency_oldest_multiple_user_turn",
+    "turn_on_wifi_low_battery_mode",
+    "wifi_off_3_distraction_tools_arg_type_scrambled",
+    "get_cellular_3_distraction_tools_arg_description_scrambled",
+    "wifi_off_3_distraction_tools_tool_description_scrambled"
+   ],
+   "pass": true
+  },
+  "E-3": {
+   "pred": "两臂异常率之差 ≤ 0.30",
+   "got": -0.6216,
+   "pass": false,
+   "note": "混淆项：解析器不同，只登记"
+  },
+  "E-4": {
+   "pred": "崩溃场景 ≥70% 跑满轮数上限",
+   "got": 1.0,
+   "pass": true
+  },
+  "E-5": {
+   "pred": "E4(4B) 的 ALL_CATEGORIES.similarity < EL(8B)",
+   "got": [
+    {
+     "similarity": 0.2029833322649212,
+     "turn_count": 25.72972972972973
+    },
+    {
+     "similarity": 0.013513513513513514,
+     "turn_count": 30.0
+    }
+   ],
+   "pass": null,
+   "note": "只登记，不作判据"
+  },
+  "P-E3": {
+   "agg_has_exception_field": [],
+   "pass": true
+  },
+  "P-E1": {
+   "E4": {
+    "k": 13,
+    "n": 37,
+    "ci95": [
+     0.2183,
+     0.5124
+    ]
+   },
+   "EL": {
+    "k": 36,
+    "n": 37,
+    "ci95": [
+     0.8618,
+     0.9952
+    ]
+   }
+  },
+  "P-E2": {
+   "pass": true,
+   "note": "成立即可写：聚合行无法区分崩溃与答错（给计数）"
+  },
+  "P-E4": {
+   "pass": true,
+   "note": "合规红线：不得与官方榜单数字比较"
+  },
+  "D-1_server_rejections": {
+   "E4": 3,
+   "EL": 108
+  },
+  "D-2_signature_in_third_harness": {
+   "E4": {
+    "n_error": 3,
+    "any_pair_sums_to_8193": false
+   },
+   "EL": {
+    "n_error": 108,
+    "any_pair_sums_to_8193": false
+   }
+  },
+  "D-2_note": "签名 out+in=W_s+1 是构造值（207）⇒ 只说明打印器行为，不构成机制证据",
+  "D-3_cross_tab": {
+   "E4": {
+    "None|sim<0.2=False": 1,
+    "RetryError|sim<0.2=True": 1,
+    "KeyError|sim<0.2=True": 1,
+    "None|sim<0.2=True": 1,
+    "BadRequestError|sim<0.2=True": 1
+   },
+   "EL": {
+    "RetryError|sim<0.2=True": 1,
+    "None|sim<0.2=False": 1
+   }
+  }
+ }
+}

@@ -1,0 +1,47 @@
+{
+ "schema": "bfcl_tax_report_v1",
+ "dir": "results/bfcl/multiturn4_20260930_budget24576",
+ "result_files": [
+  "results/bfcl/multiturn4_20260930_budget24576/result/Qwen_Qwen3-8B-FC/multi_turn/BFCL_v4_multi_turn_base_result.json"
+ ],
+ "score_file": null,
+ "n_total": 4,
+ "buckets": {
+  "b1_executed_correct": 0,
+  "b2_executed_harness_failed": 0,
+  "b3_never_executed_boundary": 0,
+  "b2_task_ids": [],
+  "b3_task_ids_count": 0
+ },
+ "rates": {
+  "official_accuracy": null,
+  "conditional_accuracy": null,
+  "reachability_tax": 0.0,
+  "tax_cost_pp": null
+ },
+ "signature": {
+  "mode": "unknown",
+  "W_s_estimate": null,
+  "band_position": null,
+  "distinct_input_tokens": [],
+  "n_boundary_msgs": 0,
+  "invariant_out_plus_in": []
+ },
+ "error_type_census": {},
+ "b_unknown_executed_unscored": [
+  0,
+  1,
+  2,
+  3
+ ],
+ "gates": {
+  "G1_rows_present": true,
+  "G1_rows_count": 4,
+  "G2_done_marker": true,
+  "G3_boundary_invariant_single": true,
+  "G4_score_matches_rows": true,
+  "G5_bucket_partition": true,
+  "G6_no_orphan_score_ids": true
+ },
+ "gates_pass": true
+}

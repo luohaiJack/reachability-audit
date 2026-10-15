@@ -1,0 +1,72 @@
+{
+ "schema": "bfcl_tax_report_v1",
+ "dir": "results/bfcl/env2_miss_param_v1",
+ "result_files": [
+  "results/bfcl/env2_miss_param_v1/Qwen_Qwen3-4B-Instruct-2507/multi_turn/BFCL_v4_multi_turn_miss_func_result.json",
+  "results/bfcl/env2_miss_param_v1/Qwen_Qwen3-4B-Instruct-2507/multi_turn/BFCL_v4_multi_turn_miss_param_result.json"
+ ],
+ "score_file": "results/bfcl/env2_miss_param_v1/official_score.jsonl",
+ "n_total": 40,
+ "buckets": {
+  "b1_executed_correct": 17,
+  "b2_executed_harness_failed": 23,
+  "b3_never_executed_boundary": 0,
+  "b2_task_ids": [
+   103,
+   104,
+   105,
+   106,
+   107,
+   108,
+   110,
+   113,
+   114,
+   115,
+   117,
+   118,
+   119,
+   121,
+   125,
+   127,
+   128,
+   129,
+   132,
+   134,
+   136,
+   137,
+   138
+  ],
+  "b3_task_ids_count": 0
+ },
+ "rates": {
+  "official_accuracy": 0.425,
+  "conditional_accuracy": 0.425,
+  "reachability_tax": 0.0,
+  "tax_cost_pp": 0.0
+ },
+ "signature": {
+  "mode": "unknown",
+  "W_s_estimate": null,
+  "band_position": null,
+  "distinct_input_tokens": [],
+  "n_boundary_msgs": 0,
+  "invariant_out_plus_in": []
+ },
+ "error_type_census": {
+  "multi_turn:empty_turn_model_response": 3,
+  "multi_turn:execution_response_mismatch": 6,
+  "multi_turn:force_terminated": 2,
+  "multi_turn:instance_state_mismatch": 12
+ },
+ "b_unknown_executed_unscored": [],
+ "gates": {
+  "G1_rows_present": true,
+  "G1_rows_count": 80,
+  "G2_done_marker": true,
+  "G3_boundary_invariant_single": true,
+  "G4_score_matches_rows": true,
+  "G5_bucket_partition": true,
+  "G6_no_orphan_score_ids": true
+ },
+ "gates_pass": true
+}

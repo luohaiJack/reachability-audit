@@ -1,0 +1,70 @@
+{
+ "schema": "bfcl_tax_report_v1",
+ "dir": "results/bfcl/law_llama31_mismatch32768_v1",
+ "result_files": [
+  "results/bfcl/law_llama31_mismatch32768_v1/meta-llama_Llama-3.1-8B-Instruct/multi_turn/BFCL_v4_multi_turn_long_context_result.json"
+ ],
+ "score_file": "results/bfcl/law_llama31_mismatch32768_v1/official_score.jsonl",
+ "n_total": 40,
+ "buckets": {
+  "b1_executed_correct": 4,
+  "b2_executed_harness_failed": 16,
+  "b3_never_executed_boundary": 20,
+  "b2_task_ids": [
+   104,
+   106,
+   108,
+   110,
+   118,
+   120,
+   123,
+   124,
+   125,
+   126,
+   127,
+   128,
+   129,
+   132,
+   134,
+   136
+  ],
+  "b3_task_ids_count": 20
+ },
+ "rates": {
+  "official_accuracy": 0.1,
+  "conditional_accuracy": 0.2,
+  "reachability_tax": 0.5,
+  "tax_cost_pp": 10.0
+ },
+ "signature": {
+  "mode": "mismatch",
+  "W_s_estimate": 32768,
+  "band_position": "28673…31769（需 ≥ W_s−4096 且分散）",
+  "distinct_input_tokens": [
+   28673,
+   31769
+  ],
+  "n_boundary_msgs": 20,
+  "invariant_out_plus_in": [
+   32769
+  ]
+ },
+ "error_type_census": {
+  "multi_turn:empty_turn_model_response": 5,
+  "multi_turn:execution_response_mismatch": 2,
+  "multi_turn:force_terminated": 1,
+  "multi_turn:inference_error": 20,
+  "multi_turn:instance_state_mismatch": 8
+ },
+ "b_unknown_executed_unscored": [],
+ "gates": {
+  "G1_rows_present": true,
+  "G1_rows_count": 40,
+  "G2_done_marker": true,
+  "G3_boundary_invariant_single": true,
+  "G4_score_matches_rows": true,
+  "G5_bucket_partition": true,
+  "G6_no_orphan_score_ids": true
+ },
+ "gates_pass": true
+}

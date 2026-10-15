@@ -1,0 +1,113 @@
+{
+ "schema": "bfcl_tax_report_v1",
+ "dir": "results/bfcl/pros_N_fresh160_aligned20480_v1",
+ "result_files": [
+  "results/bfcl/pros_N_fresh160_aligned20480_v1/Qwen_Qwen3-4B-Instruct-2507/multi_turn/BFCL_v4_multi_turn_long_context_result.json"
+ ],
+ "score_file": "results/bfcl/pros_N_fresh160_aligned20480_v1/official_score.jsonl",
+ "n_total": 160,
+ "buckets": {
+  "b1_executed_correct": 27,
+  "b2_executed_harness_failed": 109,
+  "b3_never_executed_boundary": 24,
+  "b2_task_ids": [
+   0,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   36,
+   37,
+   38,
+   40,
+   41,
+   42,
+   43,
+   44,
+   46,
+   47,
+   49,
+   51,
+   52,
+   53,
+   54,
+   57,
+   58,
+   65,
+   66,
+   67,
+   69,
+   72,
+   75,
+   76,
+   82,
+   83,
+   84,
+   85,
+   87
+  ],
+  "b3_task_ids_count": 24
+ },
+ "rates": {
+  "official_accuracy": 0.16875,
+  "conditional_accuracy": 0.1985,
+  "reachability_tax": 0.15,
+  "tax_cost_pp": 3.0
+ },
+ "signature": {
+  "mode": "aligned",
+  "W_s_estimate": 20480,
+  "band_position": "恒 19481（= W_s−999）",
+  "distinct_input_tokens": [
+   19481
+  ],
+  "n_boundary_msgs": 24,
+  "invariant_out_plus_in": [
+   20481
+  ]
+ },
+ "error_type_census": {
+  "multi_turn:empty_turn_model_response": 18,
+  "multi_turn:execution_response_mismatch": 29,
+  "multi_turn:force_terminated": 12,
+  "multi_turn:inference_error": 24,
+  "multi_turn:instance_state_mismatch": 50
+ },
+ "b_unknown_executed_unscored": [],
+ "gates": {
+  "G1_rows_present": true,
+  "G1_rows_count": 160,
+  "G2_done_marker": true,
+  "G3_boundary_invariant_single": true,
+  "G4_score_matches_rows": true,
+  "G5_bucket_partition": true,
+  "G6_no_orphan_score_ids": true
+ },
+ "gates_pass": true
+}

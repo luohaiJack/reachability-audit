@@ -1,34 +1,34 @@
-# 交付步骤（作者执行；本机无法上传）
+# 交付记录（已执行）
 
-本目录已经**可以直接打包上传**：自包含、零依赖、附复现脚本。
+## 现状
 
-## 1. 选择托管
+- **仓库**：https://github.com/luohaiJack/reachability-audit （公开）
+- **首次提交**：`reachability-audit v1: three-bucket accounting, tax, diagnostic-tautology classifier`
+- 正文 `Data availability` 已填入该地址。
+- 包内自检：`sha256sum -c MANIFEST.sha256`（11 项）通过；
+  `python3 reproduce.py --workspace <WS>` 对 10 条臂重跑 **0 差异**。
 
-| 选项 | 适用 | 注意 |
-|---|---|---|
-| GitHub 仓库 + Zenodo 归档（推荐） | 要 DOI | GitHub release → Zenodo 集成，自动发 DOI |
-| Zenodo 单独上传 | 只要 DOI、不要仓库 | 上传 `reachability-audit-v1.zip` |
-| anonymous.4open.science | 双盲评审期 | 审稿期匿名，接收后换正式地址 |
+## 内容
 
-## 2. 命令（在有网机器上）
+| 目录/文件 | 内容 |
+|---|---|
+| `bfcl_tax_report.py` | 主仪器（零依赖）：三桶 + 三个率 + 六门禁 + 退出码 |
+| `tools/report_forensics.py` | **报文字段检测器**：`constructed / measured / absent` |
+| `tools/field_census.py` | 田野普查（带分母：可审计比例、税分布、派别） |
+| `tools/audit_power.py` | **决策边界** $\Delta_{\max}=100(\tau_A+\tau_B)$ pp |
+| `ports/tau2_tax_report.py` | τ² 官方 harness 的移植样例 |
+| `reports/` | 每条臂的 `tax_report.json`（+ τ² 与第三基准的判定 json） |
+| `examples/`、`SCHEMA.md`、`reproduce.py` | 样例、字段语义、复现脚本 |
 
-```bash
-cd /home/leli/Documents/新方向codex/agent实证研究
-sha256sum -c artifact_reachability_audit_v1/MANIFEST.sha256   # 先自检
-cd artifact_reachability_audit_v1 && zip -r ../reachability-audit-v1.zip . -x 'MANIFEST.sha256'
-```
+## 仍需人工完成的两件
 
-Zenodo：New upload → 选 `reachability-audit-v1.zip` → Resource type *Software* →
-License（**需作者确认**：建议 MIT）→ Publish → 复制 DOI。
+1. **许可**：`README.md` 末行仍是 `TBD`（建议 代码 MIT / 数据 CC BY 4.0），
+   确认后写入即可。
+2. **DOI**：Zenodo → Settings → GitHub → 打开 `reachability-audit` 开关 →
+   在 GitHub 建一个 **Release**（本仓库已有 token 可建）→ Zenodo 自动归档并发 DOI →
+   把 DOI 补进论文 `Data availability`。
 
-## 3. 回填两处（**不要忘**）
+## 安全提示
 
-1. 论文 `Data availability`：把 `<REPO-OR-DOI>` 换成真实地址。
-   **注意**：`verify_paper_numbers.py` 会对占位符给出 **WARN**（不判 FAIL，以免门禁长期发红），在
-   看到 `<REPO-OR-DOI>` 时提醒一次；同时有一条硬守卫禁止 "upon reasonable request" 回流 —— 这是故意的，
-   防止占位符被漏掉后投出去。
-2. 本文件与 `README.md` 的许可行（把 `TBD` 改成确认后的许可）。
-
-## 4. 打包内容清单
-
-见 `MANIFEST.sha256`（每个文件的 sha256）。
+写入本仓库所用的 **token 已暴露在对话记录里**，用完请到
+`https://github.com/settings/tokens` **立即吊销**。

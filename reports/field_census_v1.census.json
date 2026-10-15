@@ -1,0 +1,856 @@
+{
+ "schema": "field_census_v1",
+ "prereg": "217_预注册_M1M2M4_2026-10-15.md",
+ "denominator": {
+  "n_submissions_total": 70,
+  "n_declaring_trajectories": 52,
+  "n_audited": 28,
+  "n_unavailable": 24,
+  "audited_fraction_of_total": 0.4,
+  "audited_fraction_of_declaring": 0.5385
+ },
+ "aggregate": {
+  "n_sims": 11476,
+  "n_excluded_infra": 158,
+  "excluded_share": 0.0138,
+  "n_window_class": 0
+ },
+ "tax_distribution": {
+  "n": 28,
+  "median": 0.0,
+  "max": 0.1366,
+  "n_zero": 19,
+  "share_nonzero": 0.3214
+ },
+ "ci95_on_zero_share": [
+  0.4933850455563118,
+  0.8206695245657927
+ ],
+ "schools": {
+  "excluded": 9,
+  "scored_abnormal": 5,
+  "clean": 16
+ },
+ "unavailable": [
+  {
+   "dir": "distyl-buttonagent_distyl_2026-03-25",
+   "domain": "banking_knowledge",
+   "file": "distyl-buttonagent_banking_knowledge_4trials.json",
+   "type": "custom",
+   "model": "Distyl ButtonAgent",
+   "org": "Distyl AI",
+   "why": "http_404"
+  },
+  {
+   "dir": "gemini-3-1-flash-live-preview-thinking-high-banking_google_2026-07-13",
+   "domain": "banking_knowledge",
+   "file": "gemini-3-1-flash-live-preview_voice_high_usersim-gpt55xhigh_banking",
+   "type": "custom",
+   "model": "gemini-3.1-flash-live-preview-thinking-high",
+   "org": "Google",
+   "why": "http_404"
+  },
+  {
+   "dir": "gemini-3-1-flash-live-preview-thinking-high_google_2026-04-02",
+   "domain": "telecom",
+   "file": "telecom_regular",
+   "type": "standard",
+   "model": "gemini-3.1-flash-live-preview-thinking-high",
+   "org": "Google",
+   "why": "parse_error:JSONDecodeError"
+  },
+  {
+   "dir": "gemini-3-1-flash-live-preview-thinking-minimal_google_2026-04-13",
+   "domain": "telecom",
+   "file": "telecom_regular_gemini_gemini-3.1-flash-live-preview",
+   "type": "standard",
+   "model": "gemini-3.1-flash-live-preview-thinking-minimal",
+   "org": "Google",
+   "why": "parse_error:JSONDecodeError"
+  },
+  {
+   "dir": "gemini-live-2.5-flash_sierra_2026-03-03",
+   "domain": "telecom",
+   "file": "telecom_regular_gemini_gemini-live-2.5-flash-native-audio",
+   "type": "standard",
+   "model": "gemini-live-2.5-flash-native-audio",
+   "org": "Google",
+   "why": "parse_error:JSONDecodeError"
+  },
+  {
+   "dir": "gpt-live-1-astra-high-banking_openai_2026-09-16",
+   "domain": "banking_knowledge",
+   "file": "banking-high-elevenlabs",
+   "type": "custom",
+   "model": "gpt-live-1",
+   "org": "OpenAI",
+   "why": "http_404"
+  },
+  {
+   "dir": "gpt-live-1-diamond-alpha-user-sim-gpt-5-5_openai_2026-09-09",
+   "domain": "telecom",
+   "file": "telecom_regular_openai_live__medium",
+   "type": "custom",
+   "model": "gpt-live-1",
+   "org": "OpenAI",
+   "why": "http_404"
+  },
+  {
+   "dir": "gpt-live-1-diamond-alpha_openai_2026-09-09",
+   "domain": "telecom",
+   "file": "telecom_regular_openai_live__medium",
+   "type": "standard",
+   "model": "gpt-live-1",
+   "org": "OpenAI",
+   "why": "parse_error:JSONDecodeError"
+  },
+  {
+   "dir": "gpt-realtime-1-0_openai_2026-04-13",
+   "domain": "telecom",
+   "file": "telecom_regular_openai_gpt-realtime-2025-08-28",
+   "type": "standard",
+   "model": "gpt-realtime-1.0",
+   "org": "OpenAI",
+   "why": "parse_error:JSONDecodeError"
+  },
+  {
+   "dir": "gpt-realtime-1.5_sierra_2026-03-03",
+   "domain": "telecom",
+   "file": "telecom_regular_openai_gpt-realtime-1.5",
+   "type": "standard",
+   "model": "gpt-realtime-1.5",
+   "org": "OpenAI",
+   "why": "parse_error:JSONDecodeError"
+  },
+  {
+   "dir": "gpt-realtime-2-banking_openai_2026-07-12",
+   "domain": "banking_knowledge",
+   "file": "gpt-realtime-2_voice_xhigh_usersim-gpt55xhigh_banking",
+   "type": "custom",
+   "model": "gpt-realtime-2",
+   "org": "OpenAI",
+   "why": "http_404"
+  },
+  {
+   "dir": "gpt-realtime-2-minimal_openai_2026-07-01",
+   "domain": "telecom",
+   "file": "gpt-realtime-2_voice_minimal_telecom",
+   "type": "standard",
+   "model": "gpt-realtime-2",
+   "org": "OpenAI",
+   "why": "parse_error:JSONDecodeError"
+  },
+  {
+   "dir": "gpt-realtime-2_openai_2026-06-24",
+   "domain": "telecom",
+   "file": "gpt-realtime-2_voice_xhigh_usersim-gpt55_telecom",
+   "type": "custom",
+   "model": "gpt-realtime-2",
+   "org": "OpenAI",
+   "why": "http_404"
+  },
+  {
+   "dir": "gpt-realtime-2_openai_2026-06-29",
+   "domain": "telecom",
+   "file": "gpt-realtime-2_voice_xhigh_telecom",
+   "type": "standard",
+   "model": "gpt-realtime-2",
+   "org": "OpenAI",
+   "why": "parse_error:JSONDecodeError"
+  },
+  {
+   "dir": "grok-voice-think-fast-1-0-tool-mentor_pickle_2026-07-07",
+   "domain": "telecom",
+   "file": "grok-voice-tool-mentor-telecom",
+   "type": "custom",
+   "model": "grok-voice-think-fast-1.0 + tool-mentor",
+   "org": "Pickle",
+   "why": "http_404"
+  },
+  {
+   "dir": "grok-voice-think-fast-1-0_xai_2026-04-21",
+   "domain": "telecom",
+   "file": "xai-grok-voice-think-fast-1.0-telecom",
+   "type": "standard",
+   "model": "grok-voice-think-fast-1.0",
+   "org": "xAI",
+   "why": "parse_error:JSONDecodeError"
+  },
+  {
+   "dir": "grok-voice-think-fast-2-0_xai_2026-08-06",
+   "domain": "telecom",
+   "file": "telecom_regular_xai",
+   "type": "standard",
+   "model": "grok-voice-think-fast-2.0",
+   "org": "xAI",
+   "why": "parse_error:JSONDecodeError"
+  },
+  {
+   "dir": "livekit-cascaded_livekit_2026-05-19",
+   "domain": "telecom",
+   "file": "telecom_regular_livekit",
+   "type": "standard",
+   "model": "Cascaded baseline",
+   "org": "Multiple providers",
+   "why": "parse_error:JSONDecodeError"
+  },
+  {
+   "dir": "pine-voice-preview-user-sim-gpt-5-5_pineai_2026-08-17",
+   "domain": "telecom",
+   "file": "telecom_regular_openai_pine-voice-preview",
+   "type": "custom",
+   "model": "Pine Voice Preview",
+   "org": "Pine AI",
+   "why": "http_404"
+  },
+  {
+   "dir": "pine-voice-preview-user-sim-v1-0_pineai_2026-08-17",
+   "domain": "telecom",
+   "file": "telecom_regular_openai_pine-voice-preview",
+   "type": "standard",
+   "model": "Pine Voice Preview",
+   "org": "Pine AI",
+   "why": "parse_error:JSONDecodeError"
+  },
+  {
+   "dir": "qwen3-5-omni-plus-realtime_qwen_2026-08-06",
+   "domain": "telecom",
+   "file": "telecom_regular_qwen",
+   "type": "standard",
+   "model": "qwen3.5-omni-plus-realtime",
+   "org": "Qwen",
+   "why": "parse_error:JSONDecodeError"
+  },
+  {
+   "dir": "raft-30b-a3b_neu_2026-04-29",
+   "domain": "retail",
+   "file": "results.json",
+   "type": "custom",
+   "model": "RAFT-30B-A3B",
+   "org": "Northeastern University HAI Lab",
+   "why": "http_404"
+  },
+  {
+   "dir": "xai-realtime-banking_xai_2026-07-13",
+   "domain": "banking_knowledge",
+   "file": "xai-realtime_voice_usersim-gpt55xhigh_banking",
+   "type": "custom",
+   "model": "xai-realtime",
+   "org": "xAI",
+   "why": "http_404"
+  },
+  {
+   "dir": "xai-realtime_sierra_2026-03-03",
+   "domain": "telecom",
+   "file": "telecom_regular_xai_xai-realtime",
+   "type": "standard",
+   "model": "grok-voice-fast-1.0",
+   "org": "xAI",
+   "why": "parse_error:JSONDecodeError"
+  }
+ ],
+ "rows": [
+  {
+   "dir": "claude-fable-5_sierra_2026-08-04",
+   "domain": "banking_knowledge",
+   "file": "banking_knowledge_results.json",
+   "type": "standard",
+   "model": "Claude Fable 5",
+   "org": "Anthropic",
+   "how": "cached",
+   "bytes": 0,
+   "n_sims": 388,
+   "termination_reasons": {
+    "user_stop": 335,
+    "infrastructure_error": 53
+   },
+   "n_excluded": 53,
+   "n_scored_abnormal": 0,
+   "n_correct": 150,
+   "n_reward_none": 53,
+   "n_window_class": 0,
+   "tax_excluded": 0.1366,
+   "tax_any_abnormal": 0.1366
+  },
+  {
+   "dir": "claude-opus-4-5_sierra_2026-02-26",
+   "domain": "telecom",
+   "file": "claude-opus-4-5_high_telecom_gpt-5.2_4trials.json",
+   "type": "standard",
+   "model": "Claude Opus 4.5",
+   "org": "Anthropic",
+   "how": "cached",
+   "bytes": 0,
+   "n_sims": 456,
+   "termination_reasons": {
+    "user_stop": 456
+   },
+   "n_excluded": 0,
+   "n_scored_abnormal": 0,
+   "n_correct": 421,
+   "n_reward_none": 0,
+   "n_window_class": 0,
+   "tax_excluded": 0.0,
+   "tax_any_abnormal": 0.0
+  },
+  {
+   "dir": "claude-opus-4-6_sierra_2026-05-05",
+   "domain": "banking_knowledge",
+   "file": "claude-opus-4-6_max_banking_knowledge_gpt-5.2_4trials.json",
+   "type": "standard",
+   "model": "Claude Opus 4.6",
+   "org": "Anthropic",
+   "how": "cached",
+   "bytes": 0,
+   "n_sims": 388,
+   "termination_reasons": {
+    "user_stop": 388
+   },
+   "n_excluded": 0,
+   "n_scored_abnormal": 0,
+   "n_correct": 95,
+   "n_reward_none": 0,
+   "n_window_class": 0,
+   "tax_excluded": 0.0,
+   "tax_any_abnormal": 0.0
+  },
+  {
+   "dir": "claude-opus-4-7_sierra_2026-05-05",
+   "domain": "banking_knowledge",
+   "file": "banking_knowledge_results.json",
+   "type": "standard",
+   "model": "Claude Opus 4.7",
+   "org": "Anthropic",
+   "how": "cached",
+   "bytes": 0,
+   "n_sims": 388,
+   "termination_reasons": {
+    "user_stop": 388
+   },
+   "n_excluded": 0,
+   "n_scored_abnormal": 0,
+   "n_correct": 156,
+   "n_reward_none": 0,
+   "n_window_class": 0,
+   "tax_excluded": 0.0,
+   "tax_any_abnormal": 0.0
+  },
+  {
+   "dir": "claude-opus-4-8_sierra_2026-08-04",
+   "domain": "banking_knowledge",
+   "file": "banking_knowledge_results.json",
+   "type": "standard",
+   "model": "Claude Opus 4.8",
+   "org": "Anthropic",
+   "how": "cached",
+   "bytes": 0,
+   "n_sims": 388,
+   "termination_reasons": {
+    "user_stop": 388
+   },
+   "n_excluded": 0,
+   "n_scored_abnormal": 0,
+   "n_correct": 154,
+   "n_reward_none": 0,
+   "n_window_class": 0,
+   "tax_excluded": 0.0,
+   "tax_any_abnormal": 0.0
+  },
+  {
+   "dir": "claude-opus-5_sierra_2026-08-04",
+   "domain": "banking_knowledge",
+   "file": "banking_knowledge_results.json",
+   "type": "standard",
+   "model": "Claude Opus 5",
+   "org": "Anthropic",
+   "how": "cached",
+   "bytes": 0,
+   "n_sims": 388,
+   "termination_reasons": {
+    "user_stop": 388
+   },
+   "n_excluded": 0,
+   "n_scored_abnormal": 0,
+   "n_correct": 189,
+   "n_reward_none": 0,
+   "n_window_class": 0,
+   "tax_excluded": 0.0,
+   "tax_any_abnormal": 0.0
+  },
+  {
+   "dir": "claude-sonnet-4-5_sierra_2026-02-26",
+   "domain": "telecom",
+   "file": "claude-sonnet-4-5_enabled_telecom_gpt-5.2_4trials.json",
+   "type": "standard",
+   "model": "Claude Sonnet 4.5",
+   "org": "Anthropic",
+   "how": "cached",
+   "bytes": 0,
+   "n_sims": 456,
+   "termination_reasons": {
+    "user_stop": 456
+   },
+   "n_excluded": 0,
+   "n_scored_abnormal": 0,
+   "n_correct": 387,
+   "n_reward_none": 0,
+   "n_window_class": 0,
+   "tax_excluded": 0.0,
+   "tax_any_abnormal": 0.0
+  },
+  {
+   "dir": "gemini-2-5-pro_sierra_2026-05-05",
+   "domain": "banking_knowledge",
+   "file": "gemini-2.5-pro_high_banking_knowledge_gpt-5.2_4trials.json",
+   "type": "standard",
+   "model": "Gemini 2.5 Pro",
+   "org": "Google",
+   "how": "cached",
+   "bytes": 0,
+   "n_sims": 388,
+   "termination_reasons": {
+    "user_stop": 383,
+    "max_steps": 1,
+    "infrastructure_error": 4
+   },
+   "n_excluded": 4,
+   "n_scored_abnormal": 1,
+   "n_correct": 49,
+   "n_reward_none": 4,
+   "n_window_class": 0,
+   "tax_excluded": 0.0103,
+   "tax_any_abnormal": 0.0129
+  },
+  {
+   "dir": "gemini-3-1-pro-preview_sierra_2026-05-05",
+   "domain": "banking_knowledge",
+   "file": "gemini-3.1-pro-preview_high_banking_knowledge_gpt-5.2_4trials.json",
+   "type": "standard",
+   "model": "Gemini 3.1 Pro Preview",
+   "org": "Google",
+   "how": "cached",
+   "bytes": 0,
+   "n_sims": 388,
+   "termination_reasons": {
+    "user_stop": 364,
+    "max_steps": 22,
+    "infrastructure_error": 2
+   },
+   "n_excluded": 2,
+   "n_scored_abnormal": 22,
+   "n_correct": 87,
+   "n_reward_none": 2,
+   "n_window_class": 0,
+   "tax_excluded": 0.0052,
+   "tax_any_abnormal": 0.0619
+  },
+  {
+   "dir": "gemini-3-flash_sierra_2026-03-02",
+   "domain": "telecom",
+   "file": "geminiflash-telecom.json",
+   "type": "standard",
+   "model": "Gemini 3 Flash",
+   "org": "Google",
+   "how": "cached",
+   "bytes": 0,
+   "n_sims": 456,
+   "termination_reasons": {
+    "user_stop": 436,
+    "too_many_errors": 20
+   },
+   "n_excluded": 0,
+   "n_scored_abnormal": 20,
+   "n_correct": 416,
+   "n_reward_none": 0,
+   "n_window_class": 0,
+   "tax_excluded": 0.0,
+   "tax_any_abnormal": 0.0439
+  },
+  {
+   "dir": "gemini-3-pro_sierra_2026-03-02",
+   "domain": "telecom",
+   "file": "geminipro-telecom.json",
+   "type": "standard",
+   "model": "Gemini 3 Pro",
+   "org": "Google",
+   "how": "cached",
+   "bytes": 0,
+   "n_sims": 456,
+   "termination_reasons": {
+    "user_stop": 454,
+    "infrastructure_error": 2
+   },
+   "n_excluded": 2,
+   "n_scored_abnormal": 0,
+   "n_correct": 415,
+   "n_reward_none": 2,
+   "n_window_class": 0,
+   "tax_excluded": 0.0044,
+   "tax_any_abnormal": 0.0044
+  },
+  {
+   "dir": "glm-5-2_sierra_2026-08-04",
+   "domain": "banking_knowledge",
+   "file": "banking_knowledge_results.json",
+   "type": "standard",
+   "model": "GLM-5.2",
+   "org": "Z.ai",
+   "how": "cached",
+   "bytes": 0,
+   "n_sims": 388,
+   "termination_reasons": {
+    "user_stop": 383,
+    "max_steps": 5
+   },
+   "n_excluded": 0,
+   "n_scored_abnormal": 5,
+   "n_correct": 144,
+   "n_reward_none": 0,
+   "n_window_class": 0,
+   "tax_excluded": 0.0,
+   "tax_any_abnormal": 0.0129
+  },
+  {
+   "dir": "glm-5-think_sierra_2026-03-02",
+   "domain": "telecom",
+   "file": "glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "type": "standard",
+   "model": "GLM-5",
+   "org": "Zhipu AI",
+   "how": "cached",
+   "bytes": 0,
+   "n_sims": 456,
+   "termination_reasons": {
+    "user_stop": 404,
+    "infrastructure_error": 52
+   },
+   "n_excluded": 52,
+   "n_scored_abnormal": 0,
+   "n_correct": 396,
+   "n_reward_none": 52,
+   "n_window_class": 0,
+   "tax_excluded": 0.114,
+   "tax_any_abnormal": 0.114
+  },
+  {
+   "dir": "gpt-5-2-none_sierra_2026-02-26",
+   "domain": "telecom",
+   "file": "gpt-5.2_none_telecom_gpt-5.2_4trials.json",
+   "type": "standard",
+   "model": "GPT-5.2",
+   "org": "OpenAI",
+   "how": "cached",
+   "bytes": 0,
+   "n_sims": 456,
+   "termination_reasons": {
+    "user_stop": 456
+   },
+   "n_excluded": 0,
+   "n_scored_abnormal": 0,
+   "n_correct": 281,
+   "n_reward_none": 0,
+   "n_window_class": 0,
+   "tax_excluded": 0.0,
+   "tax_any_abnormal": 0.0
+  },
+  {
+   "dir": "gpt-5-2_sierra_2026-02-26",
+   "domain": "telecom",
+   "file": "gpt-5.2_high_telecom_gpt-5.2_4trials.json",
+   "type": "standard",
+   "model": "GPT-5.2",
+   "org": "OpenAI",
+   "how": "cached",
+   "bytes": 0,
+   "n_sims": 456,
+   "termination_reasons": {
+    "user_stop": 456
+   },
+   "n_excluded": 0,
+   "n_scored_abnormal": 0,
+   "n_correct": 409,
+   "n_reward_none": 0,
+   "n_window_class": 0,
+   "tax_excluded": 0.0,
+   "tax_any_abnormal": 0.0
+  },
+  {
+   "dir": "gpt-5-4_sierra_2026-03-25",
+   "domain": "banking_knowledge",
+   "file": "gpt-5.4_xhigh_banking_knowledge_gpt-5.2_4trials.json",
+   "type": "standard",
+   "model": "GPT-5.4",
+   "org": "OpenAI",
+   "how": "cached",
+   "bytes": 0,
+   "n_sims": 388,
+   "termination_reasons": {
+    "user_stop": 388
+   },
+   "n_excluded": 0,
+   "n_scored_abnormal": 0,
+   "n_correct": 119,
+   "n_reward_none": 0,
+   "n_window_class": 0,
+   "tax_excluded": 0.0,
+   "tax_any_abnormal": 0.0
+  },
+  {
+   "dir": "gpt-5-5_sierra_2026-05-05",
+   "domain": "banking_knowledge",
+   "file": "banking_knowledge_results.json",
+   "type": "standard",
+   "model": "GPT-5.5",
+   "org": "OpenAI",
+   "how": "cached",
+   "bytes": 0,
+   "n_sims": 388,
+   "termination_reasons": {
+    "user_stop": 386,
+    "infrastructure_error": 2
+   },
+   "n_excluded": 2,
+   "n_scored_abnormal": 0,
+   "n_correct": 172,
+   "n_reward_none": 2,
+   "n_window_class": 0,
+   "tax_excluded": 0.0052,
+   "tax_any_abnormal": 0.0052
+  },
+  {
+   "dir": "gpt-5-6-sol_sierra_2026-08-04",
+   "domain": "banking_knowledge",
+   "file": "banking_knowledge_results.json",
+   "type": "standard",
+   "model": "GPT-5.6-sol",
+   "org": "OpenAI",
+   "how": "cached",
+   "bytes": 0,
+   "n_sims": 388,
+   "termination_reasons": {
+    "user_stop": 347,
+    "infrastructure_error": 41
+   },
+   "n_excluded": 41,
+   "n_scored_abnormal": 0,
+   "n_correct": 165,
+   "n_reward_none": 41,
+   "n_window_class": 0,
+   "tax_excluded": 0.1057,
+   "tax_any_abnormal": 0.1057
+  },
+  {
+   "dir": "grok-4-1-fast_sierra_2026-05-05",
+   "domain": "banking_knowledge",
+   "file": "grok-4-1-fast_high_banking_knowledge_gpt-5.2_4trials.json",
+   "type": "standard",
+   "model": "Grok 4.1 fast",
+   "org": "xAI",
+   "how": "cached",
+   "bytes": 0,
+   "n_sims": 388,
+   "termination_reasons": {
+    "user_stop": 387,
+    "infrastructure_error": 1
+   },
+   "n_excluded": 1,
+   "n_scored_abnormal": 0,
+   "n_correct": 48,
+   "n_reward_none": 1,
+   "n_window_class": 0,
+   "tax_excluded": 0.0026,
+   "tax_any_abnormal": 0.0026
+  },
+  {
+   "dir": "grok-4-2_sierra_2026-05-05",
+   "domain": "banking_knowledge",
+   "file": "grok-4-2_high_banking_knowledge_gpt-5.2_4trials.json",
+   "type": "standard",
+   "model": "Grok 4.2",
+   "org": "xAI",
+   "how": "cached",
+   "bytes": 0,
+   "n_sims": 388,
+   "termination_reasons": {
+    "user_stop": 387,
+    "infrastructure_error": 1
+   },
+   "n_excluded": 1,
+   "n_scored_abnormal": 0,
+   "n_correct": 68,
+   "n_reward_none": 1,
+   "n_window_class": 0,
+   "tax_excluded": 0.0026,
+   "tax_any_abnormal": 0.0026
+  },
+  {
+   "dir": "grok-4-5_sierra_2026-08-04",
+   "domain": "banking_knowledge",
+   "file": "banking_knowledge_results.json",
+   "type": "standard",
+   "model": "Grok 4.5",
+   "org": "xAI",
+   "how": "cached",
+   "bytes": 0,
+   "n_sims": 388,
+   "termination_reasons": {
+    "user_stop": 388
+   },
+   "n_excluded": 0,
+   "n_scored_abnormal": 0,
+   "n_correct": 186,
+   "n_reward_none": 0,
+   "n_window_class": 0,
+   "tax_excluded": 0.0,
+   "tax_any_abnormal": 0.0
+  },
+  {
+   "dir": "grok-4-fast_sierra_2026-05-05",
+   "domain": "banking_knowledge",
+   "file": "grok-4-fast_high_banking_knowledge_gpt-5.2_4trials.json",
+   "type": "standard",
+   "model": "Grok 4 fast",
+   "org": "xAI",
+   "how": "cached",
+   "bytes": 0,
+   "n_sims": 388,
+   "termination_reasons": {
+    "user_stop": 388
+   },
+   "n_excluded": 0,
+   "n_scored_abnormal": 0,
+   "n_correct": 55,
+   "n_reward_none": 0,
+   "n_window_class": 0,
+   "tax_excluded": 0.0,
+   "tax_any_abnormal": 0.0
+  },
+  {
+   "dir": "inkling_sierra_2026-08-04",
+   "domain": "banking_knowledge",
+   "file": "banking_knowledge_results.json",
+   "type": "standard",
+   "model": "Inkling",
+   "org": "Thinking Machines Lab",
+   "how": "cached",
+   "bytes": 0,
+   "n_sims": 388,
+   "termination_reasons": {
+    "user_stop": 388
+   },
+   "n_excluded": 0,
+   "n_scored_abnormal": 0,
+   "n_correct": 97,
+   "n_reward_none": 0,
+   "n_window_class": 0,
+   "tax_excluded": 0.0,
+   "tax_any_abnormal": 0.0
+  },
+  {
+   "dir": "kimi-k3_sierra_2026-08-04",
+   "domain": "banking_knowledge",
+   "file": "banking_knowledge_results.json",
+   "type": "standard",
+   "model": "Kimi K3",
+   "org": "Moonshot AI",
+   "how": "cached",
+   "bytes": 0,
+   "n_sims": 388,
+   "termination_reasons": {
+    "user_stop": 388
+   },
+   "n_excluded": 0,
+   "n_scored_abnormal": 0,
+   "n_correct": 144,
+   "n_reward_none": 0,
+   "n_window_class": 0,
+   "tax_excluded": 0.0,
+   "tax_any_abnormal": 0.0
+  },
+  {
+   "dir": "muse-spark-1-1_sierra_2026-08-04",
+   "domain": "banking_knowledge",
+   "file": "banking_knowledge_results.json",
+   "type": "standard",
+   "model": "Muse Spark 1.1",
+   "org": "Meta",
+   "how": "cached",
+   "bytes": 0,
+   "n_sims": 388,
+   "termination_reasons": {
+    "user_stop": 387,
+    "max_steps": 1
+   },
+   "n_excluded": 0,
+   "n_scored_abnormal": 1,
+   "n_correct": 157,
+   "n_reward_none": 0,
+   "n_window_class": 0,
+   "tax_excluded": 0.0,
+   "tax_any_abnormal": 0.0026
+  },
+  {
+   "dir": "qwen3-8-max_sierra_2026-08-04",
+   "domain": "banking_knowledge",
+   "file": "banking_knowledge_results.json",
+   "type": "standard",
+   "model": "Qwen 3.8 Max",
+   "org": "Qwen",
+   "how": "cached",
+   "bytes": 0,
+   "n_sims": 388,
+   "termination_reasons": {
+    "user_stop": 388
+   },
+   "n_excluded": 0,
+   "n_scored_abnormal": 0,
+   "n_correct": 214,
+   "n_reward_none": 0,
+   "n_window_class": 0,
+   "tax_excluded": 0.0,
+   "tax_any_abnormal": 0.0
+  },
+  {
+   "dir": "qwen3-max_qwen_2025-10-30",
+   "domain": "telecom",
+   "file": "telecom_llm_agent_qwen3-max-2025-10-30_user_simulator_gpt-4.1-2025-04-14.json",
+   "type": "standard",
+   "model": "Qwen3-Max-Thinking-Preview",
+   "org": "Qwen",
+   "how": "cached",
+   "bytes": 0,
+   "n_sims": 456,
+   "termination_reasons": {
+    "user_stop": 456
+   },
+   "n_excluded": 0,
+   "n_scored_abnormal": 0,
+   "n_correct": 437,
+   "n_reward_none": 0,
+   "n_window_class": 0,
+   "tax_excluded": 0.0,
+   "tax_any_abnormal": 0.0
+  },
+  {
+   "dir": "qwen3.5-397b-a17b-think_sierra_2026-03-02",
+   "domain": "telecom",
+   "file": "qwen3.5-397b-a17b_enabled_telecom_gpt-5.2_4trials.json",
+   "type": "standard",
+   "model": "Qwen3.5-397B-A17B",
+   "org": "Alibaba Cloud",
+   "how": "cached",
+   "bytes": 0,
+   "n_sims": 456,
+   "termination_reasons": {
+    "user_stop": 456
+   },
+   "n_excluded": 0,
+   "n_scored_abnormal": 0,
+   "n_correct": 446,
+   "n_reward_none": 0,
+   "n_window_class": 0,
+   "tax_excluded": 0.0,
+   "tax_any_abnormal": 0.0
+  }
+ ]
+}
