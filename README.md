@@ -1,5 +1,8 @@
 # reachability-audit v1 — 可达性税审计仪器
 
+[![instrument-ci](https://github.com/luohaiJack/reachability-audit/actions/workflows/ci.yml/badge.svg)](https://github.com/luohaiJack/reachability-audit/actions/workflows/ci.yml)
+　**CI 在 GitHub 的干净机器上跑**：10 臂复现 ＋ known-answer 控制 ＋ 6 例故障注入 ＋ 检测器自检 ＋ 探针离线复算 ＋ 决策边界。**首跑 success**（2026-10-15T14:18:49Z）。
+
 一个**零依赖**（只用 Python 标准库）的审计脚本：给它一个 BFCL 风格的
 结果目录，它产出**一份标准化报告**，报告里把"官方分数"拆成
 **① 执行且正确 / ② 执行但 harness 失败 / ③ 从未执行** 三桶，
@@ -108,7 +111,7 @@ python3 reproduce.py --workspace <工作区根>     # 若你有原作者的完�
 | **报文检测器自检** | `python3 tools/report_forensics.py selftest` | 三条真实报文 → constructed / non_tautological / absent |
 | **探针离线复算** | `python3 tools/report_forensics.py probe --replay inputs/m1_probe_fixture.json` | `measured` **不需要活体服务**也能复现 |
 | **决策边界** | `DSH_AUDIT_ROOT=/tmp/x python3 tools/audit_power.py` | 用随包 `inputs/` 离线复算 |
-| **CI** | `.github/workflows/ci.yml` | 以上全部在每次 push 时跑 |
+| **CI** | `.github/workflows/ci.yml`（**已启用，首跑 success**）| 以上全部在 GitHub 的干净机器上每次 push 自动跑 |
 
 ★ 故障注入本身**发现并修好了一个真缺口**：`G3` 原本只查"被拒报文的 `out+in` 取值是否唯一"
 （能抓混臂，抓不到"所有报文一致地偏离恒等式"）；现改为**再用报文里的窗口值逐条核 `in+out==W+1`**。
