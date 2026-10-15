@@ -72,11 +72,24 @@ python3 bfcl_tax_report.py results/bfcl/law_*_v1 --markdown --out audit_all.json
   非 BFCL 风格的目录布局（需要改 `load_rows` / `load_score` 两个函数，
   见 `SCHEMA.md` §移植）。
 
-## 复现论文数字
+## 复现论文数字（第三方最短路径）
 
 ```bash
-python3 reproduce.py --workspace <工作区根>     # 需要论文的 results/ 目录在场
+python3 reproduce.py            # 只用随包切片 slices/，不需要任何外部数据
+python3 reproduce.py --workspace <工作区根>     # 若你有原作者的完整 results/ 树
 ```
+
+`slices/` 收录了 `expected_reports.json` 里 **10 条臂**的**输入切片**
+（每臂的 `*_result.json` 与 `official_score.jsonl`，共约 **40 MB**），
+所以拿到包就能跑，**不需要 8 GB 的原始数据树**。
+
+预期输出（2026-10-15 本地实测，在**全新复制的目录**里）：
+
+```
+10 臂重跑（工作区 0 / 随包切片 10），差异 0 处
+```
+
+运行时会先把被审计目录复制到临时目录，**不会改动本包**。
 
 `reproduce.py` 对 `expected_reports.json` 里列出的 **10 条臂**重跑仪器，
 并逐字段比对（三桶、三个准确率、税损失 pp）。预期：

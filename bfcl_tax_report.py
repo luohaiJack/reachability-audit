@@ -140,8 +140,12 @@ def report_dir(d):
     return {
         "schema": "bfcl_tax_report_v1",
         "dir": str(d.relative_to(ROOT)) if str(d).startswith(str(ROOT)) else str(d),
-        "result_files": [str(f.relative_to(ROOT)) for f in files],
-        "score_file": str(score_f.relative_to(ROOT)) if score_f else None,
+        # 2026-10-15：被审计目录在工作区之外时（第三方拿包直接跑）不得抛 ValueError
+        "result_files": [str(f.relative_to(ROOT)) if str(f).startswith(str(ROOT)) else str(f)
+                         for f in files],
+        "score_file": (str(score_f.relative_to(ROOT))
+                       if score_f and str(score_f).startswith(str(ROOT)) else
+                       (str(score_f) if score_f else None)),
         "n_total": len(all_ids),
         "buckets": {
             "b1_executed_correct": len(correct),
