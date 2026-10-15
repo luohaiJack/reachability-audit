@@ -80,10 +80,16 @@ def fetch(decl, budget):
     code_size = (r.stdout or "").split()
     code = code_size[0] if code_size else "000"
     size = int(code_size[1]) if len(code_size) > 1 else 0
-    if code != "200" or size == 0:
+    # S3 对"缺 key"会返回 **200 + 一小段 NoSuchKey XML**（实测 393 B），
+    # 只看状态码会把它当成下载成功，随后在解析阶段报 JSONDecodeError（2026-10-15 修正）。
+    body_head = ""
+    if local.exists():
+        body_head = local.read_bytes()[:200].decode("utf-8", "replace")
+    missing_key = "<Code>NoSuchKey</Code>" in body_head or body_head.lstrip().startswith("<?xml")
+    if code != "200" or size == 0 or missing_key:
         if local.exists():
             local.unlink()
-        return None, f"http_{code}", 0
+        return None, ("no_such_key" if missing_key else f"http_{code}"), 0
     budget[0] -= size
     return local, "fetched", size
 
