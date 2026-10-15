@@ -119,6 +119,12 @@ def parse(path: pathlib.Path):
 
 def main() -> int:
     no_fetch = "--no-fetch" in sys.argv
+    if not SUBS.is_dir():
+        print("⛔ 找不到 τ² 官方榜检出：" + str(SUBS), file=sys.stderr)
+        print("   本脚本需要该仓库的 submissions/ 目录（MIT）。", file=sys.stderr)
+        print("   获取：git clone https://github.com/sierra-research/tau2-bench", file=sys.stderr)
+        print("   或用 DSH_AUDIT_ROOT 指向含该路径的数据树根。", file=sys.stderr)
+        return 1
     decls = declarations()
     print(f"声明轨迹的提交（去模板）: {len(decls)}")
     budget = [0 if no_fetch else BUDGET_BYTES]

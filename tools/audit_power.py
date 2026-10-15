@@ -61,9 +61,9 @@ def check(tau_a: float, tau_b: float, gap_pp: float) -> int:
 def main() -> int:
     import argparse as _ap
     import sys as _sys
-    _p = _ap.ArgumentParser(add_help=False)
-    _p.add_argument("--check", nargs=3, type=float, metavar=("TAU_A", "TAU_B", "GAP_PP"))
-    _a, _ = _p.parse_known_args()
+    _apx = _ap.ArgumentParser(add_help=False)
+    _apx.add_argument("--check", nargs=3, type=float, metavar=("TAU_A", "TAU_B", "GAP_PP"))
+    _a, _ = _apx.parse_known_args()
     if _a.check:
         return check(*_a.check)
     # 1) 边界表
@@ -116,6 +116,8 @@ def main() -> int:
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / "boundary.json").write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
 
+    _src = "set" if os.environ.get("DSH_AUDIT_ROOT") else "unset"
+    print(f"[审计根] {ROOT}  (DSH_AUDIT_ROOT={_src})")
     print("τ_A → Δ_max(pp)（τ_B=0）:")
     for t in table:
         print(f"  {t['tau_a']:.3f} → {t['dmax_pp']:6.2f}")

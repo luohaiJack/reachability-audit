@@ -44,6 +44,7 @@ def classify(text: str) -> dict:
     """输入报文（任意格式的字符串），输出判定。"""
     out = {"verdict": "absent", "W": None, "out": None, "in": None, "pattern": None,
            "evidence": []}
+    DOCUMENTED = {"constructed", "non_tautological", "absent"}
     for rx, name in PATTERNS:
         m = rx.search(text)
         if not m:
@@ -53,7 +54,7 @@ def classify(text: str) -> dict:
             out.update(W=W, out=o, in_=i, pattern=name)
             out["in"] = i
             out["evidence"].append(f"W={W} out={o} in={i} out+in={o+i} (W+1={W+1})")
-            out["verdict"] = "constructed" if o + i == W + 1 else "independent"
+            out["verdict"] = "constructed" if o + i == W + 1 else "non_tautological"
             return out
         if name == "ollama_req":
             n, W = int(m.group(1)), int(m.group(2))
@@ -69,6 +70,15 @@ def classify(text: str) -> dict:
             out["evidence"].append(f"ctx={m.group(1)}")
             return out
     return out
+
+
+DOCUMENTED_VERDICTS = {"constructed", "non_tautological", "absent"}
+
+
+def _assert_documented(v: dict) -> dict:
+    if v["verdict"] not in DOCUMENTED_VERDICTS:      # 词表守卫（2026-10-15）
+        raise AssertionError(f"未文档化的 verdict {v['verdict']!r}")
+    return v
 
 
 def _post(base: str, model: str, prompt: str, max_tokens: int, timeout: int = 180):
@@ -162,7 +172,7 @@ def main() -> int:
         return 1 if bad else 0
     if a.cmd == "classify":
         txt = a.text or pathlib.Path(a.file).read_text(errors="replace")
-        print(json.dumps(classify(txt), ensure_ascii=False, indent=1))
+        print(json.dumps(_assert_documented(classify(txt)), ensure_ascii=False, indent=1))
         return 0
     stacks = []
     for s in a.stack:
