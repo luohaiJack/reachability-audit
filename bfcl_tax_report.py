@@ -20,6 +20,8 @@ import argparse, collections, json, pathlib, re, sys
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 # 判定"未执行"的两种独立证据：结果文件里的错误串 / 官方 score 里的 error_type
 BOUNDARY_RE = re.compile(r"requested (\d+) output tokens and your prompt contains at least (\d+) input tokens")
+# 2026-10-15（故障注入 F4 发现）：G3 原本只查"取值是否唯一"，"所有报文一致地偏离恒等式"抓不到 ⇒ 再抓一次窗口值，能抓到就核 in+out==W+1。
+WINDOW_RE = re.compile(r"maximum context length is (\d+) tokens", re.I)
 INFERENCE_ERR = "multi_turn:inference_error"
 
 
@@ -97,11 +99,12 @@ def report_dir(d):
     ids = [t for t, _ in rows]
     all_ids = set(ids)
     # 边界报文（未执行的第一手证据）
-    bt = []
+    bt, ws_seen = [], set()
     for _, r in rows:
         res = r.get("result")
         if isinstance(res, str):
             bt += [(int(a), int(b)) for a, b in BOUNDARY_RE.findall(res)]
+            ws_seen |= {int(x) for x in WINDOW_RE.findall(res)}
     ins = sorted({b for _, b in bt})
     outs_inv = sorted({a + b for a, b in bt})
     # 三桶
@@ -131,7 +134,9 @@ def report_dir(d):
         "G1_rows_present": len(rows) > 0,
         "G1_rows_count": len(rows),
         "G2_done_marker": dm is True or dm is None or bool(dm),  # None=不适用（无日志），不算否证
-        "G3_boundary_invariant_single": len(outs_inv) <= 1,
+        # 唯一性（同配置）＋ 若报文可解析出 W：逐条核 in+out == W+1
+        "G3_boundary_invariant_single": len(outs_inv) <= 1 and (
+            not ws_seen or all((o + i) == (w + 1) for o, i in bt for w in ws_seen)),
         "G4_score_matches_rows": (acc is None or acc_from_rows is None or abs(acc - acc_from_rows) < 1e-9),
         "G5_bucket_partition": len(never & harness) == 0 and (not score or len(correct) + len(never) + len(harness) == len(all_ids)),
         "G6_no_orphan_score_ids": (not score or set(score) <= all_ids),

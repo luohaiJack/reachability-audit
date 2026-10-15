@@ -108,6 +108,14 @@ def probe(stacks: list[dict], out_path: pathlib.Path) -> dict:
                 c = classify(body)
                 rec["cells"].append({"prompt": pname, "max_tokens": mt, "http": code,
                                      "body": body[:400], **c})
+        _finish(rec, prompts)
+        res["stacks"].append(rec)
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    out_path.write_text(json.dumps(res, ensure_ascii=False, indent=1), encoding="utf-8")
+    return res
+
+
+def _finish(rec: dict, prompts: dict) -> dict:
         # 判定：同一提示下 in 是否随 max_tokens 变
         for pname in prompts:
             cells = [c for c in rec["cells"] if c["prompt"] == pname and c["in"] is not None]
@@ -135,10 +143,7 @@ def probe(stacks: list[dict], out_path: pathlib.Path) -> dict:
         else:
             rec["verdict"] = "unclear"
         rec["in_varies_with_prompt"] = varied_with_prompt
-        res["stacks"].append(rec)
-    out_path.parent.mkdir(parents=True, exist_ok=True)
-    out_path.write_text(json.dumps(res, ensure_ascii=False, indent=1), encoding="utf-8")
-    return res
+        return rec
 
 
 def main() -> int:
@@ -150,6 +155,8 @@ def main() -> int:
     st = sub.add_parser("selftest")
     p = sub.add_parser("probe")
     p.add_argument("--out", default=str(ROOT / "results" / "m1_probe_v1" / "probe.json"))
+    p.add_argument("--replay", default=None,
+                   help="离线复算：读已冻结的 probe fixture，重算各栈 verdict（无需活体栈）")
     p.add_argument("--stack", action="append", default=[],
                    help="name=base|model，可重复")
     a = ap.parse_args()
@@ -174,6 +181,20 @@ def main() -> int:
         txt = a.text or pathlib.Path(a.file).read_text(errors="replace")
         print(json.dumps(_assert_documented(classify(txt)), ensure_ascii=False, indent=1))
         return 0
+    if a.replay:
+        fx = json.loads(pathlib.Path(a.replay).read_text(encoding="utf-8"))
+        prompts = {"p3000": "hello " * 3000, "p9000": "hello " * 9000}
+        bad = 0
+        for st in fx["stacks"]:
+            rec = {"name": st["name"], "base": st.get("base"), "model": st.get("model"),
+                   "cells": [dict(c, **classify(c.get("body") or "")) for c in st["cells"]]}
+            _finish(rec, prompts)
+            ok = rec["verdict"] == st.get("verdict")
+            bad += 0 if ok else 1
+            print(f"[{'OK  ' if ok else 'FAIL'}] {st['name']:10s} live={st.get('verdict')} "
+                  f"replay={rec['verdict']}")
+        print("replay", "PASS" if not bad else f"FAIL ({bad})")
+        return 1 if bad else 0
     stacks = []
     for s in a.stack:
         nm, rest = s.split("=", 1)

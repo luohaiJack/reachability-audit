@@ -99,6 +99,21 @@ python3 reproduce.py --workspace <工作区根>     # 若你有原作者的完�
       中位 8.75，非零 5 条
 ```
 
+## 仪器的有效性证据（不是"自洽"）
+
+| 手段 | 命令 | 证明什么 |
+|---|---|---|
+| **known-answer 控制** | `python3 bfcl_tax_report.py --selftest` | 植入已知三桶（含"被叫停但达标"的第四格），断言逐字段一致 |
+| **故障注入 6 例** | `python3 fault_inject.py` | 每个已知破坏都被**指定的门禁**抓到（rc=2 且失败门禁名恰为预期集）|
+| **报文检测器自检** | `python3 tools/report_forensics.py selftest` | 三条真实报文 → constructed / non_tautological / absent |
+| **探针离线复算** | `python3 tools/report_forensics.py probe --replay inputs/m1_probe_fixture.json` | `measured` **不需要活体服务**也能复现 |
+| **决策边界** | `DSH_AUDIT_ROOT=/tmp/x python3 tools/audit_power.py` | 用随包 `inputs/` 离线复算 |
+| **CI** | `.github/workflows/ci.yml` | 以上全部在每次 push 时跑 |
+
+★ 故障注入本身**发现并修好了一个真缺口**：`G3` 原本只查"被拒报文的 `out+in` 取值是否唯一"
+（能抓混臂，抓不到"所有报文一致地偏离恒等式"）；现改为**再用报文里的窗口值逐条核 `in+out==W+1`**。
+—— 这就是"有效性证据"与"自洽复现"的区别。
+
 ## 许可
 
 **MIT** —— 见 [`LICENSE`](LICENSE)。
