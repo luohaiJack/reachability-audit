@@ -1,0 +1,22 @@
+name: instrument-ci
+on: [push, pull_request]
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: 复现 10 条臂（随包切片，无外部数据）
+        run: python3 reproduce.py
+      - name: known-answer 控制（三桶与第四格）
+        run: python3 bfcl_tax_report.py --selftest
+      - name: 故障注入（6 个已知破坏，断言失败门禁名）
+        run: python3 fault_inject.py
+      - name: 报文字段检测器自检
+        run: python3 tools/report_forensics.py selftest
+      - name: 探针离线复算（measured 可离线验证）
+        run: python3 tools/report_forensics.py probe --replay inputs/m1_probe_fixture.json
+      - name: 决策边界（离线 inputs/）
+        run: DSH_AUDIT_ROOT=/tmp/ci python3 tools/audit_power.py
