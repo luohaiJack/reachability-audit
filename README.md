@@ -88,8 +88,15 @@ python3 reproduce.py --workspace <工作区根>     # 需要论文的 results/ �
 
 ## 许可
 
-代码：建议 MIT。派生报告与数据：建议 CC BY 4.0。
-**（作者需最终确认后写入本行；本副本暂标 `TBD`。）**
+| 内容 | 许可 | 文件 |
+|---|---|---|
+| 代码（`*.py`、`reproduce.py`、`tools/`、`ports/`） | **MIT** | [`LICENSE`](LICENSE) |
+| 报告与派生数据（`reports/`、`expected_reports.json`、`examples/`） | **CC BY 4.0** | [`LICENSE-DATA`](LICENSE-DATA) |
+
+被审计的**第三方**产物（BFCL / τ²-bench / ToolSandbox 的原始轨迹）**不随本库分发**，
+其权利归各自发布方，引用时请遵循其原始许可。
+
+引用本仓库请用 `CITATION.cff`（若有）或论文条目；`reports/` 里的每个数字都可追到论文的对应小节。
 
 ## 一个已完成的移植样例：τ²-bench
 

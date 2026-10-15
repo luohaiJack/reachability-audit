@@ -22,7 +22,7 @@
 
 ## 仍需人工完成的两件
 
-1. **许可**：`README.md` 末行仍是 `TBD`（建议 代码 MIT / 数据 CC BY 4.0），
+1. ~~**许可**~~ **已完成（2026-10-15）**：`LICENSE`（MIT，Hai Luo and He Wang）＋ `LICENSE-DATA`（CC BY 4.0 全文）。
    确认后写入即可。
 2. **DOI**：Zenodo → Settings → GitHub → 打开 `reachability-audit` 开关 →
    在 GitHub 建一个 **Release**（本仓库已有 token 可建）→ Zenodo 自动归档并发 DOI →
