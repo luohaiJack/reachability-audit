@@ -93,6 +93,22 @@ def done_marker(d):
     return False if found_log else None
 
 
+def _empty_result_files(d) -> list:
+    """结果文件**存在但 0 行**（0 字节或被清空）⇒ 破损件，不是"没跑"。
+
+    与"根本没有结果文件"不同：后者是"这个目录不是一条臂"（判词/图/台账），可以跳过；
+    前者是**被清空/截断的产物**，必须判失败（夜间值守事故 F6 的直接教训）。
+    """
+    out = []
+    for f in pathlib.Path(d).rglob("*_result.json"):
+        try:
+            if not [ln for ln in f.read_text(errors="replace").splitlines() if ln.strip()]:
+                out.append(str(f.relative_to(pathlib.Path(d))))
+        except OSError:
+            out.append(str(f))
+    return out
+
+
 def report_dir(d):
     rows, files = load_rows(d)
     score, head, score_f = load_score(d)
@@ -135,6 +151,7 @@ def report_dir(d):
         "G1_rows_count": len(rows),
         "G2_done_marker": dm is True or dm is None or bool(dm),  # None=不适用（无日志），不算否证
         # 唯一性（同配置）＋ 若报文可解析出 W：逐条核 in+out == W+1
+        "G1b_result_files_not_empty": not _empty_result_files(d),
         "G3_boundary_invariant_single": len(outs_inv) <= 1 and (
             not ws_seen or all((o + i) == (w + 1) for o, i in bt for w in ws_seen)),
         "G4_score_matches_rows": (acc is None or acc_from_rows is None or abs(acc - acc_from_rows) < 1e-9),
@@ -268,7 +285,9 @@ def main():
     reports, skipped = [], []
     for d in dirs:
         r = report_dir(d)
-        if r["n_total"] == 0:            # 无原始结果的目录（判词/图/台账）⇒ 跳过，不算门禁失败
+        if r["n_total"] == 0 and not _empty_result_files(r["dir"]):
+            # **没有**原始结果的目录（判词/图/台账）⇒ 跳过，不算门禁失败；
+            # 但"结果文件存在却被清空"**不跳过** ⇒ 由 G1b 判失败（F6 用例）
             skipped.append(r["dir"])
             continue
         reports.append(r)

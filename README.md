@@ -107,11 +107,15 @@ python3 reproduce.py --workspace <工作区根>     # 若你有原作者的完�
 | 手段 | 命令 | 证明什么 |
 |---|---|---|
 | **known-answer 控制** | `python3 bfcl_tax_report.py --selftest` | 植入已知三桶（含"被叫停但达标"的第四格），断言逐字段一致 |
-| **故障注入 6 例** | `python3 fault_inject.py` | 每个已知破坏都被**指定的门禁**抓到（rc=2 且失败门禁名恰为预期集）|
+| **故障注入 8 例** | `python3 fault_inject.py` | **1 例空对照 ＋ 6 例已知破坏 ＋ 1 例有意降级**：每个破坏都被**指定的门禁**抓到（rc=2 且失败门禁名恰为预期集），缺 `official_score` 时**明示**为降级而非漏网 |
 | **报文检测器自检** | `python3 tools/report_forensics.py selftest` | 三条真实报文 → constructed / non_tautological / absent |
 | **探针离线复算** | `python3 tools/report_forensics.py probe --replay inputs/m1_probe_fixture.json` | `measured` **不需要活体服务**也能复现 |
 | **决策边界** | `DSH_AUDIT_ROOT=/tmp/x python3 tools/audit_power.py` | 用随包 `inputs/` 离线复算 |
 | **CI** | `.github/workflows/ci.yml`（**已启用，首跑 success**）| 以上全部在 GitHub 的干净机器上每次 push 自动跑 |
+
+★ **决策规则一行判定**：`python3 tools/audit_power.py --check <τ_A> <τ_B> <观测差pp>` → 打印许可/不许可，退出码 **0=许可 / 3=不许可**。
+
+★ 故障注入本身**发现并修好了两个真缺口**：其一见下（G3）；其二 **F6**——结果文件被清空原先被当作「无原始结果 ⇒ 跳过」而放行，现新增门禁 **G1b**（结果文件存在但 0 行 ⇒ 判失败）。
 
 ★ 故障注入本身**发现并修好了一个真缺口**：`G3` 原本只查"被拒报文的 `out+in` 取值是否唯一"
 （能抓混臂，抓不到"所有报文一致地偏离恒等式"）；现改为**再用报文里的窗口值逐条核 `in+out==W+1`**。

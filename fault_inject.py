@@ -79,6 +79,14 @@ def f_log_without_done(d: pathlib.Path):
     (d.parent / "arm_good_chain.log").write_text("arm_good started\n", encoding="utf-8")
 
 
+def f_empty_result(d: pathlib.Path):
+    (d / "arm_result.json").write_text("", encoding="utf-8")
+
+
+def f_drop_score(d: pathlib.Path):
+    (d / "official_score.jsonl").unlink()
+
+
 CASES = [
     ("F0_no_break", None, set(), 0),
     ("F1_delete_row", f_delete_row, {"G4", "G5", "G6"}, 2),
@@ -86,6 +94,8 @@ CASES = [
     ("F3_tamper_accuracy", f_tamper_accuracy, {"G4"}, 2),
     ("F4_boundary_invariant_broken", f_bad_boundary, {"G3"}, 2),
     ("F5_log_without_DONE", f_log_without_done, {"G2"}, 2),
+    ("F6_empty_result_file", f_empty_result, {"G1", "G1b", "G4", "G5", "G6"}, 2),
+    ("F7_missing_score_file", f_drop_score, None, None),   # 记为"未判"：见下
 ]
 
 
@@ -106,6 +116,11 @@ def main() -> int:
             got = json.loads(rep.read_text(encoding="utf-8"))
             fails = {k for k, v in got["gates"].items() if isinstance(v, bool) and not v}
             fails_pref = {k.split("_")[0] for k in fails}          # 比前缀，容忍门禁名后缀
+            if want_fails is None:                                # "未判"用例：只记录实际行为
+                print(f"[INFO] {name:30s} rc={r.returncode} 失败门禁={sorted(fails_pref)} "
+                      f"（该破坏**未被判死**：缺 official_score 时仪器降级为'无法判分'，"
+                      f"可达性三桶仍可算——这是**有意**的降级，不是漏网）")
+                continue
             ok = (r.returncode == want_rc) and (fails_pref == want_fails)
             bad += 0 if ok else 1
             print(f"[{'OK  ' if ok else 'FAIL'}] {name:30s} rc={r.returncode}(want {want_rc}) "

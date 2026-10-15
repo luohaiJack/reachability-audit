@@ -12,7 +12,7 @@ jobs:
         run: python3 reproduce.py
       - name: known-answer 控制（三桶与第四格）
         run: python3 bfcl_tax_report.py --selftest
-      - name: 故障注入（6 个已知破坏，断言失败门禁名）
+      - name: 故障注入（1 空对照 ＋ 6 已知破坏 ＋ 1 有意降级）
         run: python3 fault_inject.py
       - name: 报文字段检测器自检
         run: python3 tools/report_forensics.py selftest
