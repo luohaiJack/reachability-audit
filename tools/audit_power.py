@@ -24,7 +24,24 @@ import json
 import pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
+import os
+ROOT = pathlib.Path(os.environ.get("DSH_AUDIT_ROOT") or ROOT).resolve()
 OUT = ROOT / "results" / "audit_power_v1"
+HERE = pathlib.Path(__file__).resolve().parent
+
+
+def _p(rel: str) -> pathlib.Path:
+    """先在工作区找，找不到就用随包切片 inputs/（第三方离线可跑）。"""
+    a = ROOT / rel
+    if a.exists():
+        return a
+    b = HERE / "inputs" / pathlib.Path(rel).name
+    if b.exists():
+        return b
+    for c in (HERE.parent / "inputs" / pathlib.Path(rel).name,):
+        if c.exists():
+            return c
+    return a
 
 
 def dmax_pp(tau_a: float, tau_b: float) -> float:
@@ -37,7 +54,7 @@ def main() -> int:
     table = [{"tau_a": a, "tau_b": 0.0, "dmax_pp": dmax_pp(a, 0.0)} for a in taus]
 
     # 2) 用我们自己的臂校准：上界必须覆盖实测位移
-    rows = json.loads((ROOT / "results" / "bfcl" / "tax_report_all.json").read_text(encoding="utf-8"))
+    rows = json.loads(_p("results/bfcl/tax_report_all.json").read_text(encoding="utf-8"))
     cal = []
     for r in rows:
         rt, b = r.get("rates", {}), r.get("buckets", {})
@@ -51,7 +68,7 @@ def main() -> int:
                     "within_bound": abs(obs) <= dmax_pp(tau, 0.0) + 1e-9})
 
     # 3) 田野校准
-    fs = json.loads((ROOT / "results" / "bfcl" / "field_scan_v1" / "field_scan.json")
+    fs = json.loads(_p("results/bfcl/field_scan_v1/field_scan.json")
                     .read_text(encoding="utf-8"))
     fd = []
     for r in fs["rows"]:
@@ -85,8 +102,9 @@ def main() -> int:
     print("τ_A → Δ_max(pp)（τ_B=0）:")
     for t in table:
         print(f"  {t['tau_a']:.3f} → {t['dmax_pp']:6.2f}")
-    print(f"\n自臂 {len(cal)} 条：全部落在界内 = {out['checks']['own_arms_all_within']}；"
-          f"最大实测位移 = {out['checks']['own_arm_max_observed']}pp "
+    print("\n注：单臂位移 ≤ 自身税是恒等式（由 tax_cost_pp 的定义直接得出），"
+          "故『自臂全部落在界内』不构成校准；有信息量的是田野那一列与比值。")
+    print(f"自臂 {len(cal)} 条：最大实测位移 = {out['checks']['own_arm_max_observed']}pp "
           f"（该臂上界 {out['checks']['own_arm_bound_at_that_tau']}pp）")
     print(f"田野 {len(fd)} 条：全部落在界内 = {out['checks']['field_all_within']}")
     print("wrote", (OUT / "boundary.json").relative_to(ROOT))

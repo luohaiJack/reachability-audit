@@ -131,11 +131,26 @@ python3 reproduce.py --workspace <工作区根>     # 若你有原作者的完�
 
 | 脚本 | 作用 | 论文位置 |
 |---|---|---|
-| `tools/report_forensics.py` | **报文字段取证**：喂一条 400 报文，判它的"输入长度"是 **constructed / measured / absent**；`probe` 子命令跑"同提示 × 不同额度"的矩阵 | §5.5 |
+| `tools/report_forensics.py` | **报文字段取证**。两套词表：`classify`（单条报文）→ **constructed / non_tautological / absent**；`probe`（同提示 × 不同额度矩阵）→ **constructed / measured / unclear**；`selftest` 自带三条真实报文断言 | §5.5 |
 | `tools/field_census.py` | 把田野普查做成**带分母**的形式（可审计比例、税分布、派别） | §sec:schools |
 | `tools/audit_power.py` | **决策边界** $\Delta_{\max}=100(\tau_A+\tau_B)$ pp：多小的分差不能当能力证据 | §sec:power |
 
-**判据速记**（`report_forensics.py classify`）：
-- `constructed`：报文里的输入长度满足 `in + out == W + 1` ⇒ 它是额度的余数，**不含**请求信息；
-- `measured`：同一提示下该数**不随**额度变、随提示长度变；
-- `absent`：报文里没有计数。
+**判据速记**：
+- `classify`（单条报文）：`constructed` = 输入长度满足 `in + out == W + 1`（额度的余数，
+  **不含**请求信息）；`non_tautological` = 不是那个恒等式；`absent` = 报文里没有计数。
+- `probe`（矩阵，需要活体栈）：`measured` = 同一提示下该数**不随**额度变、随提示长度变；
+  `constructed` = 随额度联动；`unclear` = 两者都不是。
+- **单条报文判不出 `measured`**——这一步必须跑矩阵。
+
+## 离线可跑（第三方）
+
+```bash
+DSH_AUDIT_ROOT=/tmp/scratch python3 tools/audit_power.py   # 用随包 inputs/ 的冻结输入
+python3 tools/report_forensics.py selftest                 # 三条真实报文断言
+```
+
+`inputs/` 随包带了 `tax_report_all.json` 与 `field_scan.json`（44 KB），
+所以 `audit_power.py` **不需要作者的数据树**就能跑。
+`field_census.py` 需要 τ² 官方榜的 `submissions/` 检出（该仓库 MIT，可公开克隆）；
+本包只带它的**输出** `reports/field_census_v1.census.json`。
+`DSH_AUDIT_ROOT` 可指向任何数据树根，用于覆盖脚本默认的工作区路径。

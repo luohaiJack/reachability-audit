@@ -1,0 +1,936 @@
+[
+ {
+  "schema": "bfcl_tax_report_v1",
+  "dir": "results/bfcl/env2_miss_func_v1",
+  "result_files": [
+   "results/bfcl/env2_miss_func_v1/Qwen_Qwen3-4B-Instruct-2507/multi_turn/BFCL_v4_multi_turn_miss_func_result.json",
+   "results/bfcl/env2_miss_func_v1/Qwen_Qwen3-4B-Instruct-2507/multi_turn/BFCL_v4_multi_turn_miss_param_result.json"
+  ],
+  "score_file": "results/bfcl/env2_miss_func_v1/official_score.jsonl",
+  "n_total": 40,
+  "buckets": {
+   "b1_executed_correct": 14,
+   "b2_executed_harness_failed": 26,
+   "b3_never_executed_boundary": 0,
+   "b2_task_ids": [
+    103,
+    104,
+    105,
+    106,
+    108,
+    109,
+    110,
+    113,
+    115,
+    117,
+    118,
+    119,
+    120,
+    121,
+    124,
+    125,
+    126,
+    127,
+    128,
+    129,
+    132,
+    133,
+    134,
+    137,
+    138,
+    139
+   ],
+   "b3_task_ids_count": 0
+  },
+  "rates": {
+   "official_accuracy": 0.35,
+   "conditional_accuracy": 0.35,
+   "reachability_tax": 0.0,
+   "tax_cost_pp": 0.0
+  },
+  "signature": {
+   "mode": "unknown",
+   "W_s_estimate": null,
+   "band_position": null,
+   "distinct_input_tokens": [],
+   "n_boundary_msgs": 0,
+   "invariant_out_plus_in": []
+  },
+  "error_type_census": {
+   "multi_turn:empty_turn_model_response": 2,
+   "multi_turn:execution_response_mismatch": 7,
+   "multi_turn:force_terminated": 4,
+   "multi_turn:instance_state_mismatch": 13
+  },
+  "b_unknown_executed_unscored": [],
+  "gates": {
+   "G1_rows_present": true,
+   "G1_rows_count": 80,
+   "G2_done_marker": true,
+   "G3_boundary_invariant_single": true,
+   "G4_score_matches_rows": true,
+   "G5_bucket_partition": true,
+   "G6_no_orphan_score_ids": true
+  },
+  "gates_pass": true
+ },
+ {
+  "schema": "bfcl_tax_report_v1",
+  "dir": "results/bfcl/env2_miss_param_v1",
+  "result_files": [
+   "results/bfcl/env2_miss_param_v1/Qwen_Qwen3-4B-Instruct-2507/multi_turn/BFCL_v4_multi_turn_miss_func_result.json",
+   "results/bfcl/env2_miss_param_v1/Qwen_Qwen3-4B-Instruct-2507/multi_turn/BFCL_v4_multi_turn_miss_param_result.json"
+  ],
+  "score_file": "results/bfcl/env2_miss_param_v1/official_score.jsonl",
+  "n_total": 40,
+  "buckets": {
+   "b1_executed_correct": 17,
+   "b2_executed_harness_failed": 23,
+   "b3_never_executed_boundary": 0,
+   "b2_task_ids": [
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    110,
+    113,
+    114,
+    115,
+    117,
+    118,
+    119,
+    121,
+    125,
+    127,
+    128,
+    129,
+    132,
+    134,
+    136,
+    137,
+    138
+   ],
+   "b3_task_ids_count": 0
+  },
+  "rates": {
+   "official_accuracy": 0.425,
+   "conditional_accuracy": 0.425,
+   "reachability_tax": 0.0,
+   "tax_cost_pp": 0.0
+  },
+  "signature": {
+   "mode": "unknown",
+   "W_s_estimate": null,
+   "band_position": null,
+   "distinct_input_tokens": [],
+   "n_boundary_msgs": 0,
+   "invariant_out_plus_in": []
+  },
+  "error_type_census": {
+   "multi_turn:empty_turn_model_response": 3,
+   "multi_turn:execution_response_mismatch": 6,
+   "multi_turn:force_terminated": 2,
+   "multi_turn:instance_state_mismatch": 12
+  },
+  "b_unknown_executed_unscored": [],
+  "gates": {
+   "G1_rows_present": true,
+   "G1_rows_count": 80,
+   "G2_done_marker": true,
+   "G3_boundary_invariant_single": true,
+   "G4_score_matches_rows": true,
+   "G5_bucket_partition": true,
+   "G6_no_orphan_score_ids": true
+  },
+  "gates_pass": true
+ },
+ {
+  "schema": "bfcl_tax_report_v1",
+  "dir": "results/bfcl/env3_q4b_missfunc_win24576_v1",
+  "result_files": [
+   "results/bfcl/env3_q4b_missfunc_win24576_v1/Qwen_Qwen3-4B-Instruct-2507/multi_turn/BFCL_v4_multi_turn_miss_func_result.json",
+   "results/bfcl/env3_q4b_missfunc_win24576_v1/Qwen_Qwen3-4B-Instruct-2507/multi_turn/BFCL_v4_multi_turn_miss_param_result.json"
+  ],
+  "score_file": "results/bfcl/env3_q4b_missfunc_win24576_v1/official_score.jsonl",
+  "n_total": 40,
+  "buckets": {
+   "b1_executed_correct": 17,
+   "b2_executed_harness_failed": 23,
+   "b3_never_executed_boundary": 0,
+   "b2_task_ids": [
+    103,
+    104,
+    105,
+    106,
+    108,
+    109,
+    112,
+    113,
+    117,
+    118,
+    119,
+    120,
+    121,
+    124,
+    125,
+    127,
+    128,
+    129,
+    132,
+    133,
+    134,
+    137,
+    138
+   ],
+   "b3_task_ids_count": 0
+  },
+  "rates": {
+   "official_accuracy": 0.425,
+   "conditional_accuracy": 0.425,
+   "reachability_tax": 0.0,
+   "tax_cost_pp": 0.0
+  },
+  "signature": {
+   "mode": "unknown",
+   "W_s_estimate": null,
+   "band_position": null,
+   "distinct_input_tokens": [],
+   "n_boundary_msgs": 0,
+   "invariant_out_plus_in": []
+  },
+  "error_type_census": {
+   "multi_turn:empty_turn_model_response": 1,
+   "multi_turn:execution_response_mismatch": 5,
+   "multi_turn:force_terminated": 4,
+   "multi_turn:instance_state_mismatch": 13
+  },
+  "b_unknown_executed_unscored": [],
+  "gates": {
+   "G1_rows_present": true,
+   "G1_rows_count": 80,
+   "G2_done_marker": true,
+   "G3_boundary_invariant_single": true,
+   "G4_score_matches_rows": true,
+   "G5_bucket_partition": true,
+   "G6_no_orphan_score_ids": true
+  },
+  "gates_pass": true
+ },
+ {
+  "schema": "bfcl_tax_report_v1",
+  "dir": "results/bfcl/env3b_llama31_8b_missfunc_win40960_v1",
+  "result_files": [
+   "results/bfcl/env3b_llama31_8b_missfunc_win40960_v1/meta-llama_Llama-3.1-8B-Instruct/multi_turn/BFCL_v4_multi_turn_miss_func_result.json",
+   "results/bfcl/env3b_llama31_8b_missfunc_win40960_v1/meta-llama_Llama-3.1-8B-Instruct/multi_turn/BFCL_v4_multi_turn_miss_param_result.json"
+  ],
+  "score_file": "results/bfcl/env3b_llama31_8b_missfunc_win40960_v1/official_score.jsonl",
+  "n_total": 40,
+  "buckets": {
+   "b1_executed_correct": 10,
+   "b2_executed_harness_failed": 30,
+   "b3_never_executed_boundary": 0,
+   "b2_task_ids": [
+    100,
+    102,
+    103,
+    104,
+    106,
+    107,
+    108,
+    109,
+    110,
+    112,
+    113,
+    115,
+    117,
+    118,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    127,
+    128,
+    129,
+    131,
+    132,
+    133,
+    134,
+    136,
+    138,
+    139
+   ],
+   "b3_task_ids_count": 0
+  },
+  "rates": {
+   "official_accuracy": 0.25,
+   "conditional_accuracy": 0.25,
+   "reachability_tax": 0.0,
+   "tax_cost_pp": 0.0
+  },
+  "signature": {
+   "mode": "unknown",
+   "W_s_estimate": null,
+   "band_position": null,
+   "distinct_input_tokens": [],
+   "n_boundary_msgs": 0,
+   "invariant_out_plus_in": []
+  },
+  "error_type_census": {
+   "multi_turn:empty_turn_model_response": 7,
+   "multi_turn:execution_response_mismatch": 2,
+   "multi_turn:force_terminated": 6,
+   "multi_turn:instance_state_mismatch": 15
+  },
+  "b_unknown_executed_unscored": [],
+  "gates": {
+   "G1_rows_present": true,
+   "G1_rows_count": 80,
+   "G2_done_marker": true,
+   "G3_boundary_invariant_single": true,
+   "G4_score_matches_rows": true,
+   "G5_bucket_partition": true,
+   "G6_no_orphan_score_ids": true
+  },
+  "gates_pass": true
+ },
+ {
+  "schema": "bfcl_tax_report_v1",
+  "dir": "results/bfcl/expB_repro_v1",
+  "result_files": [
+   "results/bfcl/expB_repro_v1/Qwen_Qwen3-4B-Instruct-2507/multi_turn/BFCL_v4_multi_turn_long_context_result.json"
+  ],
+  "score_file": "results/bfcl/expB_repro_v1/official_score.jsonl",
+  "n_total": 40,
+  "buckets": {
+   "b1_executed_correct": 4,
+   "b2_executed_harness_failed": 1,
+   "b3_never_executed_boundary": 35,
+   "b2_task_ids": [
+    119
+   ],
+   "b3_task_ids_count": 35
+  },
+  "rates": {
+   "official_accuracy": 0.1,
+   "conditional_accuracy": 0.8,
+   "reachability_tax": 0.875,
+   "tax_cost_pp": 70.0
+  },
+  "signature": {
+   "mode": "mismatch",
+   "W_s_estimate": 24576,
+   "band_position": "20481…24044（需 ≥ W_s−4096 且分散）",
+   "distinct_input_tokens": [
+    20481,
+    20488,
+    20603,
+    21956,
+    22123,
+    22417,
+    22418,
+    23577,
+    23821,
+    23887,
+    23896,
+    24044
+   ],
+   "n_boundary_msgs": 35,
+   "invariant_out_plus_in": [
+    24577
+   ]
+  },
+  "error_type_census": {
+   "multi_turn:execution_response_mismatch": 1,
+   "multi_turn:inference_error": 35
+  },
+  "b_unknown_executed_unscored": [],
+  "gates": {
+   "G1_rows_present": true,
+   "G1_rows_count": 40,
+   "G2_done_marker": false,
+   "G3_boundary_invariant_single": true,
+   "G4_score_matches_rows": true,
+   "G5_bucket_partition": true,
+   "G6_no_orphan_score_ids": true
+  },
+  "gates_pass": false
+ },
+ {
+  "schema": "bfcl_tax_report_v1",
+  "dir": "results/bfcl/expB_upstream_ctx24576_v1",
+  "result_files": [
+   "results/bfcl/expB_upstream_ctx24576_v1/Qwen_Qwen3-4B-Instruct-2507/multi_turn/BFCL_v4_multi_turn_long_context_result.json"
+  ],
+  "score_file": null,
+  "n_total": 40,
+  "buckets": {
+   "b1_executed_correct": 0,
+   "b2_executed_harness_failed": 0,
+   "b3_never_executed_boundary": 34,
+   "b2_task_ids": [],
+   "b3_task_ids_count": 34
+  },
+  "rates": {
+   "official_accuracy": null,
+   "conditional_accuracy": null,
+   "reachability_tax": 0.85,
+   "tax_cost_pp": null
+  },
+  "signature": {
+   "mode": "mismatch",
+   "W_s_estimate": 24576,
+   "band_position": "20481…24165（需 ≥ W_s−4096 且分散）",
+   "distinct_input_tokens": [
+    20481,
+    20517,
+    20825,
+    21956,
+    22247,
+    22353,
+    22354,
+    22743,
+    23577,
+    23920,
+    24165
+   ],
+   "n_boundary_msgs": 34,
+   "invariant_out_plus_in": [
+    24577
+   ]
+  },
+  "error_type_census": {},
+  "b_unknown_executed_unscored": [
+   102,
+   119,
+   122,
+   124,
+   130,
+   139
+  ],
+  "gates": {
+   "G1_rows_present": true,
+   "G1_rows_count": 40,
+   "G2_done_marker": true,
+   "G3_boundary_invariant_single": true,
+   "G4_score_matches_rows": true,
+   "G5_bucket_partition": true,
+   "G6_no_orphan_score_ids": true
+  },
+  "gates_pass": true
+ },
+ {
+  "schema": "bfcl_tax_report_v1",
+  "dir": "results/bfcl/law_aligned32768_v1",
+  "result_files": [
+   "results/bfcl/law_aligned32768_v1/Qwen_Qwen3-4B-Instruct-2507/multi_turn/BFCL_v4_multi_turn_long_context_result.json"
+  ],
+  "score_file": "results/bfcl/law_aligned32768_v1/official_score.jsonl",
+  "n_total": 40,
+  "buckets": {
+   "b1_executed_correct": 4,
+   "b2_executed_harness_failed": 4,
+   "b3_never_executed_boundary": 32,
+   "b2_task_ids": [
+    114,
+    119,
+    123,
+    129
+   ],
+   "b3_task_ids_count": 32
+  },
+  "rates": {
+   "official_accuracy": 0.1,
+   "conditional_accuracy": 0.5,
+   "reachability_tax": 0.8,
+   "tax_cost_pp": 40.0
+  },
+  "signature": {
+   "mode": "aligned",
+   "W_s_estimate": 32768,
+   "band_position": "恒 31769（= W_s−999）",
+   "distinct_input_tokens": [
+    31769
+   ],
+   "n_boundary_msgs": 32,
+   "invariant_out_plus_in": [
+    32769
+   ]
+  },
+  "error_type_census": {
+   "multi_turn:empty_turn_model_response": 2,
+   "multi_turn:execution_response_mismatch": 2,
+   "multi_turn:inference_error": 32
+  },
+  "b_unknown_executed_unscored": [],
+  "gates": {
+   "G1_rows_present": true,
+   "G1_rows_count": 40,
+   "G2_done_marker": true,
+   "G3_boundary_invariant_single": true,
+   "G4_score_matches_rows": true,
+   "G5_bucket_partition": true,
+   "G6_no_orphan_score_ids": true
+  },
+  "gates_pass": true
+ },
+ {
+  "schema": "bfcl_tax_report_v1",
+  "dir": "results/bfcl/law_mismatch32768_v1",
+  "result_files": [
+   "results/bfcl/law_mismatch32768_v1/Qwen_Qwen3-4B-Instruct-2507/multi_turn/BFCL_v4_multi_turn_long_context_result.json"
+  ],
+  "score_file": "results/bfcl/law_mismatch32768_v1/official_score.jsonl",
+  "n_total": 40,
+  "buckets": {
+   "b1_executed_correct": 3,
+   "b2_executed_harness_failed": 5,
+   "b3_never_executed_boundary": 32,
+   "b2_task_ids": [
+    107,
+    114,
+    117,
+    119,
+    136
+   ],
+   "b3_task_ids_count": 32
+  },
+  "rates": {
+   "official_accuracy": 0.075,
+   "conditional_accuracy": 0.375,
+   "reachability_tax": 0.8,
+   "tax_cost_pp": 30.0
+  },
+  "signature": {
+   "mode": "mismatch",
+   "W_s_estimate": 32768,
+   "band_position": "28673…32216（需 ≥ W_s−4096 且分散）",
+   "distinct_input_tokens": [
+    28673,
+    28969,
+    30183,
+    30546,
+    31229,
+    31769,
+    32193,
+    32216
+   ],
+   "n_boundary_msgs": 32,
+   "invariant_out_plus_in": [
+    32769
+   ]
+  },
+  "error_type_census": {
+   "multi_turn:execution_response_mismatch": 3,
+   "multi_turn:force_terminated": 1,
+   "multi_turn:inference_error": 32,
+   "multi_turn:instance_state_mismatch": 1
+  },
+  "b_unknown_executed_unscored": [],
+  "gates": {
+   "G1_rows_present": true,
+   "G1_rows_count": 40,
+   "G2_done_marker": true,
+   "G3_boundary_invariant_single": true,
+   "G4_score_matches_rows": true,
+   "G5_bucket_partition": true,
+   "G6_no_orphan_score_ids": true
+  },
+  "gates_pass": true
+ },
+ {
+  "schema": "bfcl_tax_report_v1",
+  "dir": "results/bfcl/matrix_A2_ctx40960_v1",
+  "result_files": [
+   "results/bfcl/matrix_A2_ctx40960_v1/Qwen_Qwen3-4B-Instruct-2507/multi_turn/BFCL_v4_multi_turn_long_context_result.json"
+  ],
+  "score_file": "results/bfcl/matrix_A2_ctx40960_v1/official_score.jsonl",
+  "n_total": 40,
+  "buckets": {
+   "b1_executed_correct": 3,
+   "b2_executed_harness_failed": 9,
+   "b3_never_executed_boundary": 28,
+   "b2_task_ids": [
+    111,
+    113,
+    114,
+    120,
+    121,
+    123,
+    129,
+    132,
+    138
+   ],
+   "b3_task_ids_count": 28
+  },
+  "rates": {
+   "official_accuracy": 0.075,
+   "conditional_accuracy": 0.25,
+   "reachability_tax": 0.7,
+   "tax_cost_pp": 17.5
+  },
+  "signature": {
+   "mode": "aligned",
+   "W_s_estimate": 40960,
+   "band_position": "恒 39961（= W_s−999）",
+   "distinct_input_tokens": [
+    39961
+   ],
+   "n_boundary_msgs": 28,
+   "invariant_out_plus_in": [
+    40961
+   ]
+  },
+  "error_type_census": {
+   "multi_turn:empty_turn_model_response": 6,
+   "multi_turn:execution_response_mismatch": 2,
+   "multi_turn:inference_error": 28,
+   "multi_turn:instance_state_mismatch": 1
+  },
+  "b_unknown_executed_unscored": [],
+  "gates": {
+   "G1_rows_present": true,
+   "G1_rows_count": 40,
+   "G2_done_marker": true,
+   "G3_boundary_invariant_single": true,
+   "G4_score_matches_rows": true,
+   "G5_bucket_partition": true,
+   "G6_no_orphan_score_ids": true
+  },
+  "gates_pass": true
+ },
+ {
+  "schema": "bfcl_tax_report_v1",
+  "dir": "results/bfcl/matrix_A3_ctx24576aligned_v1",
+  "result_files": [
+   "results/bfcl/matrix_A3_ctx24576aligned_v1/Qwen_Qwen3-4B-Instruct-2507/multi_turn/BFCL_v4_multi_turn_long_context_result.json"
+  ],
+  "score_file": "results/bfcl/matrix_A3_ctx24576aligned_v1/official_score.jsonl",
+  "n_total": 40,
+  "buckets": {
+   "b1_executed_correct": 0,
+   "b2_executed_harness_failed": 0,
+   "b3_never_executed_boundary": 40,
+   "b2_task_ids": [],
+   "b3_task_ids_count": 40
+  },
+  "rates": {
+   "official_accuracy": 0.0,
+   "conditional_accuracy": 0.0,
+   "reachability_tax": 1.0,
+   "tax_cost_pp": 0.0
+  },
+  "signature": {
+   "mode": "aligned",
+   "W_s_estimate": 24576,
+   "band_position": "恒 23577（= W_s−999）",
+   "distinct_input_tokens": [
+    23577
+   ],
+   "n_boundary_msgs": 33,
+   "invariant_out_plus_in": [
+    24577
+   ]
+  },
+  "error_type_census": {
+   "multi_turn:inference_error": 40
+  },
+  "b_unknown_executed_unscored": [],
+  "gates": {
+   "G1_rows_present": true,
+   "G1_rows_count": 40,
+   "G2_done_marker": true,
+   "G3_boundary_invariant_single": true,
+   "G4_score_matches_rows": true,
+   "G5_bucket_partition": true,
+   "G6_no_orphan_score_ids": true
+  },
+  "gates_pass": true
+ },
+ {
+  "schema": "bfcl_tax_report_v1",
+  "dir": "results/bfcl/matrix_E1_q4b_FC_srv24576_cli24576_v1",
+  "result_files": [
+   "results/bfcl/matrix_E1_q4b_FC_srv24576_cli24576_v1/Qwen_Qwen3-4B-Instruct-2507-FC/multi_turn/BFCL_v4_multi_turn_long_context_result.json"
+  ],
+  "score_file": "results/bfcl/matrix_E1_q4b_FC_srv24576_cli24576_v1/official_score.jsonl",
+  "n_total": 40,
+  "buckets": {
+   "b1_executed_correct": 5,
+   "b2_executed_harness_failed": 0,
+   "b3_never_executed_boundary": 35,
+   "b2_task_ids": [],
+   "b3_task_ids_count": 35
+  },
+  "rates": {
+   "official_accuracy": 0.125,
+   "conditional_accuracy": 1.0,
+   "reachability_tax": 0.875,
+   "tax_cost_pp": 87.5
+  },
+  "signature": {
+   "mode": "aligned",
+   "W_s_estimate": 24576,
+   "band_position": "恒 23577（= W_s−999）",
+   "distinct_input_tokens": [
+    23577
+   ],
+   "n_boundary_msgs": 35,
+   "invariant_out_plus_in": [
+    24577
+   ]
+  },
+  "error_type_census": {
+   "multi_turn:inference_error": 35
+  },
+  "b_unknown_executed_unscored": [],
+  "gates": {
+   "G1_rows_present": true,
+   "G1_rows_count": 40,
+   "G2_done_marker": true,
+   "G3_boundary_invariant_single": true,
+   "G4_score_matches_rows": true,
+   "G5_bucket_partition": true,
+   "G6_no_orphan_score_ids": true
+  },
+  "gates_pass": true
+ },
+ {
+  "schema": "bfcl_tax_report_v1",
+  "dir": "results/bfcl/multiturn4_20260930",
+  "result_files": [
+   "results/bfcl/multiturn4_20260930/result/Qwen_Qwen3-8B-FC/multi_turn/BFCL_v4_multi_turn_base_result.json"
+  ],
+  "score_file": null,
+  "n_total": 4,
+  "buckets": {
+   "b1_executed_correct": 0,
+   "b2_executed_harness_failed": 0,
+   "b3_never_executed_boundary": 0,
+   "b2_task_ids": [],
+   "b3_task_ids_count": 0
+  },
+  "rates": {
+   "official_accuracy": null,
+   "conditional_accuracy": null,
+   "reachability_tax": 0.0,
+   "tax_cost_pp": null
+  },
+  "signature": {
+   "mode": "unknown",
+   "W_s_estimate": null,
+   "band_position": null,
+   "distinct_input_tokens": [],
+   "n_boundary_msgs": 0,
+   "invariant_out_plus_in": []
+  },
+  "error_type_census": {},
+  "b_unknown_executed_unscored": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "gates": {
+   "G1_rows_present": true,
+   "G1_rows_count": 4,
+   "G2_done_marker": true,
+   "G3_boundary_invariant_single": true,
+   "G4_score_matches_rows": true,
+   "G5_bucket_partition": true,
+   "G6_no_orphan_score_ids": true
+  },
+  "gates_pass": true
+ },
+ {
+  "schema": "bfcl_tax_report_v1",
+  "dir": "results/bfcl/multiturn4_20260930_budget24576",
+  "result_files": [
+   "results/bfcl/multiturn4_20260930_budget24576/result/Qwen_Qwen3-8B-FC/multi_turn/BFCL_v4_multi_turn_base_result.json"
+  ],
+  "score_file": null,
+  "n_total": 4,
+  "buckets": {
+   "b1_executed_correct": 0,
+   "b2_executed_harness_failed": 0,
+   "b3_never_executed_boundary": 0,
+   "b2_task_ids": [],
+   "b3_task_ids_count": 0
+  },
+  "rates": {
+   "official_accuracy": null,
+   "conditional_accuracy": null,
+   "reachability_tax": 0.0,
+   "tax_cost_pp": null
+  },
+  "signature": {
+   "mode": "unknown",
+   "W_s_estimate": null,
+   "band_position": null,
+   "distinct_input_tokens": [],
+   "n_boundary_msgs": 0,
+   "invariant_out_plus_in": []
+  },
+  "error_type_census": {},
+  "b_unknown_executed_unscored": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "gates": {
+   "G1_rows_present": true,
+   "G1_rows_count": 4,
+   "G2_done_marker": true,
+   "G3_boundary_invariant_single": true,
+   "G4_score_matches_rows": true,
+   "G5_bucket_partition": true,
+   "G6_no_orphan_score_ids": true
+  },
+  "gates_pass": true
+ },
+ {
+  "schema": "bfcl_tax_report_v1",
+  "dir": "results/bfcl/multiturn4_20260930_ctx24576",
+  "result_files": [
+   "results/bfcl/multiturn4_20260930_ctx24576/result/Qwen_Qwen3-8B-FC/multi_turn/BFCL_v4_multi_turn_base_result.json"
+  ],
+  "score_file": null,
+  "n_total": 4,
+  "buckets": {
+   "b1_executed_correct": 0,
+   "b2_executed_harness_failed": 0,
+   "b3_never_executed_boundary": 0,
+   "b2_task_ids": [],
+   "b3_task_ids_count": 0
+  },
+  "rates": {
+   "official_accuracy": null,
+   "conditional_accuracy": null,
+   "reachability_tax": 0.0,
+   "tax_cost_pp": null
+  },
+  "signature": {
+   "mode": "unknown",
+   "W_s_estimate": null,
+   "band_position": null,
+   "distinct_input_tokens": [],
+   "n_boundary_msgs": 0,
+   "invariant_out_plus_in": []
+  },
+  "error_type_census": {},
+  "b_unknown_executed_unscored": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "gates": {
+   "G1_rows_present": true,
+   "G1_rows_count": 4,
+   "G2_done_marker": true,
+   "G3_boundary_invariant_single": true,
+   "G4_score_matches_rows": true,
+   "G5_bucket_partition": true,
+   "G6_no_orphan_score_ids": true
+  },
+  "gates_pass": true
+ },
+ {
+  "schema": "bfcl_tax_report_v1",
+  "dir": "results/bfcl/multiturn4_20260930_ctx8192_400failed",
+  "result_files": [
+   "results/bfcl/multiturn4_20260930_ctx8192_400failed/result/Qwen_Qwen3-8B-FC/multi_turn/BFCL_v4_multi_turn_base_result.json"
+  ],
+  "score_file": null,
+  "n_total": 4,
+  "buckets": {
+   "b1_executed_correct": 0,
+   "b2_executed_harness_failed": 0,
+   "b3_never_executed_boundary": 0,
+   "b2_task_ids": [],
+   "b3_task_ids_count": 0
+  },
+  "rates": {
+   "official_accuracy": null,
+   "conditional_accuracy": null,
+   "reachability_tax": 0.0,
+   "tax_cost_pp": null
+  },
+  "signature": {
+   "mode": "unknown",
+   "W_s_estimate": null,
+   "band_position": null,
+   "distinct_input_tokens": [],
+   "n_boundary_msgs": 0,
+   "invariant_out_plus_in": []
+  },
+  "error_type_census": {},
+  "b_unknown_executed_unscored": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "gates": {
+   "G1_rows_present": true,
+   "G1_rows_count": 4,
+   "G2_done_marker": true,
+   "G3_boundary_invariant_single": true,
+   "G4_score_matches_rows": true,
+   "G5_bucket_partition": true,
+   "G6_no_orphan_score_ids": true
+  },
+  "gates_pass": true
+ },
+ {
+  "schema": "bfcl_tax_report_v1",
+  "dir": "results/bfcl/smoke4_20260930_portfix",
+  "result_files": [
+   "results/bfcl/smoke4_20260930_portfix/result/Qwen_Qwen3-8B-FC/non_live/BFCL_v4_simple_python_result.json"
+  ],
+  "score_file": null,
+  "n_total": 4,
+  "buckets": {
+   "b1_executed_correct": 0,
+   "b2_executed_harness_failed": 0,
+   "b3_never_executed_boundary": 0,
+   "b2_task_ids": [],
+   "b3_task_ids_count": 0
+  },
+  "rates": {
+   "official_accuracy": null,
+   "conditional_accuracy": null,
+   "reachability_tax": 0.0,
+   "tax_cost_pp": null
+  },
+  "signature": {
+   "mode": "unknown",
+   "W_s_estimate": null,
+   "band_position": null,
+   "distinct_input_tokens": [],
+   "n_boundary_msgs": 0,
+   "invariant_out_plus_in": []
+  },
+  "error_type_census": {},
+  "b_unknown_executed_unscored": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "gates": {
+   "G1_rows_present": true,
+   "G1_rows_count": 4,
+   "G2_done_marker": true,
+   "G3_boundary_invariant_single": true,
+   "G4_score_matches_rows": true,
+   "G5_bucket_partition": true,
+   "G6_no_orphan_score_ids": true
+  },
+  "gates_pass": true
+ }
+]

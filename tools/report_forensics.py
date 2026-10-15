@@ -60,7 +60,9 @@ def classify(text: str) -> dict:
             out.update(W=W, out=None, pattern=name)
             out["in"] = n
             out["evidence"].append(f"request={n} ctx={W}")
-            out["verdict"] = "independent" if out.get("_probe_out_invariant") else "unknown"
+            # 单条报文**不能**判"measured"：那需要 probe 矩阵（同提示 × 不同额度）。
+            # 这里只能给出"不是那个恒等式"，命名与 docstring 的三种 verdict 分开。
+            out["verdict"] = "non_tautological"
             return out
         if name == "generic_ctx":
             out.update(W=int(m.group(1)), pattern=name)
@@ -135,11 +137,29 @@ def main() -> int:
     c = sub.add_parser("classify")
     c.add_argument("--text", default=None)
     c.add_argument("--file", default=None)
+    st = sub.add_parser("selftest")
     p = sub.add_parser("probe")
     p.add_argument("--out", default=str(ROOT / "results" / "m1_probe_v1" / "probe.json"))
     p.add_argument("--stack", action="append", default=[],
                    help="name=base|model，可重复")
     a = ap.parse_args()
+    if a.cmd == "selftest":
+        cases = [
+            ('{"error":{"message":"This model\'s maximum context length is 8192 tokens. However, '
+             'you requested 0 output tokens and your prompt contains at least 8193 input tokens, '
+             'for a total of at least 8193 tokens."}}', "constructed"),
+            ('{"error":{"message":"request (3030 tokens) exceeds the available context size '
+             '(512 tokens), try increasing it"}}', "non_tautological"),
+            ('{"error":{"message":"bad request"}}', "absent"),
+        ]
+        bad = 0
+        for text, want in cases:
+            got = classify(text)["verdict"]
+            ok = got == want
+            bad += 0 if ok else 1
+            print(f"[{'OK  ' if ok else 'FAIL'}] classify → {got:16s} want {want}")
+        print("selftest", "PASS" if not bad else f"FAIL ({bad})")
+        return 1 if bad else 0
     if a.cmd == "classify":
         txt = a.text or pathlib.Path(a.file).read_text(errors="replace")
         print(json.dumps(classify(txt), ensure_ascii=False, indent=1))

@@ -1,0 +1,681 @@
+{
+ "schema": "field_tax_scan_v1",
+ "prereg": "191_预注册_田野级税扫描_2026-10-14.md",
+ "rows": [
+  {
+   "dir": "claude-fable-5_sierra_2026-08-04",
+   "domain": "banking_knowledge",
+   "file": "banking_knowledge_results.json",
+   "published_pass_1": 39.69072164948454,
+   "n_sims": 388,
+   "tax": 0.1366,
+   "abnormal_by_reason": {
+    "infrastructure_error": 53
+   },
+   "abnormal_scored_by_reason": {},
+   "abnormal_excluded_by_reason": {
+    "infrastructure_error": 53
+   },
+   "n_abnormal_scored": 0,
+   "n_abnormal_excluded": 53,
+   "official_pass": 0.4478,
+   "conditional_pass": 0.4478,
+   "p_reward_pos_given_abnormal": null,
+   "n_abnormal": 53,
+   "termination_dist": {
+    "user_stop": 335,
+    "infrastructure_error": 53
+   }
+  },
+  {
+   "dir": "claude-opus-4-5_sierra_2026-02-26",
+   "domain": "telecom",
+   "file": "claude-opus-4-5_high_telecom_gpt-5.2_4trials.json",
+   "published_pass_1": 92.32,
+   "n_sims": 456,
+   "tax": 0.0,
+   "abnormal_by_reason": {},
+   "abnormal_scored_by_reason": {},
+   "abnormal_excluded_by_reason": {},
+   "n_abnormal_scored": 0,
+   "n_abnormal_excluded": 0,
+   "official_pass": 0.9232,
+   "conditional_pass": 0.9232,
+   "p_reward_pos_given_abnormal": null,
+   "n_abnormal": 0,
+   "termination_dist": {
+    "user_stop": 456
+   }
+  },
+  {
+   "dir": "claude-opus-4-6_sierra_2026-05-05",
+   "domain": "banking_knowledge",
+   "file": "claude-opus-4-6_max_banking_knowledge_gpt-5.2_4trials.json",
+   "published_pass_1": 27.32,
+   "n_sims": 388,
+   "tax": 0.0,
+   "abnormal_by_reason": {},
+   "abnormal_scored_by_reason": {},
+   "abnormal_excluded_by_reason": {},
+   "n_abnormal_scored": 0,
+   "n_abnormal_excluded": 0,
+   "official_pass": 0.2448,
+   "conditional_pass": 0.2448,
+   "p_reward_pos_given_abnormal": null,
+   "n_abnormal": 0,
+   "termination_dist": {
+    "user_stop": 388
+   }
+  },
+  {
+   "dir": "claude-opus-4-7_sierra_2026-05-05",
+   "domain": "banking_knowledge",
+   "file": "banking_knowledge_results.json",
+   "published_pass_1": 40.20618556701031,
+   "n_sims": 388,
+   "tax": 0.0,
+   "abnormal_by_reason": {},
+   "abnormal_scored_by_reason": {},
+   "abnormal_excluded_by_reason": {},
+   "n_abnormal_scored": 0,
+   "n_abnormal_excluded": 0,
+   "official_pass": 0.4021,
+   "conditional_pass": 0.4021,
+   "p_reward_pos_given_abnormal": null,
+   "n_abnormal": 0,
+   "termination_dist": {
+    "user_stop": 388
+   }
+  },
+  {
+   "dir": "claude-opus-4-8_sierra_2026-08-04",
+   "domain": "banking_knowledge",
+   "file": "banking_knowledge_results.json",
+   "published_pass_1": 39.69072164948454,
+   "n_sims": 388,
+   "tax": 0.0,
+   "abnormal_by_reason": {},
+   "abnormal_scored_by_reason": {},
+   "abnormal_excluded_by_reason": {},
+   "n_abnormal_scored": 0,
+   "n_abnormal_excluded": 0,
+   "official_pass": 0.3969,
+   "conditional_pass": 0.3969,
+   "p_reward_pos_given_abnormal": null,
+   "n_abnormal": 0,
+   "termination_dist": {
+    "user_stop": 388
+   }
+  },
+  {
+   "dir": "claude-opus-5_sierra_2026-08-04",
+   "domain": "banking_knowledge",
+   "file": "banking_knowledge_results.json",
+   "published_pass_1": 48.71134020618557,
+   "n_sims": 388,
+   "tax": 0.0,
+   "abnormal_by_reason": {},
+   "abnormal_scored_by_reason": {},
+   "abnormal_excluded_by_reason": {},
+   "n_abnormal_scored": 0,
+   "n_abnormal_excluded": 0,
+   "official_pass": 0.4871,
+   "conditional_pass": 0.4871,
+   "p_reward_pos_given_abnormal": null,
+   "n_abnormal": 0,
+   "termination_dist": {
+    "user_stop": 388
+   }
+  },
+  {
+   "dir": "claude-sonnet-4-5_sierra_2026-02-26",
+   "domain": "telecom",
+   "file": "claude-sonnet-4-5_enabled_telecom_gpt-5.2_4trials.json",
+   "published_pass_1": 84.87,
+   "n_sims": 456,
+   "tax": 0.0,
+   "abnormal_by_reason": {},
+   "abnormal_scored_by_reason": {},
+   "abnormal_excluded_by_reason": {},
+   "n_abnormal_scored": 0,
+   "n_abnormal_excluded": 0,
+   "official_pass": 0.8487,
+   "conditional_pass": 0.8487,
+   "p_reward_pos_given_abnormal": null,
+   "n_abnormal": 0,
+   "termination_dist": {
+    "user_stop": 456
+   }
+  },
+  {
+   "dir": "gemini-2-5-pro_sierra_2026-05-05",
+   "domain": "banking_knowledge",
+   "file": "gemini-2.5-pro_high_banking_knowledge_gpt-5.2_4trials.json",
+   "published_pass_1": 13.66,
+   "n_sims": 388,
+   "tax": 0.0129,
+   "abnormal_by_reason": {
+    "max_steps": 1,
+    "infrastructure_error": 4
+   },
+   "abnormal_scored_by_reason": {
+    "max_steps": 1
+   },
+   "abnormal_excluded_by_reason": {
+    "infrastructure_error": 4
+   },
+   "n_abnormal_scored": 1,
+   "n_abnormal_excluded": 4,
+   "official_pass": 0.1276,
+   "conditional_pass": 0.1279,
+   "p_reward_pos_given_abnormal": 0.0,
+   "n_abnormal": 5,
+   "termination_dist": {
+    "user_stop": 383,
+    "infrastructure_error": 4,
+    "max_steps": 1
+   }
+  },
+  {
+   "dir": "gemini-3-1-pro-preview_sierra_2026-05-05",
+   "domain": "banking_knowledge",
+   "file": "gemini-3.1-pro-preview_high_banking_knowledge_gpt-5.2_4trials.json",
+   "published_pass_1": 26.03,
+   "n_sims": 388,
+   "tax": 0.0619,
+   "abnormal_by_reason": {
+    "max_steps": 22,
+    "infrastructure_error": 2
+   },
+   "abnormal_scored_by_reason": {
+    "max_steps": 22
+   },
+   "abnormal_excluded_by_reason": {
+    "infrastructure_error": 2
+   },
+   "n_abnormal_scored": 22,
+   "n_abnormal_excluded": 2,
+   "official_pass": 0.2254,
+   "conditional_pass": 0.239,
+   "p_reward_pos_given_abnormal": 0.0,
+   "n_abnormal": 24,
+   "termination_dist": {
+    "user_stop": 364,
+    "max_steps": 22,
+    "infrastructure_error": 2
+   }
+  },
+  {
+   "dir": "gemini-3-flash_sierra_2026-03-02",
+   "domain": "telecom",
+   "file": "geminiflash-telecom.json",
+   "published_pass_1": 91.23,
+   "n_sims": 456,
+   "tax": 0.0439,
+   "abnormal_by_reason": {
+    "too_many_errors": 20
+   },
+   "abnormal_scored_by_reason": {
+    "too_many_errors": 20
+   },
+   "abnormal_excluded_by_reason": {},
+   "n_abnormal_scored": 20,
+   "n_abnormal_excluded": 0,
+   "official_pass": 0.9123,
+   "conditional_pass": 0.9541,
+   "p_reward_pos_given_abnormal": 0.0,
+   "n_abnormal": 20,
+   "termination_dist": {
+    "user_stop": 436,
+    "too_many_errors": 20
+   }
+  },
+  {
+   "dir": "gemini-3-pro_sierra_2026-03-02",
+   "domain": "telecom",
+   "file": "geminipro-telecom.json",
+   "published_pass_1": 91.01,
+   "n_sims": 456,
+   "tax": 0.0044,
+   "abnormal_by_reason": {
+    "infrastructure_error": 2
+   },
+   "abnormal_scored_by_reason": {},
+   "abnormal_excluded_by_reason": {
+    "infrastructure_error": 2
+   },
+   "n_abnormal_scored": 0,
+   "n_abnormal_excluded": 2,
+   "official_pass": 0.9141,
+   "conditional_pass": 0.9141,
+   "p_reward_pos_given_abnormal": null,
+   "n_abnormal": 2,
+   "termination_dist": {
+    "user_stop": 454,
+    "infrastructure_error": 2
+   }
+  },
+  {
+   "dir": "glm-5-2_sierra_2026-08-04",
+   "domain": "banking_knowledge",
+   "file": "banking_knowledge_results.json",
+   "published_pass_1": 37.11340206185567,
+   "n_sims": 388,
+   "tax": 0.0129,
+   "abnormal_by_reason": {
+    "max_steps": 5
+   },
+   "abnormal_scored_by_reason": {
+    "max_steps": 5
+   },
+   "abnormal_excluded_by_reason": {},
+   "n_abnormal_scored": 5,
+   "n_abnormal_excluded": 0,
+   "official_pass": 0.3711,
+   "conditional_pass": 0.376,
+   "p_reward_pos_given_abnormal": 0.0,
+   "n_abnormal": 5,
+   "termination_dist": {
+    "user_stop": 383,
+    "max_steps": 5
+   }
+  },
+  {
+   "dir": "glm-5-think_sierra_2026-03-02",
+   "domain": "telecom",
+   "file": "glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "published_pass_1": 86.84,
+   "n_sims": 456,
+   "tax": 0.114,
+   "abnormal_by_reason": {
+    "infrastructure_error": 52
+   },
+   "abnormal_scored_by_reason": {},
+   "abnormal_excluded_by_reason": {
+    "infrastructure_error": 52
+   },
+   "n_abnormal_scored": 0,
+   "n_abnormal_excluded": 52,
+   "official_pass": 0.9802,
+   "conditional_pass": 0.9802,
+   "p_reward_pos_given_abnormal": null,
+   "n_abnormal": 52,
+   "termination_dist": {
+    "user_stop": 404,
+    "infrastructure_error": 52
+   }
+  },
+  {
+   "dir": "gpt-5-2-none_sierra_2026-02-26",
+   "domain": "telecom",
+   "file": "gpt-5.2_none_telecom_gpt-5.2_4trials.json",
+   "published_pass_1": 57.23684210526315,
+   "n_sims": 456,
+   "tax": 0.0,
+   "abnormal_by_reason": {},
+   "abnormal_scored_by_reason": {},
+   "abnormal_excluded_by_reason": {},
+   "n_abnormal_scored": 0,
+   "n_abnormal_excluded": 0,
+   "official_pass": 0.6162,
+   "conditional_pass": 0.6162,
+   "p_reward_pos_given_abnormal": null,
+   "n_abnormal": 0,
+   "termination_dist": {
+    "user_stop": 456
+   }
+  },
+  {
+   "dir": "gpt-5-2_sierra_2026-02-26",
+   "domain": "telecom",
+   "file": "gpt-5.2_high_telecom_gpt-5.2_4trials.json",
+   "published_pass_1": 89.69,
+   "n_sims": 456,
+   "tax": 0.0,
+   "abnormal_by_reason": {},
+   "abnormal_scored_by_reason": {},
+   "abnormal_excluded_by_reason": {},
+   "n_abnormal_scored": 0,
+   "n_abnormal_excluded": 0,
+   "official_pass": 0.8969,
+   "conditional_pass": 0.8969,
+   "p_reward_pos_given_abnormal": null,
+   "n_abnormal": 0,
+   "termination_dist": {
+    "user_stop": 456
+   }
+  },
+  {
+   "dir": "gpt-5-4_sierra_2026-03-25",
+   "domain": "banking_knowledge",
+   "file": "gpt-5.4_xhigh_banking_knowledge_gpt-5.2_4trials.json",
+   "published_pass_1": 39.43,
+   "n_sims": 388,
+   "tax": 0.0,
+   "abnormal_by_reason": {},
+   "abnormal_scored_by_reason": {},
+   "abnormal_excluded_by_reason": {},
+   "n_abnormal_scored": 0,
+   "n_abnormal_excluded": 0,
+   "official_pass": 0.3067,
+   "conditional_pass": 0.3067,
+   "p_reward_pos_given_abnormal": null,
+   "n_abnormal": 0,
+   "termination_dist": {
+    "user_stop": 388
+   }
+  },
+  {
+   "dir": "gpt-5-5_sierra_2026-05-05",
+   "domain": "banking_knowledge",
+   "file": "banking_knowledge_results.json",
+   "published_pass_1": 44.58762886597938,
+   "n_sims": 388,
+   "tax": 0.0052,
+   "abnormal_by_reason": {
+    "infrastructure_error": 2
+   },
+   "abnormal_scored_by_reason": {},
+   "abnormal_excluded_by_reason": {
+    "infrastructure_error": 2
+   },
+   "n_abnormal_scored": 0,
+   "n_abnormal_excluded": 2,
+   "official_pass": 0.4456,
+   "conditional_pass": 0.4456,
+   "p_reward_pos_given_abnormal": null,
+   "n_abnormal": 2,
+   "termination_dist": {
+    "user_stop": 386,
+    "infrastructure_error": 2
+   }
+  },
+  {
+   "dir": "gpt-5-6-sol_sierra_2026-08-04",
+   "domain": "banking_knowledge",
+   "file": "banking_knowledge_results.json",
+   "published_pass_1": 46.90721649484536,
+   "n_sims": 388,
+   "tax": 0.1057,
+   "abnormal_by_reason": {
+    "infrastructure_error": 41
+   },
+   "abnormal_scored_by_reason": {},
+   "abnormal_excluded_by_reason": {
+    "infrastructure_error": 41
+   },
+   "n_abnormal_scored": 0,
+   "n_abnormal_excluded": 41,
+   "official_pass": 0.4755,
+   "conditional_pass": 0.4755,
+   "p_reward_pos_given_abnormal": null,
+   "n_abnormal": 41,
+   "termination_dist": {
+    "user_stop": 347,
+    "infrastructure_error": 41
+   }
+  },
+  {
+   "dir": "grok-4-1-fast_sierra_2026-05-05",
+   "domain": "banking_knowledge",
+   "file": "grok-4-1-fast_high_banking_knowledge_gpt-5.2_4trials.json",
+   "published_pass_1": 13.14,
+   "n_sims": 388,
+   "tax": 0.0026,
+   "abnormal_by_reason": {
+    "infrastructure_error": 1
+   },
+   "abnormal_scored_by_reason": {},
+   "abnormal_excluded_by_reason": {
+    "infrastructure_error": 1
+   },
+   "n_abnormal_scored": 0,
+   "n_abnormal_excluded": 1,
+   "official_pass": 0.124,
+   "conditional_pass": 0.124,
+   "p_reward_pos_given_abnormal": null,
+   "n_abnormal": 1,
+   "termination_dist": {
+    "user_stop": 387,
+    "infrastructure_error": 1
+   }
+  },
+  {
+   "dir": "grok-4-2_sierra_2026-05-05",
+   "domain": "banking_knowledge",
+   "file": "grok-4-2_high_banking_knowledge_gpt-5.2_4trials.json",
+   "published_pass_1": 18.04,
+   "n_sims": 388,
+   "tax": 0.0026,
+   "abnormal_by_reason": {
+    "infrastructure_error": 1
+   },
+   "abnormal_scored_by_reason": {},
+   "abnormal_excluded_by_reason": {
+    "infrastructure_error": 1
+   },
+   "n_abnormal_scored": 0,
+   "n_abnormal_excluded": 1,
+   "official_pass": 0.1757,
+   "conditional_pass": 0.1757,
+   "p_reward_pos_given_abnormal": null,
+   "n_abnormal": 1,
+   "termination_dist": {
+    "user_stop": 387,
+    "infrastructure_error": 1
+   }
+  },
+  {
+   "dir": "grok-4-5_sierra_2026-08-04",
+   "domain": "banking_knowledge",
+   "file": "banking_knowledge_results.json",
+   "published_pass_1": 47.93814432989691,
+   "n_sims": 388,
+   "tax": 0.0,
+   "abnormal_by_reason": {},
+   "abnormal_scored_by_reason": {},
+   "abnormal_excluded_by_reason": {},
+   "n_abnormal_scored": 0,
+   "n_abnormal_excluded": 0,
+   "official_pass": 0.4794,
+   "conditional_pass": 0.4794,
+   "p_reward_pos_given_abnormal": null,
+   "n_abnormal": 0,
+   "termination_dist": {
+    "user_stop": 388
+   }
+  },
+  {
+   "dir": "grok-4-fast_sierra_2026-05-05",
+   "domain": "banking_knowledge",
+   "file": "grok-4-fast_high_banking_knowledge_gpt-5.2_4trials.json",
+   "published_pass_1": 15.72,
+   "n_sims": 388,
+   "tax": 0.0,
+   "abnormal_by_reason": {},
+   "abnormal_scored_by_reason": {},
+   "abnormal_excluded_by_reason": {},
+   "n_abnormal_scored": 0,
+   "n_abnormal_excluded": 0,
+   "official_pass": 0.1418,
+   "conditional_pass": 0.1418,
+   "p_reward_pos_given_abnormal": null,
+   "n_abnormal": 0,
+   "termination_dist": {
+    "user_stop": 388
+   }
+  },
+  {
+   "dir": "inkling_sierra_2026-08-04",
+   "domain": "banking_knowledge",
+   "file": "banking_knowledge_results.json",
+   "published_pass_1": 25.0,
+   "n_sims": 388,
+   "tax": 0.0,
+   "abnormal_by_reason": {},
+   "abnormal_scored_by_reason": {},
+   "abnormal_excluded_by_reason": {},
+   "n_abnormal_scored": 0,
+   "n_abnormal_excluded": 0,
+   "official_pass": 0.25,
+   "conditional_pass": 0.25,
+   "p_reward_pos_given_abnormal": null,
+   "n_abnormal": 0,
+   "termination_dist": {
+    "user_stop": 388
+   }
+  },
+  {
+   "dir": "kimi-k3_sierra_2026-08-04",
+   "domain": "banking_knowledge",
+   "file": "banking_knowledge_results.json",
+   "published_pass_1": 37.11340206185567,
+   "n_sims": 388,
+   "tax": 0.0,
+   "abnormal_by_reason": {},
+   "abnormal_scored_by_reason": {},
+   "abnormal_excluded_by_reason": {},
+   "n_abnormal_scored": 0,
+   "n_abnormal_excluded": 0,
+   "official_pass": 0.3711,
+   "conditional_pass": 0.3711,
+   "p_reward_pos_given_abnormal": null,
+   "n_abnormal": 0,
+   "termination_dist": {
+    "user_stop": 388
+   }
+  },
+  {
+   "dir": "muse-spark-1-1_sierra_2026-08-04",
+   "domain": "banking_knowledge",
+   "file": "banking_knowledge_results.json",
+   "published_pass_1": 40.4639175257732,
+   "n_sims": 388,
+   "tax": 0.0026,
+   "abnormal_by_reason": {
+    "max_steps": 1
+   },
+   "abnormal_scored_by_reason": {
+    "max_steps": 1
+   },
+   "abnormal_excluded_by_reason": {},
+   "n_abnormal_scored": 1,
+   "n_abnormal_excluded": 0,
+   "official_pass": 0.4046,
+   "conditional_pass": 0.4057,
+   "p_reward_pos_given_abnormal": 0.0,
+   "n_abnormal": 1,
+   "termination_dist": {
+    "user_stop": 387,
+    "max_steps": 1
+   }
+  },
+  {
+   "dir": "qwen3-8-max_sierra_2026-08-04",
+   "domain": "banking_knowledge",
+   "file": "banking_knowledge_results.json",
+   "published_pass_1": 55.154639175257735,
+   "n_sims": 388,
+   "tax": 0.0,
+   "abnormal_by_reason": {},
+   "abnormal_scored_by_reason": {},
+   "abnormal_excluded_by_reason": {},
+   "n_abnormal_scored": 0,
+   "n_abnormal_excluded": 0,
+   "official_pass": 0.5515,
+   "conditional_pass": 0.5515,
+   "p_reward_pos_given_abnormal": null,
+   "n_abnormal": 0,
+   "termination_dist": {
+    "user_stop": 388
+   }
+  },
+  {
+   "dir": "qwen3-max_qwen_2025-10-30",
+   "domain": "telecom",
+   "file": "telecom_llm_agent_qwen3-max-2025-10-30_user_simulator_gpt-4.1-2025-04-14.json",
+   "published_pass_1": 95.83333333333334,
+   "n_sims": 456,
+   "tax": 0.0,
+   "abnormal_by_reason": {},
+   "abnormal_scored_by_reason": {},
+   "abnormal_excluded_by_reason": {},
+   "n_abnormal_scored": 0,
+   "n_abnormal_excluded": 0,
+   "official_pass": 0.9583,
+   "conditional_pass": 0.9583,
+   "p_reward_pos_given_abnormal": null,
+   "n_abnormal": 0,
+   "termination_dist": {
+    "user_stop": 456
+   }
+  },
+  {
+   "dir": "qwen3.5-397b-a17b-think_sierra_2026-03-02",
+   "domain": "telecom",
+   "file": "qwen3.5-397b-a17b_enabled_telecom_gpt-5.2_4trials.json",
+   "published_pass_1": 97.81,
+   "n_sims": 456,
+   "tax": 0.0,
+   "abnormal_by_reason": {},
+   "abnormal_scored_by_reason": {},
+   "abnormal_excluded_by_reason": {},
+   "n_abnormal_scored": 0,
+   "n_abnormal_excluded": 0,
+   "official_pass": 0.9781,
+   "conditional_pass": 0.9781,
+   "p_reward_pos_given_abnormal": null,
+   "n_abnormal": 0,
+   "termination_dist": {
+    "user_stop": 456
+   }
+  }
+ ],
+ "verdict": {
+  "n_submissions_analyzed": 28,
+  "n_skipped": 15,
+  "skipped": [
+   "A_EXAMPLE_new-model_example-org_2025-01-15",
+   "gemini-3-1-flash-live-preview-thinking-high_google_2026-04-02",
+   "gemini-3-1-flash-live-preview-thinking-minimal_google_2026-04-13",
+   "gemini-live-2.5-flash_sierra_2026-03-03",
+   "gpt-live-1-diamond-alpha_openai_2026-09-09",
+   "gpt-realtime-1-0_openai_2026-04-13",
+   "gpt-realtime-1.5_sierra_2026-03-03",
+   "gpt-realtime-2-minimal_openai_2026-07-01",
+   "gpt-realtime-2_openai_2026-06-29",
+   "grok-voice-think-fast-1-0_xai_2026-04-21"
+  ],
+  "tax_median": 0.0,
+  "tax_max": 0.1366,
+  "tax_ge_5pct_count": 4,
+  "P_F1_pass": true,
+  "P_F1_hits": [
+   "gemini-3-1-pro-preview_sierra_2026-05-05"
+  ],
+  "spearman_tax_vs_published_pass1": -0.101,
+  "invalid_batch": false,
+  "field_decomposition": {
+   "total_sims": 11476,
+   "abnormal_total": 207,
+   "abnormal_pct": 0.018,
+   "by_reason": {
+    "infrastructure_error": 158,
+    "max_steps": 29,
+    "too_many_errors": 20
+   },
+   "scored_total": 49,
+   "scored_pct": 0.0043,
+   "scored_by_reason": {
+    "max_steps": 29,
+    "too_many_errors": 20
+   },
+   "excluded_total": 158,
+   "excluded_pct": 0.0138,
+   "excluded_by_reason": {
+    "infrastructure_error": 158
+   },
+   "window_exhaustion_mentions": 0
+  }
+ }
+}

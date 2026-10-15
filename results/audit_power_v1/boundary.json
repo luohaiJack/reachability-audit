@@ -1,0 +1,356 @@
+{
+ "schema": "audit_power_v1",
+ "prereg": "217_预注册_M1M2M4_2026-10-15.md",
+ "rule": "|Δ| ≤ 100·(τ_A + τ_B) pp ⇒ 分差可由未执行样本完全解释，不得当作能力证据",
+ "boundary_table": [
+  {
+   "tau_a": 0.0,
+   "tau_b": 0.0,
+   "dmax_pp": 0.0
+  },
+  {
+   "tau_a": 0.02,
+   "tau_b": 0.0,
+   "dmax_pp": 2.0
+  },
+  {
+   "tau_a": 0.05,
+   "tau_b": 0.0,
+   "dmax_pp": 5.0
+  },
+  {
+   "tau_a": 0.1,
+   "tau_b": 0.0,
+   "dmax_pp": 10.0
+  },
+  {
+   "tau_a": 0.2,
+   "tau_b": 0.0,
+   "dmax_pp": 20.0
+  },
+  {
+   "tau_a": 0.5,
+   "tau_b": 0.0,
+   "dmax_pp": 50.0
+  },
+  {
+   "tau_a": 0.875,
+   "tau_b": 0.0,
+   "dmax_pp": 87.5
+  }
+ ],
+ "calibration_own_arms": [
+  {
+   "arm": "env2_miss_func_v1",
+   "n": 40,
+   "tau_a": 0.0,
+   "observed_pp": 0.0,
+   "dmax_pp": 0.0,
+   "within_bound": true
+  },
+  {
+   "arm": "env2_miss_param_v1",
+   "n": 40,
+   "tau_a": 0.0,
+   "observed_pp": 0.0,
+   "dmax_pp": 0.0,
+   "within_bound": true
+  },
+  {
+   "arm": "env3_q4b_missfunc_win24576_v1",
+   "n": 40,
+   "tau_a": 0.0,
+   "observed_pp": 0.0,
+   "dmax_pp": 0.0,
+   "within_bound": true
+  },
+  {
+   "arm": "env3b_llama31_8b_missfunc_win40960_v1",
+   "n": 40,
+   "tau_a": 0.0,
+   "observed_pp": 0.0,
+   "dmax_pp": 0.0,
+   "within_bound": true
+  },
+  {
+   "arm": "expB_repro_v1",
+   "n": 40,
+   "tau_a": 0.875,
+   "observed_pp": 70.0,
+   "dmax_pp": 87.5,
+   "within_bound": true
+  },
+  {
+   "arm": "law_aligned32768_v1",
+   "n": 40,
+   "tau_a": 0.8,
+   "observed_pp": 40.0,
+   "dmax_pp": 80.0,
+   "within_bound": true
+  },
+  {
+   "arm": "law_mismatch32768_v1",
+   "n": 40,
+   "tau_a": 0.8,
+   "observed_pp": 30.0,
+   "dmax_pp": 80.0,
+   "within_bound": true
+  },
+  {
+   "arm": "matrix_A2_ctx40960_v1",
+   "n": 40,
+   "tau_a": 0.7,
+   "observed_pp": 17.5,
+   "dmax_pp": 70.0,
+   "within_bound": true
+  },
+  {
+   "arm": "matrix_A3_ctx24576aligned_v1",
+   "n": 40,
+   "tau_a": 1.0,
+   "observed_pp": 0.0,
+   "dmax_pp": 100.0,
+   "within_bound": true
+  },
+  {
+   "arm": "matrix_E1_q4b_FC_srv24576_cli24576_v1",
+   "n": 40,
+   "tau_a": 0.875,
+   "observed_pp": 87.5,
+   "dmax_pp": 87.5,
+   "within_bound": true
+  }
+ ],
+ "calibration_field": [
+  {
+   "dir": "claude-fable-5_sierra_2026-08-04",
+   "n": 388,
+   "tau_a": 0.1366,
+   "observed_pp": 0.0,
+   "dmax_pp": 13.66,
+   "within_bound": true
+  },
+  {
+   "dir": "claude-opus-4-5_sierra_2026-02-26",
+   "n": 456,
+   "tau_a": 0.0,
+   "observed_pp": 0.0,
+   "dmax_pp": 0.0,
+   "within_bound": true
+  },
+  {
+   "dir": "claude-opus-4-6_sierra_2026-05-05",
+   "n": 388,
+   "tau_a": 0.0,
+   "observed_pp": 0.0,
+   "dmax_pp": 0.0,
+   "within_bound": true
+  },
+  {
+   "dir": "claude-opus-4-7_sierra_2026-05-05",
+   "n": 388,
+   "tau_a": 0.0,
+   "observed_pp": 0.0,
+   "dmax_pp": 0.0,
+   "within_bound": true
+  },
+  {
+   "dir": "claude-opus-4-8_sierra_2026-08-04",
+   "n": 388,
+   "tau_a": 0.0,
+   "observed_pp": 0.0,
+   "dmax_pp": 0.0,
+   "within_bound": true
+  },
+  {
+   "dir": "claude-opus-5_sierra_2026-08-04",
+   "n": 388,
+   "tau_a": 0.0,
+   "observed_pp": 0.0,
+   "dmax_pp": 0.0,
+   "within_bound": true
+  },
+  {
+   "dir": "claude-sonnet-4-5_sierra_2026-02-26",
+   "n": 456,
+   "tau_a": 0.0,
+   "observed_pp": 0.0,
+   "dmax_pp": 0.0,
+   "within_bound": true
+  },
+  {
+   "dir": "gemini-2-5-pro_sierra_2026-05-05",
+   "n": 388,
+   "tau_a": 0.0129,
+   "observed_pp": 0.03,
+   "dmax_pp": 1.29,
+   "within_bound": true
+  },
+  {
+   "dir": "gemini-3-1-pro-preview_sierra_2026-05-05",
+   "n": 388,
+   "tau_a": 0.0619,
+   "observed_pp": 1.36,
+   "dmax_pp": 6.19,
+   "within_bound": true
+  },
+  {
+   "dir": "gemini-3-flash_sierra_2026-03-02",
+   "n": 456,
+   "tau_a": 0.0439,
+   "observed_pp": 4.18,
+   "dmax_pp": 4.39,
+   "within_bound": true
+  },
+  {
+   "dir": "gemini-3-pro_sierra_2026-03-02",
+   "n": 456,
+   "tau_a": 0.0044,
+   "observed_pp": 0.0,
+   "dmax_pp": 0.44,
+   "within_bound": true
+  },
+  {
+   "dir": "glm-5-2_sierra_2026-08-04",
+   "n": 388,
+   "tau_a": 0.0129,
+   "observed_pp": 0.49,
+   "dmax_pp": 1.29,
+   "within_bound": true
+  },
+  {
+   "dir": "glm-5-think_sierra_2026-03-02",
+   "n": 456,
+   "tau_a": 0.114,
+   "observed_pp": 0.0,
+   "dmax_pp": 11.4,
+   "within_bound": true
+  },
+  {
+   "dir": "gpt-5-2-none_sierra_2026-02-26",
+   "n": 456,
+   "tau_a": 0.0,
+   "observed_pp": 0.0,
+   "dmax_pp": 0.0,
+   "within_bound": true
+  },
+  {
+   "dir": "gpt-5-2_sierra_2026-02-26",
+   "n": 456,
+   "tau_a": 0.0,
+   "observed_pp": 0.0,
+   "dmax_pp": 0.0,
+   "within_bound": true
+  },
+  {
+   "dir": "gpt-5-4_sierra_2026-03-25",
+   "n": 388,
+   "tau_a": 0.0,
+   "observed_pp": 0.0,
+   "dmax_pp": 0.0,
+   "within_bound": true
+  },
+  {
+   "dir": "gpt-5-5_sierra_2026-05-05",
+   "n": 388,
+   "tau_a": 0.0052,
+   "observed_pp": 0.0,
+   "dmax_pp": 0.52,
+   "within_bound": true
+  },
+  {
+   "dir": "gpt-5-6-sol_sierra_2026-08-04",
+   "n": 388,
+   "tau_a": 0.1057,
+   "observed_pp": 0.0,
+   "dmax_pp": 10.57,
+   "within_bound": true
+  },
+  {
+   "dir": "grok-4-1-fast_sierra_2026-05-05",
+   "n": 388,
+   "tau_a": 0.0026,
+   "observed_pp": 0.0,
+   "dmax_pp": 0.26,
+   "within_bound": true
+  },
+  {
+   "dir": "grok-4-2_sierra_2026-05-05",
+   "n": 388,
+   "tau_a": 0.0026,
+   "observed_pp": 0.0,
+   "dmax_pp": 0.26,
+   "within_bound": true
+  },
+  {
+   "dir": "grok-4-5_sierra_2026-08-04",
+   "n": 388,
+   "tau_a": 0.0,
+   "observed_pp": 0.0,
+   "dmax_pp": 0.0,
+   "within_bound": true
+  },
+  {
+   "dir": "grok-4-fast_sierra_2026-05-05",
+   "n": 388,
+   "tau_a": 0.0,
+   "observed_pp": 0.0,
+   "dmax_pp": 0.0,
+   "within_bound": true
+  },
+  {
+   "dir": "inkling_sierra_2026-08-04",
+   "n": 388,
+   "tau_a": 0.0,
+   "observed_pp": 0.0,
+   "dmax_pp": 0.0,
+   "within_bound": true
+  },
+  {
+   "dir": "kimi-k3_sierra_2026-08-04",
+   "n": 388,
+   "tau_a": 0.0,
+   "observed_pp": 0.0,
+   "dmax_pp": 0.0,
+   "within_bound": true
+  },
+  {
+   "dir": "muse-spark-1-1_sierra_2026-08-04",
+   "n": 388,
+   "tau_a": 0.0026,
+   "observed_pp": 0.11,
+   "dmax_pp": 0.26,
+   "within_bound": true
+  },
+  {
+   "dir": "qwen3-8-max_sierra_2026-08-04",
+   "n": 388,
+   "tau_a": 0.0,
+   "observed_pp": 0.0,
+   "dmax_pp": 0.0,
+   "within_bound": true
+  },
+  {
+   "dir": "qwen3-max_qwen_2025-10-30",
+   "n": 456,
+   "tau_a": 0.0,
+   "observed_pp": 0.0,
+   "dmax_pp": 0.0,
+   "within_bound": true
+  },
+  {
+   "dir": "qwen3.5-397b-a17b-think_sierra_2026-03-02",
+   "n": 456,
+   "tau_a": 0.0,
+   "observed_pp": 0.0,
+   "dmax_pp": 0.0,
+   "within_bound": true
+  }
+ ],
+ "checks": {
+  "own_arms_all_within": true,
+  "field_all_within": true,
+  "own_arm_max_observed": 87.5,
+  "own_arm_bound_at_that_tau": 87.5
+ }
+}

@@ -25,6 +25,8 @@ import subprocess
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
+import os
+ROOT = pathlib.Path(os.environ.get("DSH_AUDIT_ROOT") or ROOT).resolve()
 SUBS = (ROOT / "code/baseline_selection/tau2-bench/web/leaderboard/public/submissions")
 CACHE = ROOT / "results" / "bfcl" / "field_scan_v1" / "traj_cache"
 OUT = ROOT / "results" / "field_census_v1"
