@@ -22,9 +22,10 @@
 
 ## 仍需人工完成的两件
 
-1. ~~**许可**~~ **已完成（2026-10-15，作者裁定）**：根目录 `LICENSE` = **CC0 1.0**
-   （公有领域奉献，无需署名）。作者明确不要 MIT 的版权署名行。
-   GitHub 会在 About 面板显示 "CC0-1.0 license"。
+1. ~~**许可**~~ **已完成（2026-10-15，作者两次裁定，终版）**：根目录 `LICENSE` = **MIT**
+   （`Copyright (c) 2026 the reachability-audit authors`）。
+   GitHub About 面板显示 "MIT license"。
+   要改用真名：编辑 `LICENSE` 第 3 行即可。
 2. **DOI**：Zenodo → Settings → GitHub → 打开 `reachability-audit` 开关 →
    在 GitHub 建一个 **Release**（本仓库已有 token 可建）→ Zenodo 自动归档并发 DOI →
    把 DOI 补进论文 `Data availability`。
