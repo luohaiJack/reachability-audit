@@ -188,12 +188,74 @@ def render(r):
     return "\n".join(L)
 
 
+BOUNDARY_MSG = ("This model's maximum context length is 8192 tokens. However, you requested 0 "
+                "output tokens and your prompt contains at least 8193 input tokens.")
+
+
+def selftest() -> int:
+    """known-answer 控制：植入已知的三桶，断言仪器算出来的与植入值**逐字段**一致。
+
+    这是对"复现脚本只能证明自洽"的回应——本控制有**已知正确答案**，
+    而且刻意包含那个反例：**被窗口叫停但最终状态达标的 rollout**（第四格），
+    它必须落进 b1（执行且正确），不能落进 b3。
+    """
+    import tempfile
+    cases = [
+        # (名称, 正确答案数, 执行但失败数, 从未执行数, 第四格：停机但达标)
+        ("planted_basic", 6, 2, 2, 0),
+        ("planted_fourth_cell", 5, 2, 2, 1),
+    ]
+    bad = 0
+    for name, n_ok, n_wrong, n_never, n_stop_ok in cases:
+        with tempfile.TemporaryDirectory() as td:
+            d = pathlib.Path(td) / name
+            d.mkdir(parents=True)
+            rows, score = [], []
+            tid = 0
+            def mkrec(i, payload):
+                return json.dumps({"id": f"multi_turn_long_context_{i}", "result": payload})
+            for _ in range(n_ok + n_stop_ok):
+                rows.append(mkrec(tid, ["ok"])); tid += 1
+            for _ in range(n_wrong):
+                rows.append(mkrec(tid, ["wrong"])); score.append(
+                    {"id": f"multi_turn_long_context_{tid}",
+                     "error": {"error_type": "multi_turn:instance_state_mismatch"}}); tid += 1
+            for _ in range(n_never):
+                rows.append(mkrec(tid, BOUNDARY_MSG)); score.append(
+                    {"id": f"multi_turn_long_context_{tid}",
+                     "error": {"error_type": "multi_turn:inference_error"}}); tid += 1
+            (d / "arm_result.json").write_text("\n".join(rows) + "\n", encoding="utf-8")
+            n = len(rows)
+            acc = (n_ok + n_stop_ok) / n
+            head = {"accuracy": acc}
+            (d / "official_score.jsonl").write_text(
+                json.dumps(head) + "\n" + "\n".join(json.dumps(x) for x in score) + "\n",
+                encoding="utf-8")
+            r = report_dir(d)
+            got = (r["buckets"]["b1_executed_correct"], r["buckets"]["b2_executed_harness_failed"],
+                   r["buckets"]["b3_never_executed_boundary"])
+            want = (n_ok + n_stop_ok, n_wrong, n_never)
+            ok = got == want and r["gates_pass"]
+            bad += 0 if ok else 1
+            print(f"[{'OK  ' if ok else 'FAIL'}] {name}: buckets={got} want={want} "
+                  f"tax={r['rates']['reachability_tax']} official={r['rates']['official_accuracy']} "
+                  f"gates={'pass' if r['gates_pass'] else 'FAIL'}")
+    print("selftest", "PASS" if not bad else f"FAIL ({bad})")
+    return 1 if bad else 0
+
+
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("dirs", nargs="+")
+    ap.add_argument("dirs", nargs="*")
     ap.add_argument("--out", default=None, help="合并报告的输出路径（默认各目录内 tax_report.json）")
     ap.add_argument("--markdown", action="store_true", help="额外打印 markdown 表")
+    ap.add_argument("--selftest", action="store_true",
+                    help="known-answer 控制：人工构造两个臂，断言三桶/三个率与植入值一致")
     a = ap.parse_args()
+    if a.selftest:
+        return selftest()
+    if not a.dirs:
+        ap.error("需要至少一个结果目录（或 --selftest）")
     dirs = collect_dirs(a.dirs)
     if not dirs:
         print("⛔ 未找到结果目录", file=sys.stderr)
