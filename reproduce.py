@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""reproduce.py — 用交付的仪器重跑论文的 18 条臂，并逐字段比对 expected_reports.json。
+"""reproduce.py — 用交付的仪器重跑论文的 20 条臂，并逐字段比对 expected_reports.json。
 
 **两种输入来源**（按序）：
   1. 工作区：`<workspace>/results/bfcl/<arm>/`（原作者的数据树，可选）
