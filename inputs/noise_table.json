@@ -1,0 +1,87 @@
+{
+ "32,768 (no rope)": {
+  "arms": [
+   "matrix_w32768_v1",
+   "matrix_w32768b_v1"
+  ],
+  "missing": [],
+  "rejections": [
+   33,
+   34
+  ],
+  "accuracy": [
+   0.1,
+   0.125
+  ],
+  "rej_spread": 1,
+  "acc_spread_pp": 2.5
+ },
+ "40,960 (no rope)": {
+  "arms": [
+   "matrix_A2_ctx40960_v1",
+   "matrix_A2r_ctx40960_clientcount_v1"
+  ],
+  "missing": [],
+  "rejections": [
+   28,
+   26
+  ],
+  "accuracy": [
+   0.075,
+   0.1
+  ],
+  "rej_spread": 2,
+  "acc_spread_pp": 2.5
+ },
+ "49,152 (yarn)": {
+  "arms": [
+   "matrix_w49152_v1",
+   "matrix_w49152b_v1"
+  ],
+  "missing": [],
+  "rejections": [
+   15,
+   15
+  ],
+  "accuracy": [
+   0.25,
+   0.3
+  ],
+  "rej_spread": 0,
+  "acc_spread_pp": 5.0
+ },
+ "65,536 (yarn)": {
+  "arms": [
+   "matrix_A2_ctx65536_v1",
+   "matrix_A2_ctx65536_b_v1"
+  ],
+  "missing": [],
+  "rejections": [
+   13,
+   6
+  ],
+  "accuracy": [
+   0.2,
+   0.15
+  ],
+  "rej_spread": 7,
+  "acc_spread_pp": 5.0
+ },
+ "8B @40,960 (no rope)": {
+  "arms": [
+   "matrix_S4_qwen3_8b_ctx40960_v1",
+   "matrix_S4b_qwen3_8b_ctx40960_v1"
+  ],
+  "missing": [],
+  "rejections": [
+   27,
+   28
+  ],
+  "accuracy": [
+   0.15,
+   0.2
+  ],
+  "rej_spread": 1,
+  "acc_spread_pp": 5.0
+ }
+}

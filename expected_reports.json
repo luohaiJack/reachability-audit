@@ -258,5 +258,18 @@
    "tax_cost_pp": 40.0
   },
   "gates_pass": true
+ },
+ "matrix_w32768b_v1": {
+  "buckets": {
+   "b1_executed_correct": 5,
+   "b2_executed_harness_failed": 1,
+   "b3_never_executed_boundary": 34
+  },
+  "rates": {
+   "official_accuracy": 0.125,
+   "conditional_accuracy": 0.8333,
+   "tax_cost_pp": 70.8
+  },
+  "gates_pass": true
  }
 }

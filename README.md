@@ -50,6 +50,13 @@ python3 bfcl_tax_report.py results/bfcl/law_*_v1 --markdown --out audit_all.json
 `smoke4`）以及 **2 份 τ² 端口报告**（由 `ports/tau2_tax_report.py` 生成，按设计只带两门）。
 未随包的 16 份是历史留痕或端口报告，**不能**仅凭本包复现。
 
+## 一条臂的降级与如实披露（2026-10-16）
+
+`matrix_A2_ctx65536_b_v1`（65,536 档第二次）的 40 条结果里 **17 条是 `Connection error`**：
+按"边界报文"数它拒了 **6** 条（税 0.15），按仪器的 **never-executed 桶**是 **23/40**（税 0.575）。
+两者都在 `expected_reports.json`/`reports/` 里可查。论文据此**把该对排除在"同配置重跑"
+比较之外**，并同时报出两个口径 —— 本包不掩盖它。
+
 ## 判分文件是**部分清单**（口径说明，2026-10-16 补）
 
 BFCL 的 `official_score.jsonl` 记录的是**被判分的条目**，不是全部题目：
@@ -102,7 +109,7 @@ python3 reproduce.py            # 只用随包切片 slices/，不需要任何�
 python3 reproduce.py --workspace <工作区根>     # 若你有原作者的完整 results/ 树
 ```
 
-`slices/` 收录了 `expected_reports.json` 里 **20 条臂**的**输入切片**
+`slices/` 收录了 `expected_reports.json` 里 **21 条臂**的**输入切片**
 （每臂的 `*_result.json` 与 `official_score.jsonl`，共约 **40 MB**），
 所以拿到包就能跑，**不需要 8 GB 的原始数据树**。
 
@@ -114,13 +121,13 @@ python3 reproduce.py --workspace <工作区根>     # 若你有原作者的完�
 18 臂重跑（工作区 0 / 随包切片 16），差异 0 处
 ```
 
-逐臂的位移（`tax_cost_pp`，20 条臂）：
+逐臂的位移（`tax_cost_pp`，21 条臂）：
 `87.5, 70.0, 47.1, 46.7, 40.0, 31.2, 30.0, 18.6, 17.5, 15.0, 9.6, 0 ×5`
 （**非零 11 条**，中位 18.05）。
 
 运行时会先把被审计目录复制到临时目录，**不会改动本包**。
 
-`reproduce.py` 对 `expected_reports.json` 里列出的 **20 条臂**重跑仪器，
+`reproduce.py` 对 `expected_reports.json` 里列出的 **21 条臂**重跑仪器，
 并逐字段比对（三桶、三个准确率、税损失 pp）。预期：
 
 ```

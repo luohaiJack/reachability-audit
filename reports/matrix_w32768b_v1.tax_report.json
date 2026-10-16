@@ -1,0 +1,52 @@
+{
+ "schema": "bfcl_tax_report_v1",
+ "dir": "/tmp/tmp6aznj535/matrix_w32768b_v1",
+ "result_files": [
+  "/tmp/tmp6aznj535/matrix_w32768b_v1/Qwen_Qwen3-4B-Instruct-2507/multi_turn/BFCL_v4_multi_turn_long_context_result.json"
+ ],
+ "score_file": "/tmp/tmp6aznj535/matrix_w32768b_v1/official_score.jsonl",
+ "n_total": 40,
+ "buckets": {
+  "b1_executed_correct": 5,
+  "b2_executed_harness_failed": 1,
+  "b3_never_executed_boundary": 34,
+  "b2_task_ids": [
+   119
+  ],
+  "b3_task_ids_count": 34
+ },
+ "rates": {
+  "official_accuracy": 0.125,
+  "conditional_accuracy": 0.8333,
+  "reachability_tax": 0.85,
+  "tax_cost_pp": 70.8
+ },
+ "signature": {
+  "mode": "aligned",
+  "W_s_estimate": 32768,
+  "band_position": "恒 31769（= W_s−999）",
+  "distinct_input_tokens": [
+   31769
+  ],
+  "n_boundary_msgs": 34,
+  "invariant_out_plus_in": [
+   32769
+  ]
+ },
+ "error_type_census": {
+  "multi_turn:execution_response_mismatch": 1,
+  "multi_turn:inference_error": 34
+ },
+ "b_unknown_executed_unscored": [],
+ "gates": {
+  "G1_rows_present": true,
+  "G1_rows_count": 40,
+  "G2_done_marker": null,
+  "G1b_result_files_not_empty": true,
+  "G3_boundary_invariant_single": true,
+  "G4_score_matches_rows": true,
+  "G5_bucket_partition": true,
+  "G6_no_orphan_score_ids": true
+ },
+ "gates_pass": true
+}

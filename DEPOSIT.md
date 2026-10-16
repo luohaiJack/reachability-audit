@@ -6,7 +6,7 @@
 - **首次提交**：`reachability-audit v1: three-bucket accounting, tax, diagnostic-tautology classifier`
 - 正文 `Data availability` 已填入该地址。
 - 包内自检：`sha256sum -c MANIFEST.sha256`（全部文件）通过；
-  `python3 reproduce.py --workspace <WS>` 对 20 条臂重跑 **0 差异**。
+  `python3 reproduce.py --workspace <WS>` 对 21 条臂重跑 **0 差异**。
 
 ## 内容
 

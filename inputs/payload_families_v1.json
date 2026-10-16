@@ -1,0 +1,114 @@
+{
+ "schema": "payload_families_v1",
+ "runs": [
+  "results/bfcl/e2_qwen3_4b_notrunc_v1",
+  "results/bfcl/t2_qwen3_4b_notrunc_140_198_v1"
+ ],
+ "n_tasks": 57,
+ "n_distinct_payloads": 32,
+ "n_shared_families": 6,
+ "n_tasks_in_shared_families": 31,
+ "n_tasks_with_unique_payload": 26,
+ "total_terminations": 115,
+ "terminations_from_shared_families": 92,
+ "share_from_shared_families_pct": 80.0,
+ "families": [
+  {
+   "fingerprint": "129f919f20",
+   "n_tasks": 9,
+   "chars": 31704,
+   "sha1": "aa8eab038bc91db59d29dd0978d3d5d572059363",
+   "prefix": "{\"price\": 220.34, \"percent_change\": 0.34, \"volume\": 1.234, \"MA(5)\": [234.34, 212.46, 228.56, 209.19, 223.68, 242.5, 225.",
+   "terminated": 27,
+   "rollouts": 27,
+   "tasks": [
+    "_100",
+    "_108",
+    "_112",
+    "_113",
+    "_125",
+    "_129",
+    "_133",
+    "_135",
+    "_137"
+   ]
+  },
+  {
+   "fingerprint": "438a81e95a",
+   "n_tasks": 9,
+   "chars": 31704,
+   "sha1": "1aadee485a2088088459c1dfe3c327f2a656ff42",
+   "prefix": "{\"price\": 227.16, \"percent_change\": 0.17, \"volume\": 2.552, \"MA(5)\": [234.34, 212.46, 228.56, 209.19, 223.68, 242.5, 225.",
+   "terminated": 26,
+   "rollouts": 27,
+   "tasks": [
+    "_106",
+    "_110",
+    "_118",
+    "_120",
+    "_121",
+    "_124",
+    "_144",
+    "_146",
+    "_148"
+   ]
+  },
+  {
+   "fingerprint": "74873e77f5",
+   "n_tasks": 4,
+   "chars": 31705,
+   "sha1": "a2cad7b789d1e8e2a2899265b7e3b4b3e62a2453",
+   "prefix": "{\"price\": 725.89, \"percent_change\": -0.03, \"volume\": 1.789, \"MA(5)\": [234.34, 212.46, 228.56, 209.19, 223.68, 242.5, 225",
+   "terminated": 12,
+   "rollouts": 12,
+   "tasks": [
+    "_104",
+    "_105",
+    "_114",
+    "_134"
+   ]
+  },
+  {
+   "fingerprint": "a25df5a4fa",
+   "n_tasks": 4,
+   "chars": 31704,
+   "sha1": "69d35aebdf99e3340b4030de826850f32ea6deaf",
+   "prefix": "{\"price\": 310.23, \"percent_change\": 0.09, \"volume\": 3.234, \"MA(5)\": [234.34, 212.46, 228.56, 209.19, 223.68, 242.5, 225.",
+   "terminated": 12,
+   "rollouts": 12,
+   "tasks": [
+    "_109",
+    "_117",
+    "_128",
+    "_131"
+   ]
+  },
+  {
+   "fingerprint": "8ee24f7410",
+   "n_tasks": 3,
+   "chars": 31702,
+   "sha1": "60d7294f0b31218da2feb8dd5bf4a34830300d8c",
+   "prefix": "{\"price\": 150.75, \"percent_change\": 0.05, \"volume\": 1.5, \"MA(5)\": [234.34, 212.46, 228.56, 209.19, 223.68, 242.5, 225.93",
+   "terminated": 9,
+   "rollouts": 9,
+   "tasks": [
+    "_101",
+    "_107",
+    "_136"
+   ]
+  },
+  {
+   "fingerprint": "b73eadc360",
+   "n_tasks": 2,
+   "chars": 31704,
+   "sha1": "a66df90a45337665f28a9053300bb8de67760044",
+   "prefix": "{\"price\": 345.67, \"percent_change\": 0.11, \"volume\": 2.112, \"MA(5)\": [234.34, 212.46, 228.56, 209.19, 223.68, 242.5, 225.",
+   "terminated": 6,
+   "rollouts": 6,
+   "tasks": [
+    "_132",
+    "_138"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,79 @@
+{
+  "schema": "payload_families_rollout_v1",
+  "runs": [
+    "results/bfcl/e2_qwen3_4b_notrunc_v1",
+    "results/bfcl/t2_qwen3_4b_notrunc_140_198_v1"
+  ],
+  "seeds": [
+    "2001",
+    "2002",
+    "2003"
+  ],
+  "n_rollouts": 171,
+  "n_tasks": 57,
+  "total_terminations": 115,
+  "n_distinct_payloads_rollout": 38,
+  "n_distinct_payloads_among_terminations": 14,
+  "n_shared_among_terminations": 7,
+  "n_unique_among_terminations": 7,
+  "n_shared_payloads": 7,
+  "n_tasks_in_shared": 33,
+  "terminations_from_shared": 95,
+  "share_from_shared_pct": 82.6,
+  "top_families": [
+    {
+      "fp": "1aadee485a",
+      "n_terminations": 26
+    },
+    {
+      "fp": "aa8eab038b",
+      "n_terminations": 23
+    },
+    {
+      "fp": "a2cad7b789",
+      "n_terminations": 14
+    },
+    {
+      "fp": "69d35aebdf",
+      "n_terminations": 12
+    },
+    {
+      "fp": "60d7294f0b",
+      "n_terminations": 9
+    },
+    {
+      "fp": "a66df90a45",
+      "n_terminations": 6
+    }
+  ],
+  "per_seed_family_assignment_differs": {
+    "2002_vs_2001": {
+      "n_common_tasks": 57,
+      "n_tasks_family_differs": 7,
+      "median_trigger_char_diff": 1,
+      "max_trigger_char_diff": 24653,
+      "min_trigger_char_diff": -24690
+    },
+    "2003_vs_2001": {
+      "n_common_tasks": 57,
+      "n_tasks_family_differs": 4,
+      "median_trigger_char_diff": 19,
+      "max_trigger_char_diff": 24653,
+      "min_trigger_char_diff": 1
+    }
+  },
+  "per_seed_trigger_size_delta": {
+    "2002_vs_2001": {
+      "median": 0,
+      "median_abs": 0,
+      "min": -24690,
+      "max": 24653
+    },
+    "2003_vs_2001": {
+      "median": 0,
+      "median_abs": 0,
+      "min": 0,
+      "max": 24653
+    }
+  }
+}
