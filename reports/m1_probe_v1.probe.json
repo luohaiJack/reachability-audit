@@ -191,7 +191,17 @@
    "io_sum_constant_p9000": true,
    "n_reported_p9000": 3,
    "verdict": "constructed",
-   "in_varies_with_prompt": false
+   "in_varies_with_prompt": false,
+   "server_version": "0.31.0",
+   "server_argv": [
+    "vllm",
+    "serve",
+    "--max-model-len",
+    "8192",
+    "--port",
+    "18002"
+   ],
+   "max_model_len": 8192
   }
  ]
 }
