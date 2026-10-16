@@ -1,0 +1,18 @@
+{
+ "arm": "matrix_w32768_v1",
+ "W": 32768,
+ "n_requests": 205,
+ "n_rejected": 33,
+ "n_fallback": 33,
+ "W_client": [
+  32768
+ ],
+ "n_client_at_fallback": {
+  "min": 35936,
+  "max": 52167
+ },
+ "message_values": {
+  "1000/31769": 33
+ },
+ "official": "{\"accuracy\": 0.1, \"correct_count\": 4, \"total_count\": 40}"
+}
