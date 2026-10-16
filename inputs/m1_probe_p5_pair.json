@@ -1,0 +1,33 @@
+{
+ "schema": "m1_probe_p5_v1",
+ "question": "拒绝报文里的输入数是否等于 窗口-输出额度（构造值）？",
+ "method": "同一窗口 8192、同一模型、同一探针矩阵（p9000 × max_tokens ∈ {1,128,4096}）；唯一差别是运行时注入 PR #57035 的语义（max_input_tokens 返回 max_total_tokens）",
+ "baseline_server_version": "0.31.0（PyPI 最新，早于 1a3a7a8）",
+ "patched": {
+  "max_tokens": [
+   1,
+   128,
+   4096
+  ],
+  "reported_in": [
+   8193,
+   8193,
+   8193
+  ],
+  "in_varies_with_out": false
+ },
+ "baseline": {
+  "max_tokens": [
+   1,
+   128,
+   4096
+  ],
+  "reported_in": [
+   8192,
+   8065,
+   4097
+  ],
+  "in_varies_with_out": true
+ },
+ "reading": "补丁前报数 = 8192/8065/4097（= W+1-out，随额度变）；注入 #57035 语义后同一 400 报文恒为 8193（= W+1，不再随额度变）⇒ 该恒等式是**修复前路径**的性质；修复后该字段仍是窗口派生的常数，而非对 prompt 的测量。"
+}
