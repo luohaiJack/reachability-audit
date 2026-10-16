@@ -1,0 +1,64 @@
+{
+ "schema": "bfcl_tax_report_v1",
+ "dir": "/tmp/tmpwtbgtbeq/matrix_A2_ctx65536_b_v1",
+ "result_files": [
+  "/tmp/tmpwtbgtbeq/matrix_A2_ctx65536_b_v1/Qwen_Qwen3-4B-Instruct-2507/multi_turn/BFCL_v4_multi_turn_long_context_result.json"
+ ],
+ "score_file": "/tmp/tmpwtbgtbeq/matrix_A2_ctx65536_b_v1/official_score.jsonl",
+ "n_total": 40,
+ "buckets": {
+  "b1_executed_correct": 6,
+  "b2_executed_harness_failed": 11,
+  "b3_never_executed_boundary": 23,
+  "b2_task_ids": [
+   106,
+   107,
+   112,
+   113,
+   114,
+   118,
+   123,
+   126,
+   128,
+   129,
+   132
+  ],
+  "b3_task_ids_count": 23
+ },
+ "rates": {
+  "official_accuracy": 0.15,
+  "conditional_accuracy": 0.3529,
+  "reachability_tax": 0.575,
+  "tax_cost_pp": 20.3
+ },
+ "signature": {
+  "mode": "aligned",
+  "W_s_estimate": 65536,
+  "band_position": "恒 64537（= W_s−999）",
+  "distinct_input_tokens": [
+   64537
+  ],
+  "n_boundary_msgs": 6,
+  "invariant_out_plus_in": [
+   65537
+  ]
+ },
+ "error_type_census": {
+  "multi_turn:empty_turn_model_response": 3,
+  "multi_turn:execution_response_mismatch": 2,
+  "multi_turn:inference_error": 23,
+  "multi_turn:instance_state_mismatch": 6
+ },
+ "b_unknown_executed_unscored": [],
+ "gates": {
+  "G1_rows_present": true,
+  "G1_rows_count": 40,
+  "G2_done_marker": null,
+  "G1b_result_files_not_empty": true,
+  "G3_boundary_invariant_single": true,
+  "G4_score_matches_rows": true,
+  "G5_bucket_partition": true,
+  "G6_no_orphan_score_ids": true
+ },
+ "gates_pass": true
+}

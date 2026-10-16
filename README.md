@@ -1,7 +1,7 @@
 # reachability-audit v1 — 可达性税审计仪器
 
 [![instrument-ci](https://github.com/luohaiJack/reachability-audit/actions/workflows/ci.yml/badge.svg)](https://github.com/luohaiJack/reachability-audit/actions/workflows/ci.yml)
-　**CI 在 GitHub 的干净机器上跑**：**16 臂复现** ＋ known-answer 控制 ＋ **8 例故障注入** ＋ 检测器自检 ＋ 探针离线复算 ＋ **插桩不变式控制** ＋ 决策边界（共 **7 步**）。**首跑 success**（2026-10-15T14:18:49Z）。
+　**CI 在 GitHub 的干净机器上跑**：**18 臂复现** ＋ known-answer 控制 ＋ **8 例故障注入** ＋ 检测器自检 ＋ 探针离线复算 ＋ **插桩不变式控制** ＋ 决策边界（共 **7 步**）。**首跑 success**（2026-10-15T14:18:49Z）。
 
 一个**零依赖**（只用 Python 标准库）的审计脚本：给它一个 BFCL 风格的
 结果目录，它产出**一份标准化报告**，报告里把"官方分数"拆成
@@ -53,7 +53,7 @@ python3 bfcl_tax_report.py results/bfcl/law_*_v1 --markdown --out audit_all.json
 ## 判分文件是**部分清单**（口径说明，2026-10-16 补）
 
 BFCL 的 `official_score.jsonl` 记录的是**被判分的条目**，不是全部题目：
-16 条臂里 **15 条**的判分条目数少于结果行数（例：`matrix_A2r_…` 40 行结果 / 36 条判分；
+18 条臂里 **15 条**的判分条目数少于结果行数（例：`matrix_A2r_…` 40 行结果 / 36 条判分；
 `env2_*` 80 行 / 23–26 条），只有 `matrix_A3_…` 是 40/40。
 ⇒ **不能**把"结果题号 ⊆ 判分题号"当门禁（它在多数臂上必然触发，
 反映的是判分器只列被判分条目的口径，而不是缺陷）。
@@ -102,7 +102,7 @@ python3 reproduce.py            # 只用随包切片 slices/，不需要任何�
 python3 reproduce.py --workspace <工作区根>     # 若你有原作者的完整 results/ 树
 ```
 
-`slices/` 收录了 `expected_reports.json` 里 **16 条臂**的**输入切片**
+`slices/` 收录了 `expected_reports.json` 里 **18 条臂**的**输入切片**
 （每臂的 `*_result.json` 与 `official_score.jsonl`，共约 **40 MB**），
 所以拿到包就能跑，**不需要 8 GB 的原始数据树**。
 
@@ -111,20 +111,20 @@ python3 reproduce.py --workspace <工作区根>     # 若你有原作者的完�
 ```
 [OK  ] matrix_w49152_v1                               (bundle)
 
-16 臂重跑（工作区 0 / 随包切片 16），差异 0 处
+18 臂重跑（工作区 0 / 随包切片 16），差异 0 处
 ```
 
-逐臂的位移（`tax_cost_pp`，16 条臂）：
+逐臂的位移（`tax_cost_pp`，18 条臂）：
 `87.5, 70.0, 47.1, 46.7, 40.0, 31.2, 30.0, 18.6, 17.5, 15.0, 9.6, 0 ×5`
 （**非零 11 条**，中位 18.05）。
 
 运行时会先把被审计目录复制到临时目录，**不会改动本包**。
 
-`reproduce.py` 对 `expected_reports.json` 里列出的 **16 条臂**重跑仪器，
+`reproduce.py` 对 `expected_reports.json` 里列出的 **18 条臂**重跑仪器，
 并逐字段比对（三桶、三个准确率、税损失 pp）。预期：
 
 ```
-16 臂：官方→条件 位移 pp = 87.5, 70.0, 47.1, 46.7, 40.0, 31.2, 30.0, 18.6,
+18 臂：官方→条件 位移 pp = 87.5, 70.0, 47.1, 46.7, 40.0, 31.2, 30.0, 18.6,
                        17.5, 15.0, 9.6, 0, 0, 0, 0, 0
       非零 11 条，中位 18.05
 ```

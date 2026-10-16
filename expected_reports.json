@@ -206,5 +206,31 @@
    "tax_cost_pp": 15.0
   },
   "gates_pass": true
+ },
+ "matrix_A2_ctx65536_b_v1": {
+  "buckets": {
+   "b1_executed_correct": 6,
+   "b2_executed_harness_failed": 11,
+   "b3_never_executed_boundary": 23
+  },
+  "rates": {
+   "official_accuracy": 0.15,
+   "conditional_accuracy": 0.3529,
+   "tax_cost_pp": 20.3
+  },
+  "gates_pass": true
+ },
+ "matrix_w49152b_v1": {
+  "buckets": {
+   "b1_executed_correct": 12,
+   "b2_executed_harness_failed": 13,
+   "b3_never_executed_boundary": 15
+  },
+  "rates": {
+   "official_accuracy": 0.3,
+   "conditional_accuracy": 0.48,
+   "tax_cost_pp": 18.0
+  },
+  "gates_pass": true
  }
 }

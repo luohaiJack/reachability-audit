@@ -30,7 +30,7 @@ grep -rn "Copyright\|SPDX" --include=*.py .        # 第三方版权头：0 命�
 
 | 目录 | 内容 | 性质 |
 |---|---|---|
-| `slices/` | 16 条臂的 `*_result.json` 与 `official_score.jsonl` | **我们自己跑出来的产物**（输入切片，40 MB） |
+| `slices/` | 18 条臂的 `*_result.json` 与 `official_score.jsonl` | **我们自己跑出来的产物**（输入切片，40 MB） |
 | `reports/` | 逐臂 `tax_report.json`、τ² 与田野的判定 json | **我们算出来的统计量** |
 | `examples/` | 一份样例报告 | 同上 |
 

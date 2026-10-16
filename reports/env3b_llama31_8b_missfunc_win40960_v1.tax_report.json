@@ -1,11 +1,11 @@
 {
  "schema": "bfcl_tax_report_v1",
- "dir": "/tmp/tmpbqwsi95f/env3b_llama31_8b_missfunc_win40960_v1",
+ "dir": "/tmp/tmpt6oqxkn9/env3b_llama31_8b_missfunc_win40960_v1",
  "result_files": [
-  "/tmp/tmpbqwsi95f/env3b_llama31_8b_missfunc_win40960_v1/meta-llama_Llama-3.1-8B-Instruct/multi_turn/BFCL_v4_multi_turn_miss_func_result.json",
-  "/tmp/tmpbqwsi95f/env3b_llama31_8b_missfunc_win40960_v1/meta-llama_Llama-3.1-8B-Instruct/multi_turn/BFCL_v4_multi_turn_miss_param_result.json"
+  "/tmp/tmpt6oqxkn9/env3b_llama31_8b_missfunc_win40960_v1/meta-llama_Llama-3.1-8B-Instruct/multi_turn/BFCL_v4_multi_turn_miss_func_result.json",
+  "/tmp/tmpt6oqxkn9/env3b_llama31_8b_missfunc_win40960_v1/meta-llama_Llama-3.1-8B-Instruct/multi_turn/BFCL_v4_multi_turn_miss_param_result.json"
  ],
- "score_file": "/tmp/tmpbqwsi95f/env3b_llama31_8b_missfunc_win40960_v1/official_score.jsonl",
+ "score_file": "/tmp/tmpt6oqxkn9/env3b_llama31_8b_missfunc_win40960_v1/official_score.jsonl",
  "n_total": 40,
  "buckets": {
   "b1_executed_correct": 10,
