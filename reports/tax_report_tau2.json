@@ -1,0 +1,32 @@
+{
+ "schema": "tau2_tax_report_v1",
+ "dir": "results/tau2/tau2_retail_qwen131072_v1",
+ "n_total": 39,
+ "buckets": {
+  "b1_executed_correct": 2,
+  "b2_executed_harness_failed": 28,
+  "b3_never_executed_boundary": 9,
+  "b3_task_ids_count": 9
+ },
+ "rates": {
+  "official_accuracy": 0.0513,
+  "conditional_accuracy": 0.0667,
+  "reachability_tax": 0.2308,
+  "tax_cost_pp": 1.5
+ },
+ "termination_reasons": {
+  "user_stop": 29,
+  "infrastructure_error": 9,
+  "too_many_errors": 1
+ },
+ "error_types": {
+  "JSONDecodeError": 9
+ },
+ "window_rejection_task_ids": [],
+ "gates": {
+  "G1_rows_present": true,
+  "G1_rows_count": 39,
+  "G5_bucket_partition": true
+ },
+ "gates_pass": true
+}

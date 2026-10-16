@@ -47,8 +47,16 @@ python3 bfcl_tax_report.py results/bfcl/law_*_v1 --markdown --out audit_all.json
 `reports/` 里共 **39 份** `*.tax_report.json`：其中 **23 份**对应随包 `slices/` 的臂
 （可由 `reproduce.py` 零差异复现，均含 `G1b`），另 **16 份**属于**输入未随包**的臂或端口报告
 （`expB_upstream`、`law_fresh160`、`law_llama31`、四份 `multiturn4_*`、四份 `pros_*`、
-`smoke4`）以及 **4 份 τ² 端口报告**（8192/32768/131072/端口）（由 `ports/tau2_tax_report.py` 生成，按设计只带两门）。
+`smoke4`）以及 **5 份 τ² 端口报告**（port 8,192／llama 8,192／llama 32,768／llama 131,072／**qwen 131,072**）（由 `ports/tau2_tax_report.py` 生成，按设计只带两门）。
 未随包的 16 份是历史留痕或端口报告，**不能**仅凭本包复现。
+
+## τ² 同族窗口对（2026-10-16 补，L3'）
+
+`tau2_retail_port_v1`（**Qwen3-4B** agent + Qwen3-4B user-sim @ **8,192**）与
+`tau2_retail_qwen131072_v1`（**同族、同 user-sim** @ **131,072**）构成**只换窗口**的对：
+前者 **3** 条 `ContextWindowExceededError`、后者 **0** 条（39/40 仿真完成，
+最后一条超出预算未跑完，已在论文披露）；survivor reward 0.0714 → 0.0667。
+注意 131,072 **超出 Qwen3-4B 声明的 40,960**，因此该臂必须改位置编码（论文已写明）。
 
 ## 未完成的一次尝试（τ² 2×2，2026-10-16 留痕）
 
