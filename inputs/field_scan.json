@@ -644,7 +644,12 @@
    "gpt-realtime-1.5_sierra_2026-03-03",
    "gpt-realtime-2-minimal_openai_2026-07-01",
    "gpt-realtime-2_openai_2026-06-29",
-   "grok-voice-think-fast-1-0_xai_2026-04-21"
+   "grok-voice-think-fast-1-0_xai_2026-04-21",
+   "grok-voice-think-fast-2-0_xai_2026-08-06",
+   "livekit-cascaded_livekit_2026-05-19",
+   "pine-voice-preview-user-sim-v1-0_pineai_2026-08-17",
+   "qwen3-5-omni-plus-realtime_qwen_2026-08-06",
+   "xai-realtime_sierra_2026-03-03"
   ],
   "tax_median": 0.0,
   "tax_max": 0.1366,
@@ -676,6 +681,8 @@
     "infrastructure_error": 158
    },
    "window_exhaustion_mentions": 0
-  }
+  },
+  "n_cache_files": 43,
+  "skipped_composition": "15 个对象存储错误体（NoSuchKey XML），其中 10 个是语音/实时模型"
  }
 }

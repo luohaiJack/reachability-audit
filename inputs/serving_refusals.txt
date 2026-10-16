@@ -1,0 +1,16 @@
+# 服务栈拒绝的原始文本（用于正文 §sec:replication 的引文可追性）
+
+## 1. 超过模型声明窗口时的 `--max-model-len` 拒绝（vLLM 0.31.0）
+命令：vllm serve ./models/Qwen3-4B --max-model-len 49152 --served-model-name /home/leli/client_view_qwen3_4b_ctx49152_norope
+stderr：
+  pydantic_core._pydantic_core.ValidationError: 1 validation error for ModelConfig
+    Value error, User-specified max_model_len (49152) is greater than the derived max_model_len
+    (max_position_embeddings=40960.0 or model_max_length=None in model config)
+发生时间：2026-10-16，客户端视图保持模型原生位置编码（rope_scaling=null）时。
+
+## 2. 被服务的权重与声明窗口
+checkpoint : Qwen/Qwen3-4B
+snapshot   : 1cfa9a7208912126459214e8b04321603b3df60c
+config.json sha256 前缀 : 8ba006f74fecfaaeb392872a...
+max_position_embeddings : 40960
+rope_scaling            : null
