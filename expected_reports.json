@@ -167,5 +167,44 @@
    "tax_cost_pp": 31.2
   },
   "gates_pass": true
+ },
+ "matrix_S4b_qwen3_8b_ctx40960_v1": {
+  "buckets": {
+   "b1_executed_correct": 8,
+   "b2_executed_harness_failed": 4,
+   "b3_never_executed_boundary": 28
+  },
+  "rates": {
+   "official_accuracy": 0.2,
+   "conditional_accuracy": 0.6667,
+   "tax_cost_pp": 46.7
+  },
+  "gates_pass": true
+ },
+ "matrix_w32768_v1": {
+  "buckets": {
+   "b1_executed_correct": 4,
+   "b2_executed_harness_failed": 3,
+   "b3_never_executed_boundary": 33
+  },
+  "rates": {
+   "official_accuracy": 0.1,
+   "conditional_accuracy": 0.5714,
+   "tax_cost_pp": 47.1
+  },
+  "gates_pass": true
+ },
+ "matrix_w49152_v1": {
+  "buckets": {
+   "b1_executed_correct": 10,
+   "b2_executed_harness_failed": 15,
+   "b3_never_executed_boundary": 15
+  },
+  "rates": {
+   "official_accuracy": 0.25,
+   "conditional_accuracy": 0.4,
+   "tax_cost_pp": 15.0
+  },
+  "gates_pass": true
  }
 }

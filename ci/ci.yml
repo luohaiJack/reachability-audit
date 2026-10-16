@@ -8,7 +8,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: 复现 13 条臂（随包切片，无外部数据）
+      - name: 复现 16 条臂（随包切片，无外部数据）
         run: python3 reproduce.py
       - name: known-answer 控制（三桶与第四格）
         run: python3 bfcl_tax_report.py --selftest

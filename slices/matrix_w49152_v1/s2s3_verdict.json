@@ -1,0 +1,18 @@
+{
+ "arm": "matrix_w49152_v1",
+ "W": 49152,
+ "n_requests": 370,
+ "n_rejected": 15,
+ "n_fallback": 15,
+ "W_client": [
+  49152
+ ],
+ "n_client_at_fallback": {
+  "min": 49180,
+  "max": 80295
+ },
+ "message_values": {
+  "1000/48153": 15
+ },
+ "official": "{\"accuracy\": 0.25, \"correct_count\": 10, \"total_count\": 40}"
+}

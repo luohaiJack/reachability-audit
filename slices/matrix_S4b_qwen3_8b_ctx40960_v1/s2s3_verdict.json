@@ -1,0 +1,18 @@
+{
+ "arm": "matrix_S4b_qwen3_8b_ctx40960_v1",
+ "W": 40960,
+ "n_requests": 232,
+ "n_rejected": 28,
+ "n_fallback": 28,
+ "W_client": [
+  40960
+ ],
+ "n_client_at_fallback": {
+  "min": 40984,
+  "max": 68587
+ },
+ "message_values": {
+  "1000/39961": 28
+ },
+ "official": "{\"accuracy\": 0.2, \"correct_count\": 8, \"total_count\": 40}"
+}

@@ -83,7 +83,7 @@ python3 reproduce.py            # 只用随包切片 slices/，不需要任何�
 python3 reproduce.py --workspace <工作区根>     # 若你有原作者的完整 results/ 树
 ```
 
-`slices/` 收录了 `expected_reports.json` 里 **13 条臂**的**输入切片**
+`slices/` 收录了 `expected_reports.json` 里 **16 条臂**的**输入切片**
 （每臂的 `*_result.json` 与 `official_score.jsonl`，共约 **40 MB**），
 所以拿到包就能跑，**不需要 8 GB 的原始数据树**。
 
@@ -95,7 +95,7 @@ python3 reproduce.py --workspace <工作区根>     # 若你有原作者的完�
 
 运行时会先把被审计目录复制到临时目录，**不会改动本包**。
 
-`reproduce.py` 对 `expected_reports.json` 里列出的 **13 条臂**重跑仪器，
+`reproduce.py` 对 `expected_reports.json` 里列出的 **16 条臂**重跑仪器，
 并逐字段比对（三桶、三个准确率、税损失 pp）。预期：
 
 ```
