@@ -44,8 +44,8 @@ python3 bfcl_tax_report.py results/bfcl/law_*_v1 --markdown --out audit_all.json
 
 ## `reports/` 的覆盖范围
 
-`reports/` 里共 **30 份** `*.tax_report.json`：其中 **16 份**对应随包 `slices/` 的臂
-（可由 `reproduce.py` 零差异复现，均含 `G1b`），另 **14 份**属于**输入未随包**的臂
+`reports/` 里共 **36 份** `*.tax_report.json`：其中 **20 份**对应随包 `slices/` 的臂
+（可由 `reproduce.py` 零差异复现，均含 `G1b`），另 **16 份**属于**输入未随包**的臂或端口报告
 （`expB_upstream`、`law_fresh160`、`law_llama31`、四份 `multiturn4_*`、四份 `pros_*`、
 `smoke4`）以及 **2 份 τ² 端口报告**（由 `ports/tau2_tax_report.py` 生成，按设计只带两门）。
 未随包的 14 份是历史留痕，**不能**仅凭本包复现。
