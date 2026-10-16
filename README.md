@@ -50,6 +50,15 @@ python3 bfcl_tax_report.py results/bfcl/law_*_v1 --markdown --out audit_all.json
 `smoke4`）以及 **2 份 τ² 端口报告**（由 `ports/tau2_tax_report.py` 生成，按设计只带两门）。
 未随包的 16 份是历史留痕或端口报告，**不能**仅凭本包复现。
 
+## 未完成的一次尝试（τ² 2×2，2026-10-16 留痕）
+
+为把 τ² 那一格从 "policy configuration" 收紧到 "agent policy"，我们试过**固定 8,192 窗口、
+把 agent 与 user-sim 分别换族**的 2×2。**两次尝试均失败**：第一次 Llama 端口引擎 OOM；
+第二次双端口都起来了（单独 chat/tools 探针 200），τ² 仍全量
+`litellm.InternalServerError`（40/40、30/33）。原因未核实。
+⇒ 该 2×2 **未产出可用数据**，本包**不含**这两条臂；论文相应措辞**维持**在
+"the policy configuration we ran there"。
+
 ## 一条臂的降级与如实披露（2026-10-16）
 
 `matrix_A2_ctx65536_b_v1`（65,536 档第二次）的 40 条结果里 **17 条是 `Connection error`**：
@@ -60,7 +69,7 @@ python3 bfcl_tax_report.py results/bfcl/law_*_v1 --markdown --out audit_all.json
 ## 判分文件是**部分清单**（口径说明，2026-10-16 补）
 
 BFCL 的 `official_score.jsonl` 记录的是**被判分的条目**，不是全部题目：
-21 条臂里 **20 条**的判分条目数少于结果行数（例：`matrix_A2r_…` 40 行结果 / 36 条判分；
+23 条臂里 **22 条**的判分条目数少于结果行数（例：`matrix_A2r_…` 40 行结果 / 36 条判分；
 `env2_*` 80 行 / 23–26 条），只有 `matrix_A3_ctx24576aligned_v1` 是 40 行 / 40 条判分。
 
 ### ⚠️ 该臂的一个口径陷阱（第八轮第二刀 F7，2026-10-16 补）
@@ -117,7 +126,7 @@ python3 reproduce.py            # 只用随包切片 slices/，不需要任何�
 python3 reproduce.py --workspace <工作区根>     # 若你有原作者的完整 results/ 树
 ```
 
-`slices/` 收录了 `expected_reports.json` 里 **21 条臂**的**输入切片**
+`slices/` 收录了 `expected_reports.json` 里 **23 条臂**的**输入切片**
 （每臂的 `*_result.json` 与 `official_score.jsonl`，共约 **40 MB**），
 所以拿到包就能跑，**不需要 8 GB 的原始数据树**。
 
@@ -129,13 +138,13 @@ python3 reproduce.py --workspace <工作区根>     # 若你有原作者的完�
 18 臂重跑（工作区 0 / 随包切片 16），差异 0 处
 ```
 
-逐臂的位移（`tax_cost_pp`，21 条臂）：
+逐臂的位移（`tax_cost_pp`，23 条臂）：
 `87.5, 70.0, 47.1, 46.7, 40.0, 31.2, 30.0, 18.6, 17.5, 15.0, 9.6, 0 ×5`
 （**非零 11 条**，中位 18.05）。
 
 运行时会先把被审计目录复制到临时目录，**不会改动本包**。
 
-`reproduce.py` 对 `expected_reports.json` 里列出的 **21 条臂**重跑仪器，
+`reproduce.py` 对 `expected_reports.json` 里列出的 **23 条臂**重跑仪器，
 并逐字段比对（三桶、三个准确率、税损失 pp）。预期：
 
 ```

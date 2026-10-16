@@ -13,7 +13,16 @@
    0.1,
    0.125
   ],
+  "connection_errors": [
+   0,
+   0
+  ],
   "rej_spread": 1,
+  "clean_rejections": [
+   33,
+   34
+  ],
+  "clean_rej_spread": 1,
   "acc_spread_pp": 2.5
  },
  "40,960 (no rope)": {
@@ -30,7 +39,16 @@
    0.075,
    0.1
   ],
+  "connection_errors": [
+   0,
+   0
+  ],
   "rej_spread": 2,
+  "clean_rejections": [
+   28,
+   26
+  ],
+  "clean_rej_spread": 2,
   "acc_spread_pp": 2.5
  },
  "49,152 (yarn)": {
@@ -47,24 +65,46 @@
    0.25,
    0.3
   ],
+  "connection_errors": [
+   0,
+   0
+  ],
   "rej_spread": 0,
+  "clean_rejections": [
+   15,
+   15
+  ],
+  "clean_rej_spread": 0,
   "acc_spread_pp": 5.0
  },
  "65,536 (yarn)": {
   "arms": [
    "matrix_A2_ctx65536_v1",
-   "matrix_A2_ctx65536_b_v1"
+   "matrix_A2_ctx65536_b_v1",
+   "matrix_A2_ctx65536_c_v1"
   ],
   "missing": [],
   "rejections": [
    13,
-   6
+   6,
+   13
   ],
   "accuracy": [
    0.2,
+   0.15,
    0.15
   ],
+  "connection_errors": [
+   0,
+   17,
+   1
+  ],
   "rej_spread": 7,
+  "clean_rejections": [
+   13,
+   13
+  ],
+  "clean_rej_spread": 0,
   "acc_spread_pp": 5.0
  },
  "8B @40,960 (no rope)": {
@@ -81,7 +121,16 @@
    0.15,
    0.2
   ],
+  "connection_errors": [
+   0,
+   0
+  ],
   "rej_spread": 1,
+  "clean_rejections": [
+   27,
+   28
+  ],
+  "clean_rej_spread": 1,
   "acc_spread_pp": 5.0
  }
 }
