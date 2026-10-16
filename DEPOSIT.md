@@ -5,8 +5,8 @@
 - **仓库**：https://github.com/luohaiJack/reachability-audit （公开）
 - **首次提交**：`reachability-audit v1: three-bucket accounting, tax, diagnostic-tautology classifier`
 - 正文 `Data availability` 已填入该地址。
-- 包内自检：`sha256sum -c MANIFEST.sha256`（11 项）通过；
-  `python3 reproduce.py --workspace <WS>` 对 10 条臂重跑 **0 差异**。
+- 包内自检：`sha256sum -c MANIFEST.sha256`（全部文件）通过；
+  `python3 reproduce.py --workspace <WS>` 对 13 条臂重跑 **0 差异**。
 
 ## 内容
 

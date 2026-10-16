@@ -6,7 +6,7 @@
 一个**零依赖**（只用 Python 标准库）的审计脚本：给它一个 BFCL 风格的
 结果目录，它产出**一份标准化报告**，报告里把"官方分数"拆成
 **① 执行且正确 / ② 执行但 harness 失败 / ③ 从未执行** 三桶，
-并给出三个准确率与六项完整性门禁。
+并给出三个准确率与**七项**完整性门禁。
 
 本目录是论文 *Execution-window hazard and reachability* 所描述仪器的可交付副本。
 
@@ -42,13 +42,14 @@ python3 bfcl_tax_report.py results/bfcl/law_*_v1 --markdown --out audit_all.json
 **退出码**：`0` = 报告产出且门禁全过；`2` = 报告产出但门禁不过
 （半成品臂 —— **禁止据此下判词**）；`2` 亦用于"未找到结果目录"。
 
-## 六项完整性门禁（`gates`）
+## 七项完整性门禁（`gates`）
 
 | 门禁 | 断言 | 为什么 |
 |---|---|---|
 | `G1_rows_present` / `G1_rows_count` | 有原始行，并报出条数 | 空目录不得产出"0% 税"的假报告 |
+| `G1b_result_files_not_empty` | 结果文件**存在就不得为 0 行** | F6 用例抓出的缺口：被清空的产物原先被当"无原始结果"跳过 |
 | `G2_done_marker` | 找到 chain 日志就必须有 `DONE` | 半成品臂的最大来源；无日志记"不适用"，**不算否证** |
-| `G3_boundary_invariant_single` | 被拒报文的 `out+in` 取值唯一 | 混臂检测 |
+| `G3_boundary_invariant_single` | 被拒报文的 `out+in` 取值唯一**且等于 `W_s+1`** | 混臂检测＋恒等式（F4 用例抓出的缺口）|
 | `G4_score_matches_rows` | 官方 `accuracy` 与逐条重算**逐位**一致 | 防止"评错文件"（我们踩过） |
 | `G5_bucket_partition` | 三桶互斥且覆盖全部题 | 桶不互斥 ⇒ 报告无意义 |
 | `G6_no_orphan_score_ids` | 判分器里的题号 ⊆ 结果文件题号 | 归档/copy 事故检测 |
@@ -65,7 +66,7 @@ python3 bfcl_tax_report.py results/bfcl/law_*_v1 --markdown --out audit_all.json
 **不能**用来推断真实提示长度、阈值带位置或"边界几何"。
 真实的死亡阈值只能从**客户端逐请求计数与输出额度**读出。
 本目录的报告保留该字段仅为与旧产物兼容；论文已把该组件从
-"签名检测"改名为 **dead-request detection**。
+仪器把这些字段标为 **constructed**（构造值），并在报告里与"实测"分开呈现。
 
 ## 适用范围与不适用范围
 
@@ -82,7 +83,7 @@ python3 reproduce.py            # 只用随包切片 slices/，不需要任何�
 python3 reproduce.py --workspace <工作区根>     # 若你有原作者的完整 results/ 树
 ```
 
-`slices/` 收录了 `expected_reports.json` 里 **10 条臂**的**输入切片**
+`slices/` 收录了 `expected_reports.json` 里 **13 条臂**的**输入切片**
 （每臂的 `*_result.json` 与 `official_score.jsonl`，共约 **40 MB**），
 所以拿到包就能跑，**不需要 8 GB 的原始数据树**。
 
@@ -94,7 +95,7 @@ python3 reproduce.py --workspace <工作区根>     # 若你有原作者的完�
 
 运行时会先把被审计目录复制到临时目录，**不会改动本包**。
 
-`reproduce.py` 对 `expected_reports.json` 里列出的 **10 条臂**重跑仪器，
+`reproduce.py` 对 `expected_reports.json` 里列出的 **13 条臂**重跑仪器，
 并逐字段比对（三桶、三个准确率、税损失 pp）。预期：
 
 ```
@@ -115,9 +116,7 @@ python3 reproduce.py --workspace <工作区根>     # 若你有原作者的完�
 
 ★ **决策规则一行判定**：`python3 tools/audit_power.py --check <τ_A> <τ_B> <观测差pp>` → 打印许可/不许可，退出码 **0=许可 / 3=不许可**。
 
-★ 故障注入本身**发现并修好了两个真缺口**：其一见下（G3）；其二 **F6**——结果文件被清空原先被当作「无原始结果 ⇒ 跳过」而放行，现新增门禁 **G1b**（结果文件存在但 0 行 ⇒ 判失败）。
-
-★ 故障注入本身**发现并修好了一个真缺口**：`G3` 原本只查"被拒报文的 `out+in` 取值是否唯一"
+★ 故障注入本身**发现并修好了两个真缺口**：其一 `G3` 原本只查"被拒报文的 `out+in` 取值是否唯一"
 （能抓混臂，抓不到"所有报文一致地偏离恒等式"）；现改为**再用报文里的窗口值逐条核 `in+out==W+1`**。
 —— 这就是"有效性证据"与"自洽复现"的区别。
 

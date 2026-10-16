@@ -1,10 +1,10 @@
 {
  "schema": "bfcl_tax_report_v1",
- "dir": "results/bfcl/law_aligned32768_v1",
+ "dir": "/tmp/tmp1tvpfhwp/law_aligned32768_v1",
  "result_files": [
-  "results/bfcl/law_aligned32768_v1/Qwen_Qwen3-4B-Instruct-2507/multi_turn/BFCL_v4_multi_turn_long_context_result.json"
+  "/tmp/tmp1tvpfhwp/law_aligned32768_v1/Qwen_Qwen3-4B-Instruct-2507/multi_turn/BFCL_v4_multi_turn_long_context_result.json"
  ],
- "score_file": "results/bfcl/law_aligned32768_v1/official_score.jsonl",
+ "score_file": "/tmp/tmp1tvpfhwp/law_aligned32768_v1/official_score.jsonl",
  "n_total": 40,
  "buckets": {
   "b1_executed_correct": 4,
@@ -46,6 +46,7 @@
   "G1_rows_present": true,
   "G1_rows_count": 40,
   "G2_done_marker": true,
+  "G1b_result_files_not_empty": true,
   "G3_boundary_invariant_single": true,
   "G4_score_matches_rows": true,
   "G5_bucket_partition": true,
