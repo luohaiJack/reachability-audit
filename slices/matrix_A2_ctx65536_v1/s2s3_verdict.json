@@ -1,0 +1,23 @@
+{
+ "dir": "results/bfcl/matrix_A2_ctx65536_v1",
+ "n_tasks": 40,
+ "n_requests": 431,
+ "n_status_error": 13,
+ "n_fallback_1000": 13,
+ "n_rejected_tasks": 13,
+ "W_client": [
+  65536
+ ],
+ "n_client_at_fallback": {
+  "min": 66785,
+  "max": 88876
+ },
+ "n_client_overall": {
+  "min": 4434,
+  "max": 88876
+ },
+ "status_dist": {
+  "ok": 418,
+  "error": 13
+ }
+}

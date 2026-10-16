@@ -1,0 +1,18 @@
+{
+ "arm": "S4_qwen3_8b_ctx40960",
+ "n_requests": 230,
+ "n_status_error": 27,
+ "n_fallback_1000": 27,
+ "n_rejected_tasks": 27,
+ "W_client": [
+  40960
+ ],
+ "n_client_at_fallback": {
+  "min": 41501,
+  "max": 78114
+ },
+ "n_client_overall": {
+  "min": 4434,
+  "max": 78114
+ }
+}

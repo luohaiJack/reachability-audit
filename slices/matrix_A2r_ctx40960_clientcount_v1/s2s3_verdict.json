@@ -1,0 +1,23 @@
+{
+ "dir": "results/bfcl/matrix_A2r_ctx40960_clientcount_v1",
+ "n_tasks": 40,
+ "n_requests": 242,
+ "n_status_error": 26,
+ "n_fallback_1000": 26,
+ "n_rejected_tasks": 26,
+ "W_client": [
+  40960
+ ],
+ "n_client_at_fallback": {
+  "min": 40977,
+  "max": 72293
+ },
+ "n_client_overall": {
+  "min": 4434,
+  "max": 72293
+ },
+ "status_dist": {
+  "ok": 216,
+  "error": 26
+ }
+}
