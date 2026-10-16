@@ -149,7 +149,9 @@ def report_dir(d):
     gates = {
         "G1_rows_present": len(rows) > 0,
         "G1_rows_count": len(rows),
-        "G2_done_marker": dm is True or dm is None or bool(dm),  # None=不适用（无日志），不算否证
+        # 三态（2026-10-16，第七轮第二刀）：None = 不适用（该目录没有 chain 日志，例如随包切片），
+        # True/False = 有日志且是否有 DONE 标记。**True 与"不适用"不再不可分**。
+        "G2_done_marker": (None if dm is None else bool(dm)),
         # 唯一性（同配置）＋ 若报文可解析出 W：逐条核 in+out == W+1
         "G1b_result_files_not_empty": not _empty_result_files(d),
         "G3_boundary_invariant_single": len(outs_inv) <= 1 and (
@@ -158,7 +160,9 @@ def report_dir(d):
         "G5_bucket_partition": len(never & harness) == 0 and (not score or len(correct) + len(never) + len(harness) == len(all_ids)),
         "G6_no_orphan_score_ids": (not score or set(score) <= all_ids),
     }
-    gates_pass = all(v for k, v in gates.items() if k.startswith("G") and isinstance(v, bool))
+    # None 的门禁＝不适用（不计入通过与失败）；只有显式 False 才算不过
+    gates_pass = all(v for k, v in gates.items()
+                     if k.startswith("G") and isinstance(v, bool))
     return {
         "schema": "bfcl_tax_report_v1",
         "dir": str(d.relative_to(ROOT)) if str(d).startswith(str(ROOT)) else str(d),
@@ -206,7 +210,8 @@ def render(r):
          f"签名: {sg['mode']} | W_s≈{sg['W_s_estimate']} | 带位置 {sg['band_position']} | "
          f"报文恒等式 out+in ∈ {sg['invariant_out_plus_in']}",
          f"error_type: {r['error_type_census']}",
-         f"门禁: {'✅ 通过' if r['gates_pass'] else '⛔ 不过'} {[k for k, v in r['gates'].items() if isinstance(v, bool) and not v]}"]
+         f"门禁: {'✅ 通过' if r['gates_pass'] else '⛔ 不过'} {[k for k, v in r['gates'].items() if isinstance(v, bool) and not v]}"
+         + f"｜不适用: {[k for k, v in r['gates'].items() if v is None]}"]
     return "\n".join(L)
 
 

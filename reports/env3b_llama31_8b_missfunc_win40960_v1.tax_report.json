@@ -1,11 +1,11 @@
 {
  "schema": "bfcl_tax_report_v1",
- "dir": "/tmp/tmp282cb7nm/env3b_llama31_8b_missfunc_win40960_v1",
+ "dir": "/tmp/tmpbqwsi95f/env3b_llama31_8b_missfunc_win40960_v1",
  "result_files": [
-  "/tmp/tmp282cb7nm/env3b_llama31_8b_missfunc_win40960_v1/meta-llama_Llama-3.1-8B-Instruct/multi_turn/BFCL_v4_multi_turn_miss_func_result.json",
-  "/tmp/tmp282cb7nm/env3b_llama31_8b_missfunc_win40960_v1/meta-llama_Llama-3.1-8B-Instruct/multi_turn/BFCL_v4_multi_turn_miss_param_result.json"
+  "/tmp/tmpbqwsi95f/env3b_llama31_8b_missfunc_win40960_v1/meta-llama_Llama-3.1-8B-Instruct/multi_turn/BFCL_v4_multi_turn_miss_func_result.json",
+  "/tmp/tmpbqwsi95f/env3b_llama31_8b_missfunc_win40960_v1/meta-llama_Llama-3.1-8B-Instruct/multi_turn/BFCL_v4_multi_turn_miss_param_result.json"
  ],
- "score_file": "/tmp/tmp282cb7nm/env3b_llama31_8b_missfunc_win40960_v1/official_score.jsonl",
+ "score_file": "/tmp/tmpbqwsi95f/env3b_llama31_8b_missfunc_win40960_v1/official_score.jsonl",
  "n_total": 40,
  "buckets": {
   "b1_executed_correct": 10,
@@ -69,7 +69,7 @@
  "gates": {
   "G1_rows_present": true,
   "G1_rows_count": 80,
-  "G2_done_marker": true,
+  "G2_done_marker": null,
   "G1b_result_files_not_empty": true,
   "G3_boundary_invariant_single": true,
   "G4_score_matches_rows": true,

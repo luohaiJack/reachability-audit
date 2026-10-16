@@ -1,7 +1,7 @@
 # reachability-audit v1 — 可达性税审计仪器
 
 [![instrument-ci](https://github.com/luohaiJack/reachability-audit/actions/workflows/ci.yml/badge.svg)](https://github.com/luohaiJack/reachability-audit/actions/workflows/ci.yml)
-　**CI 在 GitHub 的干净机器上跑**：10 臂复现 ＋ known-answer 控制 ＋ 6 例故障注入 ＋ 检测器自检 ＋ 探针离线复算 ＋ 决策边界。**首跑 success**（2026-10-15T14:18:49Z）。
+　**CI 在 GitHub 的干净机器上跑**：**16 臂复现** ＋ known-answer 控制 ＋ **8 例故障注入** ＋ 检测器自检 ＋ 探针离线复算 ＋ **插桩不变式控制** ＋ 决策边界（共 **7 步**）。**首跑 success**（2026-10-15T14:18:49Z）。
 
 一个**零依赖**（只用 Python 标准库）的审计脚本：给它一个 BFCL 风格的
 结果目录，它产出**一份标准化报告**，报告里把"官方分数"拆成
@@ -36,11 +36,30 @@ python3 bfcl_tax_report.py results/bfcl/law_*_v1 --markdown --out audit_all.json
 
 **输出**：`<结果目录>/tax_report.json`（schema 见 `SCHEMA.md`），字段包括
 `buckets`（三桶）、`rates`（官方／条件／税／税损失 pp）、`signature`
-（被拒报文的算术位置，**注意：这是打印器构造值，见下**）、`gates`（六项）、
+（被拒报文的算术位置，**注意：这是打印器构造值，见下**）、`gates`（七项）、
 `gates_pass`。
 
 **退出码**：`0` = 报告产出且门禁全过；`2` = 报告产出但门禁不过
 （半成品臂 —— **禁止据此下判词**）；`2` 亦用于"未找到结果目录"。
+
+## `reports/` 的覆盖范围
+
+`reports/` 里共 **30 份** `*.tax_report.json`：其中 **16 份**对应随包 `slices/` 的臂
+（可由 `reproduce.py` 零差异复现，均含 `G1b`），另 **14 份**属于**输入未随包**的臂
+（`expB_upstream`、`law_fresh160`、`law_llama31`、四份 `multiturn4_*`、四份 `pros_*`、
+`smoke4`）以及 **2 份 τ² 端口报告**（由 `ports/tau2_tax_report.py` 生成，按设计只带两门）。
+未随包的 14 份是历史留痕，**不能**仅凭本包复现。
+
+## 判分文件是**部分清单**（口径说明，2026-10-16 补）
+
+BFCL 的 `official_score.jsonl` 记录的是**被判分的条目**，不是全部题目：
+16 条臂里 **15 条**的判分条目数少于结果行数（例：`matrix_A2r_…` 40 行结果 / 36 条判分；
+`env2_*` 80 行 / 23–26 条），只有 `matrix_A3_…` 是 40/40。
+⇒ **不能**把"结果题号 ⊆ 判分题号"当门禁（它在多数臂上必然触发，
+反映的是判分器只列被判分条目的口径，而不是缺陷）。
+仪器采用的方向门禁是 **`G6_no_orphan_score_ids`**（判分有、结果没有才算缺陷）。
+另外 4 个 `env*` 臂的切片目录**同时含两个子榜**的结果文件
+（`miss_func` 与 `miss_param`），当前无害（`b3=0`、`G4` 过），但阅读时需注意类别。
 
 ## 七项完整性门禁（`gates`）
 
@@ -87,11 +106,17 @@ python3 reproduce.py --workspace <工作区根>     # 若你有原作者的完�
 （每臂的 `*_result.json` 与 `official_score.jsonl`，共约 **40 MB**），
 所以拿到包就能跑，**不需要 8 GB 的原始数据树**。
 
-预期输出（2026-10-15 本地实测，在**全新复制的目录**里）：
+预期输出（2026-10-16 本地实测）：
 
 ```
-10 臂重跑（工作区 0 / 随包切片 10），差异 0 处
+[OK  ] matrix_w49152_v1                               (bundle)
+
+16 臂重跑（工作区 0 / 随包切片 16），差异 0 处
 ```
+
+逐臂的位移（`tax_cost_pp`，16 条臂）：
+`87.5, 70.0, 47.1, 46.7, 40.0, 31.2, 30.0, 18.6, 17.5, 15.0, 9.6, 0 ×5`
+（**非零 11 条**，中位 18.05）。
 
 运行时会先把被审计目录复制到临时目录，**不会改动本包**。
 
@@ -99,8 +124,9 @@ python3 reproduce.py --workspace <工作区根>     # 若你有原作者的完�
 并逐字段比对（三桶、三个准确率、税损失 pp）。预期：
 
 ```
-10 臂：官方→条件 位移 pp = 87.5, 70.0, 40.0, 30.0, 17.5, 0, 0, 0, 0, 0
-      中位 8.75，非零 5 条
+16 臂：官方→条件 位移 pp = 87.5, 70.0, 47.1, 46.7, 40.0, 31.2, 30.0, 18.6,
+                       17.5, 15.0, 9.6, 0, 0, 0, 0, 0
+      非零 11 条，中位 18.05
 ```
 
 ## 仪器的有效性证据（不是"自洽"）
@@ -142,7 +168,7 @@ python3 reproduce.py --workspace <工作区根>     # 若你有原作者的完�
 重写了 `load_rows()`（读 `results.json` 的 `simulations[]`）与 `load_score()`
 （τ² 的"分"是 `reward_info.reward`，终止原因在 `termination_reason`），
 **并改了两处内容**：③ 桶判据换成 `termination_reason == "infrastructure_error"`；
-门禁只带 **2/6**（G1/G5，其余四门 τ² 产物里没有对应输入）。
+门禁只带 **2/7**（G1/G5，其余四门 τ² 产物里没有对应输入）。
 三桶与三个率的**定义**未改。
 
 映射：③ 从未执行 = `termination_reason == "infrastructure_error"`；
