@@ -1,10 +1,10 @@
 {
  "schema": "bfcl_tax_report_v1",
- "dir": "/tmp/tmpw6j8aju7/matrix_E1_q4b_FC_srv24576_cli24576_v1",
+ "dir": "/tmp/tmpbgxgam_1/matrix_E1_q4b_FC_srv24576_cli24576_v1",
  "result_files": [
-  "/tmp/tmpw6j8aju7/matrix_E1_q4b_FC_srv24576_cli24576_v1/Qwen_Qwen3-4B-Instruct-2507-FC/multi_turn/BFCL_v4_multi_turn_long_context_result.json"
+  "/tmp/tmpbgxgam_1/matrix_E1_q4b_FC_srv24576_cli24576_v1/Qwen_Qwen3-4B-Instruct-2507-FC/multi_turn/BFCL_v4_multi_turn_long_context_result.json"
  ],
- "score_file": "/tmp/tmpw6j8aju7/matrix_E1_q4b_FC_srv24576_cli24576_v1/official_score.jsonl",
+ "score_file": "/tmp/tmpbgxgam_1/matrix_E1_q4b_FC_srv24576_cli24576_v1/official_score.jsonl",
  "n_total": 40,
  "buckets": {
   "b1_executed_correct": 5,
