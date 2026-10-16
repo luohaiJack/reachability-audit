@@ -114,6 +114,9 @@ python3 reproduce.py --workspace <工作区根>     # 若你有原作者的完�
 | **决策边界** | `DSH_AUDIT_ROOT=/tmp/x python3 tools/audit_power.py` | 用随包 `inputs/` 离线复算 |
 | **CI** | `.github/workflows/ci.yml`（**已启用，首跑 success**）| 以上全部在 GitHub 的干净机器上每次 push 自动跑 |
 
+★ **报告与仪器同版**：`reports/` 下除 τ² 两条（由端口 `ports/tau2_tax_report.py` 生成，本就只带两门）
+外，**全部报告由当前仪器重新生成**，因此每份都含最新的 `G1b` 门禁 —— 交付的报告就是交付的仪器产出的。
+
 ★ **决策规则一行判定**：`python3 tools/audit_power.py --check <τ_A> <τ_B> <观测差pp>` → 打印许可/不许可，退出码 **0=许可 / 3=不许可**。
 
 ★ 故障注入本身**发现并修好了两个真缺口**：其一 `G3` 原本只查"被拒报文的 `out+in` 取值是否唯一"

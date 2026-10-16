@@ -61,6 +61,7 @@
   "G1_rows_present": true,
   "G1_rows_count": 40,
   "G2_done_marker": true,
+  "G1b_result_files_not_empty": true,
   "G3_boundary_invariant_single": true,
   "G4_score_matches_rows": true,
   "G5_bucket_partition": true,
