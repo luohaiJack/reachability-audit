@@ -74,6 +74,15 @@ python3 bfcl_tax_report.py results/bfcl/law_*_v1 --markdown --out audit_all.json
 两者都在 `expected_reports.json`/`reports/` 里可查。论文据此**把该对排除在"同配置重跑"
 比较之外**，并同时报出两个口径 —— 本包不掩盖它。
 
+## MANIFEST 的生成口径（2026-10-17 修）
+
+`MANIFEST.sha256` 只收**版本控制内的产物**，生成时**排除 `__pycache__/`、`*.pyc` 与 `.git/`**：
+```bash
+find . -type f ! -name MANIFEST.sha256 ! -path "./.git/*" ! -path "*/__pycache__/*" ! -name "*.pyc" \
+  | sort | xargs sha256sum > MANIFEST.sha256
+```
+（此前一次生成把本地跑脚本产生的 `.pyc` 也收进去，导致 clone 到别处自检 1 项失败。）
+
 ## 判分文件是**部分清单**（口径说明，2026-10-16 补）
 
 BFCL 的 `official_score.jsonl` 记录的是**被判分的条目**，不是全部题目：
