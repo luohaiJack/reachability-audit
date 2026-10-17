@@ -1,0 +1,93 @@
+{
+ "schema": "m1_probe_v1",
+ "stacks": [
+  {
+   "name": "vllm031_realpatch",
+   "base": "http://127.0.0.1:18002",
+   "model": "/home/leli/client_view_qwen3_4b_ctx8192",
+   "cells": [
+    {
+     "prompt": "p3000",
+     "max_tokens": 1,
+     "http": 200,
+     "body": "{\"id\":\"chatcmpl-94bdfca4accc1a85\",\"object\":\"chat.completion\",\"created\":1792158668,\"model\":\"/home/leli/client_view_qwen3_4b_ctx8192\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"<think>\",\"refusal\":null,\"annotations\":null,\"audio\":null,\"function_call\":null,\"reasoning\":null},\"logprobs\":null,\"finish_reason\":\"length\",\"stop_reason\":null,\"token_ids\":null,\"routed_experts\":null}],\"service_",
+     "verdict": "absent",
+     "W": null,
+     "out": null,
+     "in": null,
+     "pattern": null,
+     "evidence": []
+    },
+    {
+     "prompt": "p3000",
+     "max_tokens": 128,
+     "http": 200,
+     "body": "{\"id\":\"chatcmpl-b29d9622f5ddeb6d\",\"object\":\"chat.completion\",\"created\":1792158669,\"model\":\"/home/leli/client_view_qwen3_4b_ctx8192\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"<think>\\nOkay, the user sent a message with a lot of repeated \\\"hello\\\" phrases. Let me see... They might be testing if I can handle a long message or maybe they're trying to see if I respond appropriately",
+     "verdict": "absent",
+     "W": null,
+     "out": null,
+     "in": null,
+     "pattern": null,
+     "evidence": []
+    },
+    {
+     "prompt": "p3000",
+     "max_tokens": 4096,
+     "http": 200,
+     "body": "{\"id\":\"chatcmpl-97e30c79e24d0e94\",\"object\":\"chat.completion\",\"created\":1792158670,\"model\":\"/home/leli/client_view_qwen3_4b_ctx8192\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"<think>\\nOkay, the user sent a message with a lot of \\\"hello\\\" repeated multiple times. Let me think about how to respond.\\n\\nFirst, I need to acknowledge their message. They might be testing the system or",
+     "verdict": "absent",
+     "W": null,
+     "out": null,
+     "in": null,
+     "pattern": null,
+     "evidence": []
+    },
+    {
+     "prompt": "p9000",
+     "max_tokens": 1,
+     "http": 400,
+     "body": "{\"error\":{\"message\":\"This model's maximum context length is 8192 tokens. However, your prompt contains at least 8193 input tokens, which exceeds this limit even without any output tokens. Please reduce the length of the input prompt. (parameter=input_tokens, value=8193)\",\"type\":\"BadRequestError\",\"param\":\"input_tokens\",\"code\":400}}",
+     "verdict": "non_tautological",
+     "W": 8192,
+     "out": null,
+     "in": 8193,
+     "pattern": "vllm_postfix",
+     "evidence": [
+      "ctx=8192"
+     ]
+    },
+    {
+     "prompt": "p9000",
+     "max_tokens": 128,
+     "http": 400,
+     "body": "{\"error\":{\"message\":\"This model's maximum context length is 8192 tokens. However, your prompt contains at least 8193 input tokens, which exceeds this limit even without any output tokens. Please reduce the length of the input prompt. (parameter=input_tokens, value=8193)\",\"type\":\"BadRequestError\",\"param\":\"input_tokens\",\"code\":400}}",
+     "verdict": "non_tautological",
+     "W": 8192,
+     "out": null,
+     "in": 8193,
+     "pattern": "vllm_postfix",
+     "evidence": [
+      "ctx=8192"
+     ]
+    },
+    {
+     "prompt": "p9000",
+     "max_tokens": 4096,
+     "http": 400,
+     "body": "{\"error\":{\"message\":\"This model's maximum context length is 8192 tokens. However, your prompt contains at least 8193 input tokens, which exceeds this limit even without any output tokens. Please reduce the length of the input prompt. (parameter=input_tokens, value=8193)\",\"type\":\"BadRequestError\",\"param\":\"input_tokens\",\"code\":400}}",
+     "verdict": "non_tautological",
+     "W": 8192,
+     "out": null,
+     "in": 8193,
+     "pattern": "vllm_postfix",
+     "evidence": [
+      "ctx=8192"
+     ]
+    }
+   ],
+   "verdict": "unclear",
+   "in_varies_with_prompt": false,
+   "in_varies_with_max_tokens_p9000": false
+  }
+ ]
+}

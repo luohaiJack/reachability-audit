@@ -29,6 +29,10 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 
 # 已知的报文模式 → 抓 (W, out, in)
 PATTERNS = [
+    # 修复后（vLLM PR #57035 / commit 1a3a7a8）：窗口界 + "even without any output tokens"
+    # 报文里没有 requested output 数，报数恒为 W+1 ⇒ 与"输出额度"解耦（window_bound）
+    (re.compile(r"maximum context length is (\d+) tokens.*?contains at least (\d+) input tokens"
+                r".*?even without any output tokens", re.S | re.I), "vllm_postfix"),
     # vLLM：窗口 + requested output + "at least ... input"
     (re.compile(r"maximum context length is (\d+) tokens.*?requested (\d+) output tokens"
                 r".*?contains at least (\d+) input tokens", re.S | re.I), "vllm_ctx"),
@@ -55,6 +59,13 @@ def classify(text: str) -> dict:
             out["in"] = i
             out["evidence"].append(f"W={W} out={o} in={i} out+in={o+i} (W+1={W+1})")
             out["verdict"] = "constructed" if o + i == W + 1 else "non_tautological"
+            return out
+        if name == "vllm_postfix":
+            W, i = int(m.group(1)), int(m.group(2))
+            out.update(W=W, out=None, pattern=name)
+            out["in"] = i
+            out["evidence"].append(f"W={W} in={i} (W+1={W+1}) 无 requested-output 项")
+            out["verdict"] = "non_tautological" if i == W + 1 else "non_tautological"
             return out
         if name == "ollama_req":
             n, W = int(m.group(1)), int(m.group(2))
