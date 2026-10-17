@@ -1,0 +1,32 @@
+{
+ "n": 40,
+ "first": 23,
+ "oracle": 29,
+ "gap": 6,
+ "selectors": {
+  "longest": {
+   "picked": 27,
+   "pct": 67.5,
+   "delta_pp": 10.0,
+   "capture_pct": 66.67,
+   "mcnemar_p": 0.125,
+   "pass_both": true
+  },
+  "error_free_longest": {
+   "picked": 27,
+   "pct": 67.5,
+   "delta_pp": 10.0,
+   "capture_pct": 66.67,
+   "mcnemar_p": 0.125,
+   "pass_both": true
+  },
+  "longest_first_call_majority": {
+   "picked": 27,
+   "pct": 67.5,
+   "delta_pp": 10.0,
+   "capture_pct": 66.67,
+   "mcnemar_p": 0.125,
+   "pass_both": true
+  }
+ }
+}
