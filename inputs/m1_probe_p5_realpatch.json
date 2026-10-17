@@ -47,7 +47,7 @@
      "max_tokens": 1,
      "http": 400,
      "body": "{\"error\":{\"message\":\"This model's maximum context length is 8192 tokens. However, your prompt contains at least 8193 input tokens, which exceeds this limit even without any output tokens. Please reduce the length of the input prompt. (parameter=input_tokens, value=8193)\",\"type\":\"BadRequestError\",\"param\":\"input_tokens\",\"code\":400}}",
-     "verdict": "non_tautological",
+     "verdict": "window_bound",
      "W": 8192,
      "out": null,
      "in": 8193,
@@ -61,7 +61,7 @@
      "max_tokens": 128,
      "http": 400,
      "body": "{\"error\":{\"message\":\"This model's maximum context length is 8192 tokens. However, your prompt contains at least 8193 input tokens, which exceeds this limit even without any output tokens. Please reduce the length of the input prompt. (parameter=input_tokens, value=8193)\",\"type\":\"BadRequestError\",\"param\":\"input_tokens\",\"code\":400}}",
-     "verdict": "non_tautological",
+     "verdict": "window_bound",
      "W": 8192,
      "out": null,
      "in": 8193,
@@ -75,7 +75,7 @@
      "max_tokens": 4096,
      "http": 400,
      "body": "{\"error\":{\"message\":\"This model's maximum context length is 8192 tokens. However, your prompt contains at least 8193 input tokens, which exceeds this limit even without any output tokens. Please reduce the length of the input prompt. (parameter=input_tokens, value=8193)\",\"type\":\"BadRequestError\",\"param\":\"input_tokens\",\"code\":400}}",
-     "verdict": "non_tautological",
+     "verdict": "window_bound",
      "W": 8192,
      "out": null,
      "in": 8193,
@@ -85,9 +85,24 @@
      ]
     }
    ],
-   "verdict": "unclear",
+   "verdict": "window_bound",
    "in_varies_with_prompt": false,
-   "in_varies_with_max_tokens_p9000": false
+   "in_varies_with_max_tokens_p9000": false,
+   "server_version": "0.31.0 + PR #57035 (1a3a7a8)",
+   "server_argv": [
+    "vllm",
+    "serve",
+    "--max-model-len",
+    "8192",
+    "--port",
+    "18002"
+   ],
+   "max_model_len": 8192
   }
- ]
+ ],
+ "patch": {
+  "pr": 57035,
+  "merge_commit": "1a3a7a8",
+  "applied_to": "vLLM 0.31.0 (source copy, patch -p1)"
+ }
 }

@@ -48,7 +48,7 @@ def classify(text: str) -> dict:
     """输入报文（任意格式的字符串），输出判定。"""
     out = {"verdict": "absent", "W": None, "out": None, "in": None, "pattern": None,
            "evidence": []}
-    DOCUMENTED = {"constructed", "non_tautological", "absent"}
+    DOCUMENTED = {"constructed", "non_tautological", "absent", "window_bound"}
     for rx, name in PATTERNS:
         m = rx.search(text)
         if not m:
@@ -65,7 +65,8 @@ def classify(text: str) -> dict:
             out.update(W=W, out=None, pattern=name)
             out["in"] = i
             out["evidence"].append(f"W={W} in={i} (W+1={W+1}) 无 requested-output 项")
-            out["verdict"] = "non_tautological" if i == W + 1 else "non_tautological"
+            # 修复后：报数恒 W+1，与请求的 allowance 解耦；记为 window_bound（不是 measurement）
+            out["verdict"] = "window_bound" if i == W + 1 else "non_tautological"
             return out
         if name == "ollama_req":
             n, W = int(m.group(1)), int(m.group(2))
@@ -83,7 +84,7 @@ def classify(text: str) -> dict:
     return out
 
 
-DOCUMENTED_VERDICTS = {"constructed", "non_tautological", "absent"}
+DOCUMENTED_VERDICTS = {"constructed", "non_tautological", "absent", "window_bound"}
 
 
 def _assert_documented(v: dict) -> dict:
@@ -138,7 +139,8 @@ def _finish(rec: dict, prompts: dict) -> dict:
                     len({(c["out"] or 0) + c["in"] for c in cells}) == 1)
                 rec[f"n_reported_{pname}"] = len(cells)
         # 判定（217 §M1）：
-        #  constructed = 同一提示下 in 随 out 联动，且 out+in 恒定（vLLM 系）
+        #  window_bound = 同一提示下 in **不随** out 变，且恒等于 W+1（修复后 vLLM 系）
+        #  constructed = 同一提示下 in 随 out 联动，且 out+in 恒定（vLLM 系，pre-fix）
         #  measured    = 同一提示下 in 不随 out 变，却随提示长度变（ollama/llama.cpp 系）
         cons = rec.get("io_sum_constant_p9000") and rec.get("in_varies_with_max_tokens_p9000")
         by_out = {}
@@ -147,7 +149,16 @@ def _finish(rec: dict, prompts: dict) -> dict:
                 by_out.setdefault(c["max_tokens"], {})[c["prompt"]] = c["in"]
         varied_with_prompt = any(len(set(v.values())) > 1 for v in by_out.values())
         invariant_in_out = rec.get("n_reported_p9000") and not rec.get("in_varies_with_max_tokens_p9000")
-        if cons:
+        # window_bound：同一提示下 in 不随 out 变，且恒等于 W+1（修复后 vLLM 系）
+        _ins9 = {c["in"] for c in rec["cells"]
+                 if c["prompt"] == "p9000" and c["in"] is not None}
+        _W9 = {c["W"] for c in rec["cells"] if c["prompt"] == "p9000" and c.get("W")}
+        is_window_bound = (len(_ins9) == 1 and bool(_W9)
+                           and next(iter(_ins9)) == next(iter(_W9)) + 1
+                           and not rec.get("in_varies_with_max_tokens_p9000", False))
+        if is_window_bound:
+            rec["verdict"] = "window_bound"
+        elif cons:
             rec["verdict"] = "constructed"
         elif invariant_in_out and varied_with_prompt:
             rec["verdict"] = "measured"
