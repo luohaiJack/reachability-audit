@@ -290,7 +290,7 @@ def main():
     reports, skipped = [], []
     for d in dirs:
         r = report_dir(d)
-        if r["n_total"] == 0 and not _empty_result_files(r["dir"]):
+        if r["n_total"] == 0 and not _empty_result_files(d):
             # **没有**原始结果的目录（判词/图/台账）⇒ 跳过，不算门禁失败；
             # 但"结果文件存在却被清空"**不跳过** ⇒ 由 G1b 判失败（F6 用例）
             skipped.append(r["dir"])
