@@ -1,0 +1,9 @@
+{
+ "served_model_dir": "Qwen/Qwen3-4B",
+ "snapshot": "",
+ "config_sha256": "8ba006f74fecfaaeb392872a60f4a480e7ec9860153d2e1b769ec81f9a147f8a",
+ "max_model_len": 8192,
+ "positional_encoding": "native (no rope change)",
+ "agent_alias": "gorilla-llm/gorilla-openfunctions-v2",
+ "note": "两臂同 checkpoint、同别名，只差 max_model_len（H7：产物层可核）"
+}

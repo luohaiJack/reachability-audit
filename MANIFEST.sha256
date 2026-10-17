@@ -8,6 +8,7 @@ ad603e69cd92b8c1993fb16a32861ecc69d7a52e3a7dbfece08d5e82a664f90c  ./DEPOSIT.md
 4baa53678b458231a083c7f530bd2b6d25863c928bce7bdfc8a718f4a4f27fe4  ./.github/workflows/ci.yml
 90eafac535a388eb84b99414b257212570dfa7aee61ee2519d7928fe364e4c23  ./.gitignore
 8e569ade9e590ebc9f5eb29cbd5e72ea56987b0f2e8d3215efd7537263b5f081  ./inputs/field_scan.json
+df1de27b1d80d31b0fb607f8e82405df32dfc48d0a6f27e49e79fbd27c996668  ./inputs/launch.json
 7769a16360ab8780182cb2887e7e317d64044594c209d1c13015e9c33cb8ebca  ./inputs/m1_probe_fixture.json
 dbe1b5ac66448a9c3f89aaa2a320a09b565c22068fddd13ce9b17f5f158e6f2f  ./inputs/m1_probe_p5_pair.json
 6e8c3a59444a48f4696763b187fbf065843ccfb2fdc844b4db7eacc398fd67fc  ./inputs/m1_probe_p5_realpatch.json
