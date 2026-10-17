@@ -1,7 +1,7 @@
 # reachability-audit v1 — 可达性税审计仪器
 
 [![instrument-ci](https://github.com/luohaiJack/reachability-audit/actions/workflows/ci.yml/badge.svg)](https://github.com/luohaiJack/reachability-audit/actions/workflows/ci.yml)
-　**CI 在 GitHub 的干净机器上跑**：**18 臂复现** ＋ known-answer 控制 ＋ **8 例故障注入** ＋ 检测器自检 ＋ 探针离线复算 ＋ **插桩不变式控制** ＋ 决策边界（共 **7 步**）。**首跑 success**（2026-10-15T14:18:49Z）。
+　**CI 在 GitHub 的干净机器上跑**：**23 臂复现** ＋ known-answer 控制 ＋ **8 例故障注入** ＋ 检测器自检 ＋ 探针离线复算 ＋ **插桩不变式控制** ＋ 决策边界（共 **7 步**）。**首跑 success**（2026-10-15T14:18:49Z）。
 
 一个**零依赖**（只用 Python 标准库）的审计脚本：给它一个 BFCL 风格的
 结果目录，它产出**一份标准化报告**，报告里把"官方分数"拆成
@@ -47,7 +47,7 @@ python3 bfcl_tax_report.py results/bfcl/law_*_v1 --markdown --out audit_all.json
 `reports/` 里共 **39 份** `*.tax_report.json`：其中 **23 份**对应随包 `slices/` 的臂
 （可由 `reproduce.py` 零差异复现，均含 `G1b`），另 **16 份**属于**输入未随包**的臂或端口报告
 （`expB_upstream`、`law_fresh160`、`law_llama31`、四份 `multiturn4_*`、四份 `pros_*`、
-`smoke4`）以及 **5 份 τ² 端口报告**（port 8,192／llama 8,192／llama 32,768／llama 131,072／**qwen 131,072**）（由 `ports/tau2_tax_report.py` 生成，按设计只带两门）。
+`smoke4`）以及 **4 份 τ² 端口报告**（port 8,192／llama 8,192／llama 32,768／llama 131,072／**qwen 131,072**）（由 `ports/tau2_tax_report.py` 生成，按设计只带两门）。
 未随包的 16 份是历史留痕或端口报告，**不能**仅凭本包复现。
 
 ## τ² 同族窗口对（2026-10-16 补，L3'）
@@ -143,7 +143,7 @@ python3 reproduce.py --workspace <工作区根>     # 若你有原作者的完�
 ```
 [OK  ] matrix_w49152_v1                               (bundle)
 
-18 臂重跑（工作区 0 / 随包切片 16），差异 0 处
+23 臂重跑（工作区 0 / 随包切片 16），差异 0 处
 ```
 
 逐臂的位移（`tax_cost_pp`，23 条臂）：
@@ -156,7 +156,7 @@ python3 reproduce.py --workspace <工作区根>     # 若你有原作者的完�
 并逐字段比对（三桶、三个准确率、税损失 pp）。预期：
 
 ```
-18 臂：官方→条件 位移 pp = 87.5, 70.0, 47.1, 46.7, 40.0, 31.2, 30.0, 18.6,
+23 臂：官方→条件 位移 pp = 87.5, 70.0, 47.1, 46.7, 40.0, 31.2, 30.0, 18.6,
                        17.5, 15.0, 9.6, 0, 0, 0, 0, 0
       非零 11 条，中位 18.05
 ```
