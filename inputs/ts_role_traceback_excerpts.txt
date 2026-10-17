@@ -1,0 +1,7 @@
+# agent 侧（legacy completions）
+# 来源: results/ts/ts_expand_v1/E4/agent_gorilla-llm/gorilla-openfunctions-v2_user_gpt-3.5-turbo-0125_10_15_2026_14_47_50/result_summary.json
+y\", line 102, in play\n    roles[sandbox_db[\"recipient\"][-1]].respond()\n  File \"/home/leli/Documents/新方向codex/agent实证研究/code/baseline_selection/ToolSandbox/tool_sandbox/roles/gorilla_api_agent.py\", line 391, in respond\n    gorilla_response = self.model_inference(\n                       ^^^^^^^^^^^^^^^^^^^^^\n  
+
+# user-sim 侧（chat.completions）
+# 来源: results/ts/ts_expand_v1/E4/agent_gorilla-llm/gorilla-openfunctions-v2_user_gpt-3.5-turbo-0125_10_15_2026_14_47_50/result_summary.json
+call__\n    result = fn(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/home/leli/Documents/新方向codex/agent实证研究/code/baseline_selection/ToolSandbox/tool_sandbox/roles/openai_api_user.py\", line 140, in model_inference\n    return self.openai_client.chat.completions.create(\n           ^^^^^^^^^^^^^^^^^^^^^
