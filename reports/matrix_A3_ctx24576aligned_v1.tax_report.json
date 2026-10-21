@@ -1,23 +1,27 @@
 {
  "schema": "bfcl_tax_report_v1",
- "dir": "/tmp/tmp7s3zncr4/matrix_A3_ctx24576aligned_v1",
+ "dir": "/tmp/tmp.KFqeZCjzzU/arm",
  "result_files": [
-  "/tmp/tmp7s3zncr4/matrix_A3_ctx24576aligned_v1/Qwen_Qwen3-4B-Instruct-2507/multi_turn/BFCL_v4_multi_turn_long_context_result.json"
+  "/tmp/tmp.KFqeZCjzzU/arm/Qwen_Qwen3-4B-Instruct-2507/multi_turn/BFCL_v4_multi_turn_long_context_result.json"
  ],
- "score_file": "/tmp/tmp7s3zncr4/matrix_A3_ctx24576aligned_v1/official_score.jsonl",
+ "score_file": "/tmp/tmp.KFqeZCjzzU/arm/official_score.jsonl",
  "n_total": 40,
  "buckets": {
-  "b1_executed_correct": 0,
-  "b2_executed_harness_failed": 0,
-  "b3_never_executed_boundary": 40,
-  "b2_task_ids": [],
-  "b3_task_ids_count": 40
+  "b1_executed_correct": 4,
+  "b2_executed_harness_failed": 3,
+  "b3_never_executed_boundary": 33,
+  "b2_task_ids": [
+   102,
+   123,
+   136
+  ],
+  "b3_task_ids_count": 33
  },
  "rates": {
-  "official_accuracy": 0.0,
-  "conditional_accuracy": 0.0,
-  "reachability_tax": 1.0,
-  "tax_cost_pp": 0.0
+  "official_accuracy": 0.1,
+  "conditional_accuracy": 0.5714,
+  "reachability_tax": 0.825,
+  "tax_cost_pp": 47.1
  },
  "signature": {
   "mode": "aligned",
@@ -32,7 +36,9 @@
   ]
  },
  "error_type_census": {
-  "multi_turn:inference_error": 40
+  "multi_turn:empty_turn_model_response": 1,
+  "multi_turn:inference_error": 33,
+  "multi_turn:instance_state_mismatch": 2
  },
  "b_unknown_executed_unscored": [],
  "gates": {

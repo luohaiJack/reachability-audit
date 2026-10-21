@@ -1,0 +1,1599 @@
+{
+ "schema": "field_infra_probe_v2",
+ "n_infra": 158,
+ "n_hard_hits": 0,
+ "error_type_counts": {
+  "ValueError": 102,
+  "InternalServerError": 51,
+  "RateLimitError": 4,
+  "Timeout": 1
+ },
+ "duration_max": 0.0,
+ "duration_min": 0.0,
+ "n_duration_zero": 158,
+ "n_messages_zero": 158,
+ "n_messages_max": 0,
+ "n_ticks_none": 158,
+ "rows": [
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_008",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_004",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_021",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_005",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_022",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_027",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_019",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_049",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_090",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_091",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_092",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_097",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_088",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_004",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_005",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_021",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_035",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_094",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_022",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_027",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_020",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_087",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_090",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_091",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_092",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_088",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_004",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_005",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_021",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_097",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_022",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_094",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_087",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_091",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_090",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_092",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_088",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_004",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_005",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_008",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_021",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_022",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_097",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_026",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_087",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_091",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_090",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_092",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_088",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_081",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_097",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_085",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_094",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "gemini-2-5-pro_sierra_2026-05-05__gemini-2.5-pro_high_banking_knowledge_gpt-5.2_4trials.json",
+   "task_id": "task_015",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "gemini-2-5-pro_sierra_2026-05-05__gemini-2.5-pro_high_banking_knowledge_gpt-5.2_4trials.json",
+   "task_id": "task_036",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "gemini-2-5-pro_sierra_2026-05-05__gemini-2.5-pro_high_banking_knowledge_gpt-5.2_4trials.json",
+   "task_id": "task_053",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "gemini-2-5-pro_sierra_2026-05-05__gemini-2.5-pro_high_banking_knowledge_gpt-5.2_4trials.json",
+   "task_id": "task_049",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "gemini-3-1-pro-preview_sierra_2026-05-05__gemini-3.1-pro-preview_high_banking_knowledge_gpt-5.2_4trials.json",
+   "task_id": "task_068",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "RateLimitError",
+   "error": "litellm.RateLimitError: litellm.RateLimitError: Vertex_aiException - {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"Resource has been exhausted (e.g. check quota).\",\n    \"status\": \"RESOURCE_EXHAUSTED",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "gemini-3-1-pro-preview_sierra_2026-05-05__gemini-3.1-pro-preview_high_banking_knowledge_gpt-5.2_4trials.json",
+   "task_id": "task_063",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "RateLimitError",
+   "error": "litellm.RateLimitError: litellm.RateLimitError: Vertex_aiException - {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"Resource has been exhausted (e.g. check quota).\",\n    \"status\": \"RESOURCE_EXHAUSTED",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "gemini-3-pro_sierra_2026-03-02__geminipro-telecom.json",
+   "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_storage_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_on[PERSONA:Easy]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "RateLimitError",
+   "error": "litellm.RateLimitError: litellm.RateLimitError: vertex_aiException - {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"Resource exhausted. Please try again later. Please refer to https://cloud.google.co",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "gemini-3-pro_sierra_2026-03-02__geminipro-telecom.json",
+   "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_app_storage_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:Hard]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "RateLimitError",
+   "error": "litellm.RateLimitError: litellm.RateLimitError: vertex_aiException - {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"Resource exhausted. Please try again later. Please refer to https://cloud.google.co",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_both_permissions|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:Hard]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "InternalServerError",
+   "error": "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[service_issue]airplane_mode_on|break_apn_settings|lock_sim_card_pin|overdue_bill_suspension|unseat_sim_card[PERSONA:None]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "InternalServerError",
+   "error": "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[mms_issue]bad_network_preference|bad_wifi_calling|break_app_sms_permission|data_mode_off|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:Hard]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "InternalServerError",
+   "error": "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_both_permissions|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:Hard]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "InternalServerError",
+   "error": "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[mms_issue]bad_wifi_calling|break_apn_mms_setting|data_mode_off|data_usage_exceeded|unseat_sim_card[PERSONA:None]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "InternalServerError",
+   "error": "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|break_app_both_permissions|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_on[PERSONA:Hard]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "InternalServerError",
+   "error": "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[mms_issue]airplane_mode_on|break_app_both_permissions|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:None]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "InternalServerError",
+   "error": "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_sms_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_on[PERSONA:None]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "InternalServerError",
+   "error": "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[service_issue]airplane_mode_on|break_apn_settings|overdue_bill_suspension|unseat_sim_card[PERSONA:None]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "InternalServerError",
+   "error": "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_sms_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_on[PERSONA:None]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "InternalServerError",
+   "error": "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_storage_permission|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Easy]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "InternalServerError",
+   "error": "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_sms_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:None]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "InternalServerError",
+   "error": "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[mms_issue]bad_network_preference|bad_wifi_calling|break_app_sms_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "InternalServerError",
+   "error": "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[service_issue]airplane_mode_on|break_apn_settings|contract_end_suspension|unseat_sim_card[PERSONA:Easy]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "InternalServerError",
+   "error": "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[mms_issue]airplane_mode_on|break_app_both_permissions[PERSONA:Hard]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "InternalServerError",
+   "error": "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[mms_issue]airplane_mode_on|bad_wifi_calling|break_app_both_permissions|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:None]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "InternalServerError",
+   "error": "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_sms_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:None]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "InternalServerError",
+   "error": "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[mms_issue]bad_wifi_calling|break_apn_mms_setting|break_app_sms_permission|data_usage_exceeded[PERSONA:Hard]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "InternalServerError",
+   "error": "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[mms_issue]bad_network_preference|bad_wifi_calling|break_app_both_permissions|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:None]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "InternalServerError",
+   "error": "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_storage_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Easy]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "InternalServerError",
+   "error": "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|break_apn_mms_setting|break_app_both_permissions|data_mode_off|data_usage_exceeded|user_abroad_roaming_enabled_off[PERSONA:None]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "InternalServerError",
+   "error": "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_storage_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_on[PERSONA:Easy]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "InternalServerError",
+   "error": "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|break_app_storage_permission|data_mode_off|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "InternalServerError",
+   "error": "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_app_sms_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:None]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "InternalServerError",
+   "error": "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_app_storage_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:Hard]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "InternalServerError",
+   "error": "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_both_permissions|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Hard]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "InternalServerError",
+   "error": "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[mms_issue]bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_storage_permission|data_mode_off|data_usage_exceeded|unseat_sim_card[PERSONA:Easy]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "InternalServerError",
+   "error": "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[mms_issue]bad_wifi_calling|break_apn_mms_setting|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "InternalServerError",
+   "error": "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|break_apn_mms_setting|break_app_both_permissions|data_mode_off|data_usage_exceeded|user_abroad_roaming_enabled_off[PERSONA:None]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "InternalServerError",
+   "error": "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_storage_permission|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Easy]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "InternalServerError",
+   "error": "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_storage_permission|data_mode_off|data_usage_exceeded|unseat_sim_card[PERSONA:Easy]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "InternalServerError",
+   "error": "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[mms_issue]bad_network_preference|break_app_both_permissions[PERSONA:Easy]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "InternalServerError",
+   "error": "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[mms_issue]bad_network_preference|bad_wifi_calling|break_app_sms_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "InternalServerError",
+   "error": "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[mms_issue]bad_wifi_calling|break_apn_mms_setting|break_app_both_permissions|data_mode_off|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:None]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "InternalServerError",
+   "error": "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_on[PERSONA:Easy]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "InternalServerError",
+   "error": "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[mms_issue]bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_storage_permission|data_mode_off|data_usage_exceeded|unseat_sim_card[PERSONA:Easy]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "InternalServerError",
+   "error": "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[service_issue]airplane_mode_on|break_apn_settings|overdue_bill_suspension[PERSONA:None]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "InternalServerError",
+   "error": "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_app_storage_permission|unseat_sim_card[PERSONA:Hard]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "InternalServerError",
+   "error": "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_storage_permission|data_mode_off|data_usage_exceeded|unseat_sim_card[PERSONA:Easy]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "InternalServerError",
+   "error": "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_both_permissions|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_on[PERSONA:Hard]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "InternalServerError",
+   "error": "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[mms_issue]airplane_mode_on|bad_wifi_calling|break_app_both_permissions|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:None]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "InternalServerError",
+   "error": "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[mms_issue]break_app_storage_permission|data_usage_exceeded[PERSONA:Easy]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "InternalServerError",
+   "error": "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[mms_issue]bad_network_preference|bad_wifi_calling|break_app_both_permissions|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:None]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "InternalServerError",
+   "error": "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_storage_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Easy]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "InternalServerError",
+   "error": "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_both_permissions|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Hard]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "InternalServerError",
+   "error": "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_app_sms_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:None]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "InternalServerError",
+   "error": "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[mms_issue]bad_network_preference|break_app_sms_permission|data_mode_off|data_usage_exceeded|user_abroad_roaming_enabled_off[PERSONA:None]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "Timeout",
+   "error": "litellm.Timeout: APITimeoutError - Request timed out. Error_str: Request timed out.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[mms_issue]bad_network_preference|bad_wifi_calling|break_app_both_permissions|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:Hard]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "InternalServerError",
+   "error": "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|break_apn_mms_setting|data_mode_off|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Easy]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "InternalServerError",
+   "error": "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[mms_issue]bad_network_preference|break_app_sms_permission|user_abroad_roaming_disabled_on[PERSONA:Hard]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "InternalServerError",
+   "error": "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_both_permissions|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_on[PERSONA:Hard]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "InternalServerError",
+   "error": "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|break_apn_mms_setting|data_usage_exceeded[PERSONA:Hard]",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "InternalServerError",
+   "error": "litellm.InternalServerError: InternalServerError: OpenAIException - Connection error.",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "gpt-5-5_sierra_2026-05-05__banking_knowledge_results.json",
+   "task_id": "task_049",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "gpt-5-5_sierra_2026-05-05__banking_knowledge_results.json",
+   "task_id": "task_088",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "gpt-5-6-sol_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_005",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "gpt-5-6-sol_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_035",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "gpt-5-6-sol_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_015",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "gpt-5-6-sol_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_019",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "gpt-5-6-sol_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_026",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "gpt-5-6-sol_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_027",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "gpt-5-6-sol_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_018",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "gpt-5-6-sol_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_008",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "gpt-5-6-sol_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_005",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "gpt-5-6-sol_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_014",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "gpt-5-6-sol_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_035",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "gpt-5-6-sol_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_061",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "gpt-5-6-sol_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_055",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "gpt-5-6-sol_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_008",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "gpt-5-6-sol_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_020",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "gpt-5-6-sol_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_092",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "gpt-5-6-sol_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_027",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "gpt-5-6-sol_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_088",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "gpt-5-6-sol_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_015",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "gpt-5-6-sol_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_057",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "gpt-5-6-sol_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_088",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "gpt-5-6-sol_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_021",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "gpt-5-6-sol_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_028",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "gpt-5-6-sol_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_092",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "gpt-5-6-sol_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_027",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "gpt-5-6-sol_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_081",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "gpt-5-6-sol_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_040",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "gpt-5-6-sol_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_014",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "gpt-5-6-sol_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_055",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "gpt-5-6-sol_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_015",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "gpt-5-6-sol_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_017",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "gpt-5-6-sol_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_018",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "gpt-5-6-sol_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_019",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "gpt-5-6-sol_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_029",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "gpt-5-6-sol_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_008",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "gpt-5-6-sol_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_040",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "gpt-5-6-sol_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_092",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "gpt-5-6-sol_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_027",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "gpt-5-6-sol_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_061",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "gpt-5-6-sol_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_057",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "gpt-5-6-sol_sierra_2026-08-04__banking_knowledge_results.json",
+   "task_id": "task_087",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "grok-4-1-fast_sierra_2026-05-05__grok-4-1-fast_high_banking_knowledge_gpt-5.2_4trials.json",
+   "task_id": "task_008",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  },
+  {
+   "file": "grok-4-2_sierra_2026-05-05__grok-4-2_high_banking_knowledge_gpt-5.2_4trials.json",
+   "task_id": "task_052",
+   "duration": 0.0,
+   "n_messages": 0,
+   "error_type": "ValueError",
+   "error": "AssistantMessage must have either content or tool_calls. Got AssistantMessage\nis_final_chunk: True",
+   "hard_hit": false,
+   "ticks_none": true
+  }
+ ]
+}

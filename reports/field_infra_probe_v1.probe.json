@@ -1,0 +1,163 @@
+{
+ "schema": "field_infra_probe_v1",
+ "n_files": 29,
+ "n_sims": 11476,
+ "n_infra": 158,
+ "n_infra_with_error_text": 158,
+ "n_hard_context_hits": 0,
+ "hard_hits": [],
+ "termination_reasons": {
+  "user_stop": 11269,
+  "infrastructure_error": 158,
+  "max_steps": 29,
+  "too_many_errors": 20
+ },
+ "per_file": [
+  {
+   "file": "A_EXAMPLE_new-model_example-org_2025-01-15__example-model_telecom_gpt-5.2_4trials.json",
+   "n_sims": 0,
+   "n_infra": 0
+  },
+  {
+   "file": "claude-fable-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "n_sims": 388,
+   "n_infra": 53
+  },
+  {
+   "file": "claude-opus-4-5_sierra_2026-02-26__claude-opus-4-5_high_telecom_gpt-5.2_4trials.json",
+   "n_sims": 456,
+   "n_infra": 0
+  },
+  {
+   "file": "claude-opus-4-6_sierra_2026-05-05__claude-opus-4-6_max_banking_knowledge_gpt-5.2_4trials.json",
+   "n_sims": 388,
+   "n_infra": 0
+  },
+  {
+   "file": "claude-opus-4-7_sierra_2026-05-05__banking_knowledge_results.json",
+   "n_sims": 388,
+   "n_infra": 0
+  },
+  {
+   "file": "claude-opus-4-8_sierra_2026-08-04__banking_knowledge_results.json",
+   "n_sims": 388,
+   "n_infra": 0
+  },
+  {
+   "file": "claude-opus-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "n_sims": 388,
+   "n_infra": 0
+  },
+  {
+   "file": "claude-sonnet-4-5_sierra_2026-02-26__claude-sonnet-4-5_enabled_telecom_gpt-5.2_4trials.json",
+   "n_sims": 456,
+   "n_infra": 0
+  },
+  {
+   "file": "gemini-2-5-pro_sierra_2026-05-05__gemini-2.5-pro_high_banking_knowledge_gpt-5.2_4trials.json",
+   "n_sims": 388,
+   "n_infra": 4
+  },
+  {
+   "file": "gemini-3-1-pro-preview_sierra_2026-05-05__gemini-3.1-pro-preview_high_banking_knowledge_gpt-5.2_4trials.json",
+   "n_sims": 388,
+   "n_infra": 2
+  },
+  {
+   "file": "gemini-3-flash_sierra_2026-03-02__geminiflash-telecom.json",
+   "n_sims": 456,
+   "n_infra": 0
+  },
+  {
+   "file": "gemini-3-pro_sierra_2026-03-02__geminipro-telecom.json",
+   "n_sims": 456,
+   "n_infra": 2
+  },
+  {
+   "file": "glm-5-2_sierra_2026-08-04__banking_knowledge_results.json",
+   "n_sims": 388,
+   "n_infra": 0
+  },
+  {
+   "file": "glm-5-think_sierra_2026-03-02__glm-5_enabled_telecom_gpt-5.2_4trials.json",
+   "n_sims": 456,
+   "n_infra": 52
+  },
+  {
+   "file": "gpt-5-2-none_sierra_2026-02-26__gpt-5.2_none_telecom_gpt-5.2_4trials.json",
+   "n_sims": 456,
+   "n_infra": 0
+  },
+  {
+   "file": "gpt-5-2_sierra_2026-02-26__gpt-5.2_high_telecom_gpt-5.2_4trials.json",
+   "n_sims": 456,
+   "n_infra": 0
+  },
+  {
+   "file": "gpt-5-4_sierra_2026-03-25__gpt-5.4_xhigh_banking_knowledge_gpt-5.2_4trials.json",
+   "n_sims": 388,
+   "n_infra": 0
+  },
+  {
+   "file": "gpt-5-5_sierra_2026-05-05__banking_knowledge_results.json",
+   "n_sims": 388,
+   "n_infra": 2
+  },
+  {
+   "file": "gpt-5-6-sol_sierra_2026-08-04__banking_knowledge_results.json",
+   "n_sims": 388,
+   "n_infra": 41
+  },
+  {
+   "file": "grok-4-1-fast_sierra_2026-05-05__grok-4-1-fast_high_banking_knowledge_gpt-5.2_4trials.json",
+   "n_sims": 388,
+   "n_infra": 1
+  },
+  {
+   "file": "grok-4-2_sierra_2026-05-05__grok-4-2_high_banking_knowledge_gpt-5.2_4trials.json",
+   "n_sims": 388,
+   "n_infra": 1
+  },
+  {
+   "file": "grok-4-5_sierra_2026-08-04__banking_knowledge_results.json",
+   "n_sims": 388,
+   "n_infra": 0
+  },
+  {
+   "file": "grok-4-fast_sierra_2026-05-05__grok-4-fast_high_banking_knowledge_gpt-5.2_4trials.json",
+   "n_sims": 388,
+   "n_infra": 0
+  },
+  {
+   "file": "inkling_sierra_2026-08-04__banking_knowledge_results.json",
+   "n_sims": 388,
+   "n_infra": 0
+  },
+  {
+   "file": "kimi-k3_sierra_2026-08-04__banking_knowledge_results.json",
+   "n_sims": 388,
+   "n_infra": 0
+  },
+  {
+   "file": "muse-spark-1-1_sierra_2026-08-04__banking_knowledge_results.json",
+   "n_sims": 388,
+   "n_infra": 0
+  },
+  {
+   "file": "qwen3-8-max_sierra_2026-08-04__banking_knowledge_results.json",
+   "n_sims": 388,
+   "n_infra": 0
+  },
+  {
+   "file": "qwen3-max_qwen_2025-10-30__telecom_llm_agent_qwen3-max-2025-10-30_user_simulator_gpt-4.1-2025-04-14.json",
+   "n_sims": 456,
+   "n_infra": 0
+  },
+  {
+   "file": "qwen3.5-397b-a17b-think_sierra_2026-03-02__qwen3.5-397b-a17b_enabled_telecom_gpt-5.2_4trials.json",
+   "n_sims": 456,
+   "n_infra": 0
+  }
+ ],
+ "note": "HARD 只匹配上下文/长度类硬签名；'error' 字段在 messages 被清空时仍保留。"
+}

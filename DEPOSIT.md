@@ -44,3 +44,12 @@
 论文里自曝的那条"无完成标记"的臂（`expB_repro_v1`）在工作区数据树里可复现
 （`results/bfcl/expB_repro_v1/tax_report.json` 的 G2 为 `false`），
 但其**输入切片未随包**（见 `reports/` 说明），故包内无法复现该臂的 G2=false。
+
+## 追加（2026-10-21）：田野 infra 行 error 文本探针
+
+- 新增 `tools/field_infra_probe.py`、`tools/field_infra_probe_v2.py`：只读 τ² 田野轨迹缓存，
+  逐行取 `info.error` / `messages` / `ticks`，用于核实"158 条 infra 里没有长度/上下文签名"。
+- 新增 `reports/field_infra_probe_v1.probe.json`、`...probe_v2.json`（判据读数，与正文 §4.4/§6 对应）。
+- `MANIFEST.sha256` 已随之更新（**156** 条），`sha256sum -c` 全部通过。
+- ⚠️ **待推送到公开仓库**：GitHub 上的 v2 副本尚未含这四个文件；正文当前以
+  `results/bfcl/field_infra_probe_v1/…` 为锚，推送后即可改指仓库路径。

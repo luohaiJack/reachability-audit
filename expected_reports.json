@@ -105,14 +105,14 @@
  },
  "matrix_A3_ctx24576aligned_v1": {
   "buckets": {
-   "b1_executed_correct": 0,
-   "b2_executed_harness_failed": 0,
-   "b3_never_executed_boundary": 40
+   "b1_executed_correct": 4,
+   "b2_executed_harness_failed": 3,
+   "b3_never_executed_boundary": 33
   },
   "rates": {
-   "official_accuracy": 0.0,
-   "conditional_accuracy": 0.0,
-   "tax_cost_pp": 0.0
+   "official_accuracy": 0.1,
+   "conditional_accuracy": 0.5714,
+   "tax_cost_pp": 47.1
   },
   "gates_pass": true
  },
