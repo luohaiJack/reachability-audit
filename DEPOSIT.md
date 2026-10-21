@@ -51,5 +51,5 @@
   逐行取 `info.error` / `messages` / `ticks`，用于核实"158 条 infra 里没有长度/上下文签名"。
 - 新增 `reports/field_infra_probe_v1.probe.json`、`...probe_v2.json`（判据读数，与正文 §4.4/§6 对应）。
 - `MANIFEST.sha256` 已随之更新（**156** 条），`sha256sum -c` 全部通过。
-- ⚠️ **待推送到公开仓库**：GitHub 上的 v2 副本尚未含这四个文件；正文当前以
-  `results/bfcl/field_infra_probe_v1/…` 为锚，推送后即可改指仓库路径。
+- ✅ **已推送（2026-10-21，commit a9492c8）**：GitHub 上的 v2 副本已含这四个文件；
+  正文仍以 `results/bfcl/field_infra_probe_v1/…` 为锚。
